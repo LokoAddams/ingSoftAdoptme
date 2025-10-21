@@ -1,0 +1,21 @@
+[
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-21T14:02:21.000Z",
+      "message": "feat: DescripcionBasica creada.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 10,
+      "additions": 4,
+      "deletions": 6,
+      "date": "2025-10-21"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  }
+]
