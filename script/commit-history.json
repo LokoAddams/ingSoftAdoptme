@@ -304,12 +304,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "7eaf5ab7ad02aa5d3d928656e2e532732f5f6b86",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-10-23T09:09:12.000Z",
       "message": "feat: si la mascota NO esta disponible no crear solicitud de adopcion",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/7eaf5ab7ad02aa5d3d928656e2e532732f5f6b86"
     },
     "stats": {
       "total": 38,
@@ -337,6 +337,25 @@
       "date": "2025-10-23"
     },
     "coverage": 100,
+    "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T11:44:57.000Z",
+      "message": "feat: mensaje no se puede crear una solicitud sin conexion a internet",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 96,
+      "additions": 88,
+      "deletions": 8,
+      "date": "2025-10-23"
+    },
+    "coverage": 55.56,
     "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"

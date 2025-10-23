@@ -97,13 +97,22 @@ function initPresenter() {
         import('./Adoptante.js'),
         import('./Mascota.js')
       ]).then(([{ default: SolicitudAdopcion }, { default: Adoptante }, { default: Mascota }]) => {
-        const adoptanteInstance = new Adoptante(adoptante);
-        const mascotaInstance = new Mascota(mascota);
-        const solicitud = new SolicitudAdopcion(adoptanteInstance, mascotaInstance);
-        
-        window.__ultimaSolicitudAdopcion = solicitud;
-        const mensajeDiv = document.getElementById('solicitudMensaje');
-        if (mensajeDiv) mensajeDiv.innerText = 'Solicitud enviada correctamente';
+        (async () => {
+          try {
+            const adoptanteInstance = new Adoptante(adoptante);
+            const mascotaInstance = new Mascota(mascota);
+            // usar la factory asíncrona que valida conectividad
+            const solicitud = await SolicitudAdopcion.create(adoptanteInstance, mascotaInstance);
+
+            window.__ultimaSolicitudAdopcion = solicitud;
+            const mensajeDiv = document.getElementById('solicitudMensaje');
+            if (mensajeDiv) mensajeDiv.innerText = 'Solicitud enviada correctamente';
+          } catch (err) {
+            const mensajeDiv = document.getElementById('solicitudMensaje');
+            if (mensajeDiv) mensajeDiv.innerText = err && err.message ? err.message : 'Error al crear la solicitud';
+            console.error('Error creando SolicitudAdopcion', err);
+          }
+        })();
       }).catch((err) => {
         const mensajeDiv = document.getElementById('solicitudMensaje');
         if (mensajeDiv) mensajeDiv.innerText = err.message || 'Error al enviar la solicitud';
