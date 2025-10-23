@@ -10,4 +10,8 @@ function verMascotas(lista = [], hayConexion = true) {
     }
 }
 
-export {verMascotas};
+function verDetalleMas() {
+    return "Revise su conexión a internet.";
+}
+
+export {verMascotas, verDetalleMas};

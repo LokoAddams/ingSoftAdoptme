@@ -361,12 +361,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e2f049c717adeff6ac49d15cead7701bb2e4aeae",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-10-23T08:18:48.000Z",
       "message": "refact: Se reacomodo la visualizacion de Formularios",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/e2f049c717adeff6ac49d15cead7701bb2e4aeae"
     },
     "stats": {
       "total": 35,
@@ -376,6 +376,25 @@
     },
     "coverage": 100,
     "test_count": 9,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T11:47:49.000Z",
+      "message": "feat: Ver información de mascota si no hay conexión a internet estable",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 28,
+      "additions": 26,
+      "deletions": 2,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 10,
     "failed_tests": 0,
     "conclusion": "success"
   }
