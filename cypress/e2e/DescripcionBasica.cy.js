@@ -7,5 +7,10 @@ describe('File Upload Test', () => {
         const fileName = 'test-image.jpg'
         cy.get('input[type="file"]').attachFile(fileName)
       cy.get('input[type="file"]').should('have.value', fileName)
-    })
+    });
+    it('Deberia mostrar el nombre del archivo seleccionado', () => {
+        const fileName = 'test-image.jpg'
+        cy.get('input[type="file"]').attachFile(fileName)
+        cy.get('#archivoSeleccionado').should('contain.text', `Archivo seleccionado: ${fileName}`)
+    });
 })

@@ -1,14 +1,10 @@
+const botonSubir = document.getElementById('subirDocumentoBtn');
+const archivoInput = document.getElementById('documento');
+const archivoSeleccionadoDiv = document.getElementById('archivoSeleccionado');
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+function mostrarArchivoSeleccionado() {
+  if (!archivoSeleccionadoDiv) return;
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
-});
+  const archivo = archivoInput && archivoInput.files && archivoInput.files[0];
+  archivoSeleccionadoDiv.innerText = archivo ? `Archivo seleccionado: ${archivo.name}` : 'No hay archivo seleccionado';
+}
