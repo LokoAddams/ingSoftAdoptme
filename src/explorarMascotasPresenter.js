@@ -1,4 +1,4 @@
-import { verMascotas } from "./verMascotas";
+import { verMascotas } from "./verMascotas.js";
 
 const form = document.querySelector("#verMasc-form");
 const div = document.querySelector("#resultado-div");
@@ -16,15 +16,22 @@ form.addEventListener("submit", (event) => {
     for (let i = 0; i < mascotas.length; i++) {
       let mascota = mascotas[i];
 
-      div.innerHTML += "<p>" + 
-      mascota[0] + "<br>" +
-      mascota[2] +
-      "</p>";
-      const imagen = document.createElement("img");
-      imagen.src = mascota[1];
-      imagen.alt = "Foto mascota disponible";
-      div.appendChild(imagen);
-      div.innerHTML += "<br>";
-    }
-  }
+      const a = document.createElement("a");
+      a.href = `./detalleMascota.html?nom=${encodeURIComponent(mascota[0])}`;
+      a.style.display = "block";     // para que se vea como tarjeta clickable
+      a.style.cursor  = "pointer";
+
+      const tarjeta = document.createElement("div");
+      tarjeta.innerHTML = `<p>${mascota[0]}<br>${mascota[2]}</p>`;
+
+      const img = document.createElement("img");
+      img.src = mascota[1];
+      img.alt = "Foto mascota disponible";
+
+      tarjeta.appendChild(img);
+      a.appendChild(tarjeta);
+      div.appendChild(a);
+      div.appendChild(document.createElement("br"));
+    };
+  };
 });

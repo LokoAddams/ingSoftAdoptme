@@ -456,17 +456,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "5b3ba730a0d65181be74cb66ba29d0eae2b19a17",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-10-23T12:42:47.000Z",
       "message": "feat: Implementación de detalleMascota.html",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/5b3ba730a0d65181be74cb66ba29d0eae2b19a17"
     },
     "stats": {
       "total": 32,
       "additions": 32,
       "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T13:46:40.000Z",
+      "message": "feat: Conexión de lista de mascotas disponibles a detalles de mascota",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 42,
+      "additions": 26,
+      "deletions": 16,
       "date": "2025-10-23"
     },
     "coverage": 100,
