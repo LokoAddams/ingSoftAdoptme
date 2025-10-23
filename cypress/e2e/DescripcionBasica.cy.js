@@ -35,4 +35,12 @@ describe('File Upload Test', () => {
         cy.get('#sexo').type('Macho').should('have.value', 'Macho')
         cy.get('#edad').type('3').should('have.value', '3')
     });
+    it('Deberia mostrar mensaje de registro al hacer click en el boton registrar', () => {
+        cy.get('#registrarBtn').click()
+        cy.get('#registroMensaje').should('contain.text', 'se registro correctamente')
+    });
+    it('Deberia mostrar mensaje de falta completitud al intentar registrar sin llenar campos', () => {
+        cy.get('#registrarBtn').click()
+        cy.get('#registroMensaje').should('contain.text', 'Por favor complete todos los campos antes de registrar')
+    });
 });

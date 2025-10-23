@@ -42,7 +42,17 @@ function initPresenter() {
     }
 
     botonRegistrar.addEventListener('click', () => {
-      mostrarMensajeRegistro('se registro correctamente');
+      const campos = ['nombre', 'especie', 'raza', 'sexo', 'edad'];
+      const faltan = campos.some((id) => {
+        const el = document.getElementById(id);
+        return !el || !String(el.value || '').trim();
+      });
+
+      if (faltan) {
+        mostrarMensajeRegistro('Por favor complete todos los campos antes de registrar');
+      } else {
+        mostrarMensajeRegistro('se registro correctamente');
+      }
     });
   }
 
