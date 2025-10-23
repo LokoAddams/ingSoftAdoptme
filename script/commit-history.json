@@ -19,12 +19,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "ee1d611c781c74f97c34f169aabefa57d87d5c82",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-10-23T03:55:56.000Z",
       "message": "feat: Interfaz visual para ver mascotas disponibles",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/ee1d611c781c74f97c34f169aabefa57d87d5c82"
     },
     "stats": {
       "total": 17,
@@ -34,6 +34,25 @@
     },
     "coverage": 100,
     "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T04:06:20.000Z",
+      "message": "feat: Ver Mascota (no hay mascotas disponibles)",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 26,
+      "additions": 26,
+      "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 2,
     "failed_tests": 0,
     "conclusion": "success"
   }
