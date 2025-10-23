@@ -1,6 +1,6 @@
-describe('File Upload Test', () => {
+describe('Test', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:4200/descripcion-basica')
+        cy.visit('http://localhost:1234/descripcion-basica')
     })
 
     it('Deberia poder seleccionar un archivo', () => {

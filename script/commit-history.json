@@ -133,17 +133,36 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "20661154901f6d4d2221382e004aa90d8e2a28a0",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-10-23T03:55:56.000Z",
       "message": "Feat: Se agrego la notificacion cuando no completa los datos de registro.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/20661154901f6d4d2221382e004aa90d8e2a28a0"
     },
     "stats": {
       "total": 20,
       "additions": 19,
       "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-23T04:00:21.000Z",
+      "message": "fix: Se arreglo la parte de sumador.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 12,
+      "additions": 2,
+      "deletions": 10,
       "date": "2025-10-23"
     },
     "coverage": 0,
