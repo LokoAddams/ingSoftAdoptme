@@ -38,17 +38,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "90a0e7328405b2a174c8710cb0d3d161d5b109fd",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-10-23T04:06:20.000Z",
       "message": "feat: Ver Mascota (no hay mascotas disponibles)",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/90a0e7328405b2a174c8710cb0d3d161d5b109fd"
     },
     "stats": {
       "total": 26,
       "additions": 26,
       "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 2,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T04:10:22.000Z",
+      "message": "refactor: Ver Mascota (no hay mascotas disponibles)",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 13,
+      "additions": 8,
+      "deletions": 5,
       "date": "2025-10-23"
     },
     "coverage": 100,

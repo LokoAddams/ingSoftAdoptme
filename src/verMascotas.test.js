@@ -15,12 +15,10 @@
 // Si el ciudadano no cuenta con una conexión a internet estable al hacer click en la 
 // pestaña "Adoptar", se mostrará el mensaje "Revise su conexión a internet.".
 
+import { verMascotas } from "./verMascotas";
+
 describe("Ver Mascota (no hay mascotas disponibles).", () => {
   it("deberia mostrar 'Lo siento, por el momento no hay mascotas disponibles.'", () => {
     expect(verMascotas()).toEqual("Lo siento, por el momento no hay mascotas disponibles.");
   });
 });
-
-function verMascotas() {
-    return "Lo siento, por el momento no hay mascotas disponibles.";
-}
