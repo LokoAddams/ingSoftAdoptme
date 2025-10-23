@@ -171,17 +171,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a3ea6cbddc3c02ceed94c44e98aa065fd73c3c44",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-10-23T05:14:00.000Z",
       "message": "refactor: Ver imagen mascotas que estan en la lista renderizada",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a3ea6cbddc3c02ceed94c44e98aa065fd73c3c44"
     },
     "stats": {
       "total": 8,
       "additions": 6,
       "deletions": 2,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T05:21:11.000Z",
+      "message": "feat: Verificar tipo de variable que devuelve verMascotas",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 27,
+      "additions": 16,
+      "deletions": 11,
       "date": "2025-10-23"
     },
     "coverage": 100,
