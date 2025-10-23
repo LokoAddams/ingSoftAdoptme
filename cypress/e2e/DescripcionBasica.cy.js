@@ -28,4 +28,11 @@ describe('File Upload Test', () => {
         cy.get('#edad').should('exist')
         cy.get('#registrarBtn').should('exist')
     }); 
+    it('Deberia ingresar texto en los campos de registrarse', () => {
+        cy.get('#nombre').type('Firulais').should('have.value', 'Firulais')
+        cy.get('#especie').type('Perro').should('have.value', 'Perro')
+        cy.get('#raza').type('Labrador').should('have.value', 'Labrador')
+        cy.get('#sexo').type('Macho').should('have.value', 'Macho')
+        cy.get('#edad').type('3').should('have.value', '3')
+    });
 });

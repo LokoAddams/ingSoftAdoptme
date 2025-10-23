@@ -2,11 +2,25 @@ const botonSubir = document.getElementById('subirDocumentoBtn');
 const archivoInput = document.getElementById('documento');
 const archivoSeleccionadoDiv = document.getElementById('archivoSeleccionado');
 
+const botonRegistrar = document.getElementById('registrarBtn');
+let registroMensajeDiv = document.getElementById('registroMensaje');
+
 function mostrarArchivoSeleccionado() {
   if (!archivoSeleccionadoDiv) return;
 
   const archivo = archivoInput && archivoInput.files && archivoInput.files[0];
   archivoSeleccionadoDiv.innerText = archivo ? `Archivo seleccionado: ${archivo.name}` : 'No hay archivo seleccionado';
+}
+
+function mostrarMensajeRegistro(text) {
+  if (!registroMensajeDiv) {
+    registroMensajeDiv = document.createElement('div');
+    registroMensajeDiv.id = 'registroMensaje';
+    if (botonRegistrar) botonRegistrar.insertAdjacentElement('afterend', registroMensajeDiv);
+    else document.body.appendChild(registroMensajeDiv);
+  }
+
+  registroMensajeDiv.innerText = text || '';
 }
 
 function initPresenter() {
@@ -20,15 +34,29 @@ function initPresenter() {
     archivoInput.addEventListener('change', mostrarArchivoSeleccionado);
   }
 
+  if (botonRegistrar) {
+    if (!registroMensajeDiv) {
+      registroMensajeDiv = document.createElement('div');
+      registroMensajeDiv.id = 'registroMensaje';
+      botonRegistrar.insertAdjacentElement('afterend', registroMensajeDiv);
+    }
+
+    botonRegistrar.addEventListener('click', () => {
+      mostrarMensajeRegistro('se registro correctamente');
+    });
+  }
+
   mostrarArchivoSeleccionado();
 
   return {
     botonSubirPresent: !!botonSubir,
     archivoInputPresent: !!archivoInput,
     archivoSeleccionadoDivPresent: !!archivoSeleccionadoDiv,
+    botonRegistrarPresent: !!botonRegistrar,
+    registroMensajeDivPresent: !!registroMensajeDiv,
   };
 }
 
 const _initResult = initPresenter();
 
-export { mostrarArchivoSeleccionado, initPresenter };
+export { mostrarArchivoSeleccionado, mostrarMensajeRegistro, initPresenter };
