@@ -20,6 +20,7 @@ form.addEventListener("submit", (event) => {
       a.href = `./detalleMascota.html?nom=${encodeURIComponent(mascota[0])}`;
       a.style.display = "block";     // para que se vea como tarjeta clickable
       a.style.cursor  = "pointer";
+      a.style.textDecoration = "none";
 
       const tarjeta = document.createElement("div");
       tarjeta.innerHTML = `<p>${mascota[0]}<br>${mascota[2]}</p>`;
