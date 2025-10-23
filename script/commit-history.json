@@ -114,6 +114,25 @@
     "conclusion": "neutral"
   },
   {
+    "sha": "740b6e3fa6c7ffdb3cfdd3a8aa6c91a9d6e92609",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T03:47:15.000Z",
+      "message": "chore: Instalación de dependencias y proyecto base",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/740b6e3fa6c7ffdb3cfdd3a8aa6c91a9d6e92609"
+    },
+    "stats": {
+      "total": 27530,
+      "additions": 4410,
+      "deletions": 23120,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
     "sha": "df27e09350c0536170f5a222360fede25d73d45c",
     "author": "Adrian Claros",
     "commit": {
@@ -131,6 +150,25 @@
     "test_count": 0,
     "failed_tests": 0,
     "conclusion": "neutral"
+  },
+  {
+    "sha": "ee1d611c781c74f97c34f169aabefa57d87d5c82",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T03:55:56.000Z",
+      "message": "feat: Interfaz visual para ver mascotas disponibles",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/ee1d611c781c74f97c34f169aabefa57d87d5c82"
+    },
+    "stats": {
+      "total": 17,
+      "additions": 16,
+      "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
   },
   {
     "sha": "20661154901f6d4d2221382e004aa90d8e2a28a0",
@@ -361,12 +399,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "51ff717b1ecf1bad34583bf1b3f9f0a652dd3d59",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-10-23T13:07:18.000Z",
       "message": "style: estilos css para formularios",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/51ff717b1ecf1bad34583bf1b3f9f0a652dd3d59"
     },
     "stats": {
       "total": 252,
@@ -395,6 +433,25 @@
     },
     "coverage": 55.56,
     "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T15:51:25.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into SolicitudAdopcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 204,
+      "additions": 197,
+      "deletions": 7,
+      "date": "2025-10-23"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
     "failed_tests": 0,
     "conclusion": "success"
   }
