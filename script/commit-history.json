@@ -152,17 +152,36 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "00b65181739e77fa4e8ab4398afa78b8898eec00",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-10-23T04:00:21.000Z",
       "message": "fix: Se arreglo la parte de sumador.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/00b65181739e77fa4e8ab4398afa78b8898eec00"
     },
     "stats": {
       "total": 12,
       "additions": 2,
       "deletions": 10,
+      "date": "2025-10-23"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-10-23T05:29:14.000Z",
+      "message": "Fix: Se borro pruebas cypress de Sumador que no son parte del poryecto",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 10,
+      "additions": 1,
+      "deletions": 9,
       "date": "2025-10-23"
     },
     "coverage": 0,
