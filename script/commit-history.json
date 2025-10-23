@@ -285,12 +285,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "ad234ea0bc06a4f1ee587304e9f07deb8e114c5d",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-10-23T08:36:27.000Z",
       "message": "refactor: Creacion de clases Adoptante y Mascota",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/ad234ea0bc06a4f1ee587304e9f07deb8e114c5d"
     },
     "stats": {
       "total": 67,
@@ -314,6 +314,25 @@
     "stats": {
       "total": 38,
       "additions": 37,
+      "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T09:17:11.000Z",
+      "message": "feat: mensaje UI si la mascota NO esta disponible",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 34,
+      "additions": 33,
       "deletions": 1,
       "date": "2025-10-23"
     },

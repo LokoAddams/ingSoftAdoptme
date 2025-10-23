@@ -106,7 +106,7 @@ function initPresenter() {
         if (mensajeDiv) mensajeDiv.innerText = 'Solicitud enviada correctamente';
       }).catch((err) => {
         const mensajeDiv = document.getElementById('solicitudMensaje');
-        if (mensajeDiv) mensajeDiv.innerText = 'Error al crear la solicitud';
+        if (mensajeDiv) mensajeDiv.innerText = err.message || 'Error al enviar la solicitud';
         console.error('Error creando SolicitudAdopcion', err);
       });
     });
