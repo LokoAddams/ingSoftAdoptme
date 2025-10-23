@@ -228,17 +228,55 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "3bb997c36184564be0620a6d21f0a4139f62deee",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-10-23T07:41:13.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into SolicitudAdopcion",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/3bb997c36184564be0620a6d21f0a4139f62deee"
     },
     "stats": {
       "total": 56,
       "additions": 56,
       "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-10-23T07:44:03.000Z",
+      "message": "fix: Arreglo Pruebas",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 45,
+      "additions": 18,
+      "deletions": 27,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T07:45:42.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into SolicitudAdopcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 37,
+      "additions": 18,
+      "deletions": 19,
       "date": "2025-10-23"
     },
     "coverage": 100,
