@@ -209,17 +209,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "b4ec9cfe77185a64e3b8a6285608c432bdc68357",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-10-23T07:31:07.000Z",
       "message": "feat: Implementacion Grafica de Marcar Estados",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/b4ec9cfe77185a64e3b8a6285608c432bdc68357"
     },
     "stats": {
       "total": 33,
       "additions": 33,
       "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-10-23T07:44:03.000Z",
+      "message": "fix: Arreglo Pruebas",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 45,
+      "additions": 18,
+      "deletions": 27,
       "date": "2025-10-23"
     },
     "coverage": 100,
