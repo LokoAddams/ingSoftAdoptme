@@ -1,0 +1,21 @@
+[
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T03:47:15.000Z",
+      "message": "chore: Instalación de dependencias y proyecto base",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 27530,
+      "additions": 4410,
+      "deletions": 23120,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  }
+]
