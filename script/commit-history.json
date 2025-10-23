@@ -323,16 +323,35 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c817337b7f52b10be674ff61e2e5d924f60f57ed",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-10-23T07:55:52.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into explorarMascotas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/c817337b7f52b10be674ff61e2e5d924f60f57ed"
     },
     "stats": {
       "total": 192,
       "additions": 192,
+      "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 9,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-10-23T08:07:21.000Z",
+      "message": "Feat: Link a la pagina de exploracion de Mascotas",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 1,
+      "additions": 1,
       "deletions": 0,
       "date": "2025-10-23"
     },
