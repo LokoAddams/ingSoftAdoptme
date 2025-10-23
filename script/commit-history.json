@@ -171,12 +171,12 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "8934b868904343a039c43d43abd8da3abdb7119b",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-10-23T06:31:22.000Z",
       "message": "feat: Marca estado Disponible de la mascota",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/8934b868904343a039c43d43abd8da3abdb7119b"
     },
     "stats": {
       "total": 15,
@@ -186,6 +186,25 @@
     },
     "coverage": 100,
     "test_count": 2,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-10-23T06:38:46.000Z",
+      "message": "feat: Marca todos los estados posibles de la mascota",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 14,
+      "additions": 13,
+      "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 4,
     "failed_tests": 0,
     "conclusion": "success"
   }
