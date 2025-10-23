@@ -171,12 +171,12 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "f94c746884b084a13d070326ed8acd9800a8d90d",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-10-23T05:29:14.000Z",
       "message": "Fix: Se borro pruebas cypress de Sumador que no son parte del poryecto",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/f94c746884b084a13d070326ed8acd9800a8d90d"
     },
     "stats": {
       "total": 10,
@@ -188,5 +188,24 @@
     "test_count": 0,
     "failed_tests": 0,
     "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T07:21:19.000Z",
+      "message": "feat: logica para crear solicitud de adopcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 62,
+      "additions": 61,
+      "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]
