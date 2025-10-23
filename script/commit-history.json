@@ -342,12 +342,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "18471b752fb3ca49a23c09353f1f4fe984dc689b",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-10-23T11:44:57.000Z",
       "message": "feat: mensaje no se puede crear una solicitud sin conexion a internet",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/18471b752fb3ca49a23c09353f1f4fe984dc689b"
     },
     "stats": {
       "total": 96,
@@ -372,6 +372,25 @@
       "total": 252,
       "additions": 225,
       "deletions": 27,
+      "date": "2025-10-23"
+    },
+    "coverage": 55.56,
+    "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T13:09:05.000Z",
+      "message": "fefactor: usar archivo css",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 101,
+      "additions": 0,
+      "deletions": 101,
       "date": "2025-10-23"
     },
     "coverage": 55.56,
