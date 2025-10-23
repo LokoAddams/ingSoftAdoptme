@@ -323,12 +323,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "770d88309b48a3e407fd2a0ae7593c31f905f2b0",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-10-23T09:17:11.000Z",
       "message": "feat: mensaje UI si la mascota NO esta disponible",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/770d88309b48a3e407fd2a0ae7593c31f905f2b0"
     },
     "stats": {
       "total": 34,
@@ -353,6 +353,25 @@
       "total": 96,
       "additions": 88,
       "deletions": 8,
+      "date": "2025-10-23"
+    },
+    "coverage": 55.56,
+    "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T13:07:18.000Z",
+      "message": "style: estilos css para formularios",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 252,
+      "additions": 225,
+      "deletions": 27,
       "date": "2025-10-23"
     },
     "coverage": 55.56,
