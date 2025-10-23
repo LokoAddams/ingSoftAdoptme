@@ -20,6 +20,17 @@
     <input type="file" id="documento" style="display: none;" />
     <div id="archivoSeleccionado"></div>
   </div>
+
+  <div id="MarcarEstado" style="display: none;">
+    <h2>ESTADO DELA MASCOTA REGISTRADA</h2>
+    <label for="en proceso">En proceso de ser adoptado</label>
+    <input type="radio" id="en proceso" name="estado" value="en proceso">
+    <label for="disponible">Disponible para adopción</label>
+    <input type="radio" id="disponible" name="estado" value="disponible">
+    <label for="adoptado">Adoptado</label>
+    <input type="radio" id="adoptado" name="estado" value="adoptado">
+    <div id="resultEstadoMarc"></div>
+  </div>
     <script type="module" src="./src/presenter.js"></script>
   </body>
 </html>
