@@ -190,17 +190,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "ef3d65f6a108f225f952e39071081cfc3648ac54",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-10-23T06:38:46.000Z",
       "message": "feat: Marca todos los estados posibles de la mascota",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/ef3d65f6a108f225f952e39071081cfc3648ac54"
     },
     "stats": {
       "total": 14,
       "additions": 13,
       "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-10-23T07:31:07.000Z",
+      "message": "feat: Implementacion Grafica de Marcar Estados",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 33,
+      "additions": 33,
+      "deletions": 0,
       "date": "2025-10-23"
     },
     "coverage": 100,

@@ -1,9 +1,15 @@
+import { MarcarEstado } from './MarcarEstado.js';
+
 const botonSubir = document.getElementById('subirDocumentoBtn');
 const archivoInput = document.getElementById('documento');
 const archivoSeleccionadoDiv = document.getElementById('archivoSeleccionado');
 
 const botonRegistrar = document.getElementById('registrarBtn');
 let registroMensajeDiv = document.getElementById('registroMensaje');
+const Estado = document.getElementById('MarcarEstado');
+
+const radios = document.querySelectorAll('input[name="estado"]');
+const result = document.getElementById('resultEstadoMarc');
 
 function mostrarArchivoSeleccionado() {
   if (!archivoSeleccionadoDiv) return;
@@ -52,6 +58,7 @@ function initPresenter() {
         mostrarMensajeRegistro('Por favor complete todos los campos antes de registrar');
       } else {
         mostrarMensajeRegistro('se registro correctamente');
+        Estado.style.display = 'block';
       }
     });
   }
@@ -66,6 +73,21 @@ function initPresenter() {
     registroMensajeDivPresent: !!registroMensajeDiv,
   };
 }
+
+
+ radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      const seleccionado = document.querySelector('input[name="estado"]:checked');
+
+      if (seleccionado) {
+        result.style.display = 'block'; 
+        result.textContent = `${MarcarEstado(seleccionado.value)}`;
+        console.log('Seleccionado:', seleccionado.value);
+      } else {
+        result.style.display = 'none'; 
+      }
+    });
+  });
 
 const _initResult = initPresenter();
 
