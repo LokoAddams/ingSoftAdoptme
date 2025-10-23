@@ -13,8 +13,12 @@ form.addEventListener("submit", (event) => {
 
     div.innerHTML += "<p>" + 
     mascota[0] + "<br>" +
-    mascota[1] + "<br>" +
     mascota[2] +
-    "</p><br>";
+    "</p>";
+    const imagen = document.createElement("img");
+    imagen.src = mascota[1];
+    imagen.alt = "Foto mascota disponible";
+    div.appendChild(imagen);
+    div.innerHTML += "<br>"
   }
 });
