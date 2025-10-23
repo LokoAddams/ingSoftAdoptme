@@ -1,16 +1,35 @@
 [
   {
-    "sha": "HEAD",
+    "sha": "740b6e3fa6c7ffdb3cfdd3a8aa6c91a9d6e92609",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-10-23T03:47:15.000Z",
       "message": "chore: Instalación de dependencias y proyecto base",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/740b6e3fa6c7ffdb3cfdd3a8aa6c91a9d6e92609"
     },
     "stats": {
       "total": 27530,
       "additions": 4410,
       "deletions": 23120,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T03:55:56.000Z",
+      "message": "feat: Interfaz visual para ver mascotas disponibles",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 17,
+      "additions": 16,
+      "deletions": 1,
       "date": "2025-10-23"
     },
     "coverage": 100,
