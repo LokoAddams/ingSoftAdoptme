@@ -247,12 +247,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "6a6aa6c2c7aa2f7c42253ce5b4032230e3d0157e",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-10-23T07:44:03.000Z",
       "message": "fix: Arreglo Pruebas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/6a6aa6c2c7aa2f7c42253ce5b4032230e3d0157e"
     },
     "stats": {
       "total": 45,
@@ -277,6 +277,25 @@
       "total": 37,
       "additions": 18,
       "deletions": 19,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T08:36:27.000Z",
+      "message": "refactor: Creacion de clases Adoptante y Mascota",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 67,
+      "additions": 55,
+      "deletions": 12,
       "date": "2025-10-23"
     },
     "coverage": 100,

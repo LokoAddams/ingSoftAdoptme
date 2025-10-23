@@ -1,5 +1,7 @@
+import Adoptante from "./Adoptante.js";
+
 class SolicitudAdopcion {
-  constructor(adoptante = null, mascota = null) {
+  constructor(adoptante , mascota ) {
     
     if (adoptante) this.adoptante = adoptante;
     if (mascota) this.mascota = mascota;
