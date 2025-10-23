@@ -209,54 +209,73 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "8934b868904343a039c43d43abd8da3abdb7119b",
+    "sha": "f94c746884b084a13d070326ed8acd9800a8d90d",
     "author": "JoseAB32",
     "commit": {
-      "date": "2025-10-23T06:31:22.000Z",
-      "message": "feat: Marca estado Disponible de la mascota",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/8934b868904343a039c43d43abd8da3abdb7119b"
+      "date": "2025-10-23T05:29:14.000Z",
+      "message": "Fix: Se borro pruebas cypress de Sumador que no son parte del poryecto",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/f94c746884b084a13d070326ed8acd9800a8d90d"
     },
     "stats": {
-      "total": 15,
-      "additions": 15,
-      "deletions": 0,
+      "total": 10,
+      "additions": 1,
+      "deletions": 9,
       "date": "2025-10-23"
     },
-    "coverage": 100,
-    "test_count": 2,
+    "coverage": 0,
+    "test_count": 0,
     "failed_tests": 0,
-    "conclusion": "success"
+    "conclusion": "neutral"
   },
   {
-    "sha": "ef3d65f6a108f225f952e39071081cfc3648ac54",
-    "author": "JoseAB32",
+    "sha": "fde591c6e58039802032d1de56b802d6f7ea0e60",
+    "author": "LokoAddams",
     "commit": {
-      "date": "2025-10-23T06:38:46.000Z",
-      "message": "feat: Marca todos los estados posibles de la mascota",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/ef3d65f6a108f225f952e39071081cfc3648ac54"
+      "date": "2025-10-23T07:21:19.000Z",
+      "message": "feat: logica para crear solicitud de adopcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/fde591c6e58039802032d1de56b802d6f7ea0e60"
     },
     "stats": {
-      "total": 14,
-      "additions": 13,
+      "total": 62,
+      "additions": 61,
       "deletions": 1,
       "date": "2025-10-23"
     },
     "coverage": 100,
-    "test_count": 4,
+    "test_count": 1,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
-    "sha": "b4ec9cfe77185a64e3b8a6285608c432bdc68357",
-    "author": "JoseAB32",
+    "sha": "2c1ed42d0ab241c7bab3edbbcae66a25b4c42274",
+    "author": "LokoAddams",
     "commit": {
-      "date": "2025-10-23T07:31:07.000Z",
-      "message": "feat: Implementacion Grafica de Marcar Estados",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/b4ec9cfe77185a64e3b8a6285608c432bdc68357"
+      "date": "2025-10-23T07:32:48.000Z",
+      "message": "feat: UI para crear solicitud de adopcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/2c1ed42d0ab241c7bab3edbbcae66a25b4c42274"
     },
     "stats": {
-      "total": 33,
-      "additions": 33,
+      "total": 132,
+      "additions": 132,
+      "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "3bb997c36184564be0620a6d21f0a4139f62deee",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T07:41:13.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into SolicitudAdopcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/3bb997c36184564be0620a6d21f0a4139f62deee"
+    },
+    "stats": {
+      "total": 56,
+      "additions": 56,
       "deletions": 0,
       "date": "2025-10-23"
     },
@@ -285,21 +304,40 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
-    "author": "Vanessa745",
+    "sha": "415ba29804a680d40830f8ee31c7d9374f85f29b",
+    "author": "LokoAddams",
     "commit": {
-      "date": "2025-10-23T07:53:31.000Z",
-      "message": "Merge remote-tracking branch 'origin/main' into explorarMascotas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "date": "2025-10-23T07:45:42.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into SolicitudAdopcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/415ba29804a680d40830f8ee31c7d9374f85f29b"
     },
     "stats": {
-      "total": 102,
-      "additions": 75,
-      "deletions": 27,
+      "total": 37,
+      "additions": 18,
+      "deletions": 19,
       "date": "2025-10-23"
     },
     "coverage": 100,
-    "test_count": 8,
+    "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T07:55:52.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into explorarMascotas",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 192,
+      "additions": 192,
+      "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 9,
     "failed_tests": 0,
     "conclusion": "success"
   }
