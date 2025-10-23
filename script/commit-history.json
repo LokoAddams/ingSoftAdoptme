@@ -285,12 +285,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "fdf3372ba00f000efdc365466606b1e2ff56c0d7",
+    "sha": "6a6aa6c2c7aa2f7c42253ce5b4032230e3d0157e",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-10-23T07:44:03.000Z",
       "message": "fix: Arreglo Pruebas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/fdf3372ba00f000efdc365466606b1e2ff56c0d7"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/6a6aa6c2c7aa2f7c42253ce5b4032230e3d0157e"
     },
     "stats": {
       "total": 45,
@@ -304,12 +304,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "415ba29804a680d40830f8ee31c7d9374f85f29b",
+    "sha": "db9febd5974c34337658c5912a89e5a068cfdbb4",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-10-23T07:45:42.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into SolicitudAdopcion",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/415ba29804a680d40830f8ee31c7d9374f85f29b"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/db9febd5974c34337658c5912a89e5a068cfdbb4"
     },
     "stats": {
       "total": 37,
@@ -323,192 +323,154 @@
     "conclusion": "success"
   },
   {
-    "sha": "c817337b7f52b10be674ff61e2e5d924f60f57ed",
-    "author": "Vanessa745",
+    "sha": "ad234ea0bc06a4f1ee587304e9f07deb8e114c5d",
+    "author": "LokoAddams",
     "commit": {
-      "date": "2025-10-23T07:55:52.000Z",
-      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into explorarMascotas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/c817337b7f52b10be674ff61e2e5d924f60f57ed"
+      "date": "2025-10-23T08:36:27.000Z",
+      "message": "refactor: Creacion de clases Adoptante y Mascota",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/ad234ea0bc06a4f1ee587304e9f07deb8e114c5d"
     },
     "stats": {
-      "total": 192,
-      "additions": 192,
-      "deletions": 0,
+      "total": 67,
+      "additions": 55,
+      "deletions": 12,
       "date": "2025-10-23"
     },
     "coverage": 100,
-    "test_count": 9,
+    "test_count": 4,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
-    "sha": "4b597fe490e645832e406be3a254bc8760e1bbac",
-    "author": "JoseAB32",
+    "sha": "7eaf5ab7ad02aa5d3d928656e2e532732f5f6b86",
+    "author": "LokoAddams",
     "commit": {
-      "date": "2025-10-23T08:07:21.000Z",
-      "message": "Feat: Link a la pagina de exploracion de Mascotas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/4b597fe490e645832e406be3a254bc8760e1bbac"
+      "date": "2025-10-23T09:09:12.000Z",
+      "message": "feat: si la mascota NO esta disponible no crear solicitud de adopcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/7eaf5ab7ad02aa5d3d928656e2e532732f5f6b86"
     },
     "stats": {
-      "total": 1,
-      "additions": 1,
-      "deletions": 0,
-      "date": "2025-10-23"
-    },
-    "coverage": 100,
-    "test_count": 9,
-    "failed_tests": 0,
-    "conclusion": "success"
-  },
-  {
-    "sha": "e2f049c717adeff6ac49d15cead7701bb2e4aeae",
-    "author": "JoseAB32",
-    "commit": {
-      "date": "2025-10-23T08:18:48.000Z",
-      "message": "refact: Se reacomodo la visualizacion de Formularios",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/e2f049c717adeff6ac49d15cead7701bb2e4aeae"
-    },
-    "stats": {
-      "total": 35,
-      "additions": 17,
-      "deletions": 18,
-      "date": "2025-10-23"
-    },
-    "coverage": 100,
-    "test_count": 9,
-    "failed_tests": 0,
-    "conclusion": "success"
-  },
-  {
-    "sha": "669233650c88dfe0afb0a3a8a56e9cc149c7bbc9",
-    "author": "Vanessa745",
-    "commit": {
-      "date": "2025-10-23T11:47:49.000Z",
-      "message": "feat: Ver información de mascota si no hay conexión a internet estable",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/669233650c88dfe0afb0a3a8a56e9cc149c7bbc9"
-    },
-    "stats": {
-      "total": 28,
-      "additions": 26,
-      "deletions": 2,
-      "date": "2025-10-23"
-    },
-    "coverage": 100,
-    "test_count": 10,
-    "failed_tests": 0,
-    "conclusion": "success"
-  },
-  {
-    "sha": "126080184616200b06a25e9fa6f7483e08175152",
-    "author": "Vanessa745",
-    "commit": {
-      "date": "2025-10-23T11:51:59.000Z",
-      "message": "refactor: Ver información de mascota si no hay conexión a internet estable",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/126080184616200b06a25e9fa6f7483e08175152"
-    },
-    "stats": {
-      "total": 8,
-      "additions": 5,
-      "deletions": 3,
-      "date": "2025-10-23"
-    },
-    "coverage": 100,
-    "test_count": 10,
-    "failed_tests": 0,
-    "conclusion": "success"
-  },
-  {
-    "sha": "5a5fe505e600e60e5ab7db52aa3e9bb8e7e256c4",
-    "author": "Vanessa745",
-    "commit": {
-      "date": "2025-10-23T11:58:50.000Z",
-      "message": "feat: Ver información de mascota",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/5a5fe505e600e60e5ab7db52aa3e9bb8e7e256c4"
-    },
-    "stats": {
-      "total": 10,
-      "additions": 9,
+      "total": 38,
+      "additions": 37,
       "deletions": 1,
       "date": "2025-10-23"
     },
     "coverage": 100,
-    "test_count": 11,
+    "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
-    "sha": "81e8d50440df568edd73642060a8af8d38a77b5a",
-    "author": "Vanessa745",
+    "sha": "770d88309b48a3e407fd2a0ae7593c31f905f2b0",
+    "author": "LokoAddams",
     "commit": {
-      "date": "2025-10-23T12:09:01.000Z",
-      "message": "feat: Ver información de mascota a partir de su nombre.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/81e8d50440df568edd73642060a8af8d38a77b5a"
+      "date": "2025-10-23T09:17:11.000Z",
+      "message": "feat: mensaje UI si la mascota NO esta disponible",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/770d88309b48a3e407fd2a0ae7593c31f905f2b0"
     },
     "stats": {
-      "total": 17,
-      "additions": 12,
-      "deletions": 5,
+      "total": 34,
+      "additions": 33,
+      "deletions": 1,
       "date": "2025-10-23"
     },
     "coverage": 100,
-    "test_count": 11,
+    "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
-    "sha": "5b3ba730a0d65181be74cb66ba29d0eae2b19a17",
-    "author": "Vanessa745",
+    "sha": "18471b752fb3ca49a23c09353f1f4fe984dc689b",
+    "author": "LokoAddams",
     "commit": {
-      "date": "2025-10-23T12:42:47.000Z",
-      "message": "feat: Implementación de detalleMascota.html",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/5b3ba730a0d65181be74cb66ba29d0eae2b19a17"
+      "date": "2025-10-23T11:44:57.000Z",
+      "message": "feat: mensaje no se puede crear una solicitud sin conexion a internet",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/18471b752fb3ca49a23c09353f1f4fe984dc689b"
     },
     "stats": {
-      "total": 32,
-      "additions": 32,
-      "deletions": 0,
+      "total": 96,
+      "additions": 88,
+      "deletions": 8,
       "date": "2025-10-23"
     },
-    "coverage": 100,
-    "test_count": 11,
+    "coverage": 55.56,
+    "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
-    "sha": "67d24acfed90b32a65d7230c7b154b03f0da0abd",
-    "author": "Vanessa745",
+    "sha": "51ff717b1ecf1bad34583bf1b3f9f0a652dd3d59",
+    "author": "LokoAddams",
     "commit": {
-      "date": "2025-10-23T13:46:40.000Z",
-      "message": "feat: Conexión de lista de mascotas disponibles a detalles de mascota",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/67d24acfed90b32a65d7230c7b154b03f0da0abd"
+      "date": "2025-10-23T13:07:18.000Z",
+      "message": "style: estilos css para formularios",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/51ff717b1ecf1bad34583bf1b3f9f0a652dd3d59"
     },
     "stats": {
-      "total": 42,
-      "additions": 26,
-      "deletions": 16,
+      "total": 252,
+      "additions": 225,
+      "deletions": 27,
       "date": "2025-10-23"
     },
-    "coverage": 100,
-    "test_count": 11,
+    "coverage": 55.56,
+    "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "a97a1fd6d9d1dfe6175e7eeb99a5f0540e83866f",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T13:09:05.000Z",
+      "message": "fefactor: usar archivo css",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a97a1fd6d9d1dfe6175e7eeb99a5f0540e83866f"
+    },
+    "stats": {
+      "total": 101,
+      "additions": 0,
+      "deletions": 101,
+      "date": "2025-10-23"
+    },
+    "coverage": 55.56,
+    "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
   },
   {
     "sha": "HEAD",
-    "author": "Vanessa745",
+    "author": "LokoAddams",
     "commit": {
-      "date": "2025-10-23T13:56:18.000Z",
-      "message": "refactor: Ver detalle de mascota por su nombre",
+      "date": "2025-10-23T15:51:25.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into SolicitudAdopcion",
       "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
     },
     "stats": {
-      "total": 31,
-      "additions": 19,
+      "total": 204,
+      "additions": 197,
+      "deletions": 7,
+      "date": "2025-10-23"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T16:10:43.000Z",
+      "message": "Merge",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 30,
+      "additions": 18,
       "deletions": 12,
       "date": "2025-10-23"
     },
-    "coverage": 100,
-    "test_count": 11,
+    "coverage": 66.67,
+    "test_count": 12,
     "failed_tests": 0,
     "conclusion": "success"
   }
