@@ -1,5 +1,119 @@
 [
   {
+    "sha": "754cc6e7c527cb2cbfe59c7627c692ccb653417a",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-21T14:02:21.000Z",
+      "message": "feat: DescripcionBasica creada.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/754cc6e7c527cb2cbfe59c7627c692ccb653417a"
+    },
+    "stats": {
+      "total": 10,
+      "additions": 4,
+      "deletions": 6,
+      "date": "2025-10-21"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "a52abc4bf84efdecbf342b2710463b42043870e4",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-21T14:16:05.000Z",
+      "message": "fix: Se descomento la parte de cypress.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a52abc4bf84efdecbf342b2710463b42043870e4"
+    },
+    "stats": {
+      "total": 10,
+      "additions": 5,
+      "deletions": 5,
+      "date": "2025-10-21"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "091089be5c6b488c160f80be41968384ff68af62",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-23T03:26:16.000Z",
+      "message": "feat: Se creo el boton de seleccionar archivo.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/091089be5c6b488c160f80be41968384ff68af62"
+    },
+    "stats": {
+      "total": 28,
+      "additions": 18,
+      "deletions": 10,
+      "date": "2025-10-23"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "a67c04095409feba8df84042617db39a3bedebdc",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-23T03:29:01.000Z",
+      "message": "feat: Se creo la funcionalidad de ver el nombre del archivo seleccionado.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a67c04095409feba8df84042617db39a3bedebdc"
+    },
+    "stats": {
+      "total": 4527,
+      "additions": 2082,
+      "deletions": 2445,
+      "date": "2025-10-23"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "033a05d83e79219071830aa622fad8d8839ead7d",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-23T03:29:55.000Z",
+      "message": "feat: Se creo la funcionalidad de abrir el selector de archivos.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/033a05d83e79219071830aa622fad8d8839ead7d"
+    },
+    "stats": {
+      "total": 31,
+      "additions": 31,
+      "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "ac75e6131e7ac3467af844843febc441637c6749",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-23T03:37:34.000Z",
+      "message": "feat:Se crearon los apartados para los datos a la hora de registrarse.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/ac75e6131e7ac3467af844843febc441637c6749"
+    },
+    "stats": {
+      "total": 31,
+      "additions": 22,
+      "deletions": 9,
+      "date": "2025-10-23"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
     "sha": "740b6e3fa6c7ffdb3cfdd3a8aa6c91a9d6e92609",
     "author": "Vanessa745",
     "commit": {
@@ -19,6 +133,25 @@
     "conclusion": "success"
   },
   {
+    "sha": "df27e09350c0536170f5a222360fede25d73d45c",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-23T03:49:50.000Z",
+      "message": "feat:Se agrego que al hacer click en registrar salga se registro correctamente.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/df27e09350c0536170f5a222360fede25d73d45c"
+    },
+    "stats": {
+      "total": 45,
+      "additions": 40,
+      "deletions": 5,
+      "date": "2025-10-23"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
     "sha": "ee1d611c781c74f97c34f169aabefa57d87d5c82",
     "author": "Vanessa745",
     "commit": {
@@ -36,6 +169,44 @@
     "test_count": 1,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "20661154901f6d4d2221382e004aa90d8e2a28a0",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-23T03:55:56.000Z",
+      "message": "Feat: Se agrego la notificacion cuando no completa los datos de registro.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/20661154901f6d4d2221382e004aa90d8e2a28a0"
+    },
+    "stats": {
+      "total": 20,
+      "additions": 19,
+      "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-23T04:00:21.000Z",
+      "message": "fix: Se arreglo la parte de sumador.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 12,
+      "additions": 2,
+      "deletions": 10,
+      "date": "2025-10-23"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
   },
   {
     "sha": "90a0e7328405b2a174c8710cb0d3d161d5b109fd",
@@ -228,12 +399,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "4fd26ff554e308af07183de560498dd52df16a1d",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-10-23T05:55:29.000Z",
       "message": "refactor: Creación página explorarMascotas.html e implementación de lo desarrollado",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/4fd26ff554e308af07183de560498dd52df16a1d"
     },
     "stats": {
       "total": 90,
@@ -243,6 +414,25 @@
     },
     "coverage": 100,
     "test_count": 6,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T06:48:57.000Z",
+      "message": "Mergeo con rama principal en explorarMascotas",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 25716,
+      "additions": 22083,
+      "deletions": 3633,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
   }
