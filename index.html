@@ -15,6 +15,22 @@
       <button id="registrarBtn">Registrar</button>
   </div>
 
+  <div class="SeleccionarArchivo-form">
+    <button id="subirDocumentoBtn">Subir Documento</button>
+    <input type="file" id="documento" style="display: none;" />
+    <div id="archivoSeleccionado"></div>
+  </div>
+  <div id="MarcarEstado" style="display: none;">
+    <h2>ESTADO DELA MASCOTA REGISTRADA</h2>
+    <label for="en proceso">En proceso de ser adoptado</label>
+    <input type="radio" id="en proceso" name="estado" value="en proceso">
+    <label for="disponible">Disponible para adopción</label>
+    <input type="radio" id="disponible" name="estado" value="disponible">
+    <label for="adoptado">Adoptado</label>
+    <input type="radio" id="adoptado" name="estado" value="adoptado">
+    <div id="resultEstadoMarc"></div>
+  </div>
+
   <div class="SolicitudAdopcion-form" style="margin-top:24px; padding:12px; border:1px solid #ddd; max-width:520px;">
     <h2>Solicitud de Adopción</h2>
     <fieldset style="border:0; padding:0; margin:0 0 12px 0;">
@@ -26,7 +42,7 @@
       <div style="margin:6px 0;">
         <input type="tel" id="adoptanteTelefono" placeholder="Teléfono" style="width:100%;" />
       </div>
-
+      
       <details style="margin-top:8px;">
         <summary style="cursor:pointer;">Cuestionario (expandir)</summary>
         <div style="margin-top:8px;">
@@ -59,23 +75,6 @@
       <button id="limpiarSolicitudBtn" type="button">Limpiar</button>
     </div>
     <div id="solicitudMensaje" style="margin-top:8px; color:green;"></div>
-  </div>
-
-  <div class="SeleccionarArchivo-form">
-    <button id="subirDocumentoBtn">Subir Documento</button>
-    <input type="file" id="documento" style="display: none;" />
-    <div id="archivoSeleccionado"></div>
-  </div>
-
-  <div id="MarcarEstado" style="display: none;">
-    <h2>ESTADO DELA MASCOTA REGISTRADA</h2>
-    <label for="en proceso">En proceso de ser adoptado</label>
-    <input type="radio" id="en proceso" name="estado" value="en proceso">
-    <label for="disponible">Disponible para adopción</label>
-    <input type="radio" id="disponible" name="estado" value="disponible">
-    <label for="adoptado">Adoptado</label>
-    <input type="radio" id="adoptado" name="estado" value="adoptado">
-    <div id="resultEstadoMarc"></div>
   </div>
     <script type="module" src="./src/presenter.js"></script>
   </body>

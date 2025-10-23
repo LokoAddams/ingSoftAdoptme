@@ -342,17 +342,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "4b597fe490e645832e406be3a254bc8760e1bbac",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-10-23T08:07:21.000Z",
       "message": "Feat: Link a la pagina de exploracion de Mascotas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/4b597fe490e645832e406be3a254bc8760e1bbac"
     },
     "stats": {
       "total": 1,
       "additions": 1,
       "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 9,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-10-23T08:18:48.000Z",
+      "message": "refact: Se reacomodo la visualizacion de Formularios",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 35,
+      "additions": 17,
+      "deletions": 18,
       "date": "2025-10-23"
     },
     "coverage": 100,
