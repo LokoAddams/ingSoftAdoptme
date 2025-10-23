@@ -61,7 +61,7 @@ describe("Ver mascota (la conexión no es estable).", () => {
 // Si el ciudadano no cuenta con una conexión de internet estable al hacer click en la mascota, se mostrará 
 // el mensaje “Revise su conexión a internet.”.
 
-describe("Ver información de mascota di no hay conexión estable.", () => {
+describe("Ver información de mascota si no hay conexión estable.", () => {
   it("deberia mostrar 'Revise su conexión a internet.'", () => {
     expect(verDetalleMas()).toEqual("Revise su conexión a internet.");
   });
