@@ -190,17 +190,36 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "fde591c6e58039802032d1de56b802d6f7ea0e60",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-10-23T07:21:19.000Z",
       "message": "feat: logica para crear solicitud de adopcion",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/fde591c6e58039802032d1de56b802d6f7ea0e60"
     },
     "stats": {
       "total": 62,
       "additions": 61,
       "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 1,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T07:32:48.000Z",
+      "message": "feat: UI para crear solicitud de adopcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 132,
+      "additions": 132,
+      "deletions": 0,
       "date": "2025-10-23"
     },
     "coverage": 100,
