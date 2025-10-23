@@ -29,8 +29,8 @@ describe("Ver Mascota (si no hay mascotas disponibles en la lista).", () => {
   });
 });
 
-describe("Ver nombre de una Mascota.", () => {
-  it("deberia mostrar el nombre de la mascota que está en la lista.", () => {
-    expect(verMascotas(["Apolo"])).toEqual(["Apolo"]);
+describe("Ver nombre, imagen y facilitador de una Mascota.", () => {
+  it("deberia mostrar el nombre, imagen y facilitador de la mascota que está en la lista.", () => {
+    expect(verMascotas([["Apolo", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", "Centro Patitas al rescate"]])).toEqual([["Apolo", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", "Centro Patitas al rescate"]]);
   });
 });
