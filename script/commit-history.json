@@ -266,12 +266,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "db9febd5974c34337658c5912a89e5a068cfdbb4",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-10-23T07:45:42.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into SolicitudAdopcion",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/db9febd5974c34337658c5912a89e5a068cfdbb4"
     },
     "stats": {
       "total": 37,
@@ -300,6 +300,25 @@
     },
     "coverage": 100,
     "test_count": 4,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T09:09:12.000Z",
+      "message": "feat: si la mascota NO esta disponible no crear solicitud de adopcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 38,
+      "additions": 37,
+      "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 5,
     "failed_tests": 0,
     "conclusion": "success"
   }
