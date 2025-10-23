@@ -28,3 +28,9 @@ describe("Ver Mascota (si no hay mascotas disponibles en la lista).", () => {
     expect(verMascotas([])).toEqual("Lo siento, por el momento no hay mascotas disponibles.");
   });
 });
+
+describe("Ver nombre de una Mascota.", () => {
+  it("deberia mostrar el nombre de la mascota que está en la lista.", () => {
+    expect(verMascotas(["Apolo"])).toEqual(["Apolo"]);
+  });
+});

@@ -6,5 +6,7 @@ const div = document.querySelector("#resultado-div");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  div.innerHTML = "<p>" + verMascotas([]) + "</p>";
+  const mascota = verMascotas(["Apolo"]);
+
+  div.innerHTML = "<p>" + mascota[0] + "</p>";
 });

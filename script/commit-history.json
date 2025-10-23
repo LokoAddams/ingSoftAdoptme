@@ -95,12 +95,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "187c0efda59ab4e99ffab15dee993cb078b44dbc",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-10-23T04:18:59.000Z",
       "message": "feat: Implementación de verMascotas en la interfaz",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/187c0efda59ab4e99ffab15dee993cb078b44dbc"
     },
     "stats": {
       "total": 4,
@@ -110,6 +110,25 @@
     },
     "coverage": 100,
     "test_count": 3,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T04:37:27.000Z",
+      "message": "feat: Ver nombre de una mascota que esta en la lista",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 12,
+      "additions": 11,
+      "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 4,
     "failed_tests": 0,
     "conclusion": "success"
   }
