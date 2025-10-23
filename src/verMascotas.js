@@ -10,9 +10,16 @@ function verMascotas(lista = [], hayConexion = true) {
     }
 }
 
-function verDetalleMas(hayConexion = false) {
+function verDetalleMas(hayConexion = false, nomMas, mascotasInfo) {
     if (hayConexion) {
-        return ["Apolo", "Perruno", "Pitbull", 2, "Macho", "Disponible", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg"];
+        let mascota;
+
+        for (let i = 0; i<mascotasInfo.length; i++) {
+            mascota = mascotasInfo[i];
+            if(mascota[0] == nomMas){
+                return mascota;
+            }
+        }
     } else {
         return "Revise su conexión a internet.";
     }

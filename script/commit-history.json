@@ -418,17 +418,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "5a5fe505e600e60e5ab7db52aa3e9bb8e7e256c4",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-10-23T11:58:50.000Z",
       "message": "feat: Ver información de mascota",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/5a5fe505e600e60e5ab7db52aa3e9bb8e7e256c4"
     },
     "stats": {
       "total": 10,
       "additions": 9,
       "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T12:09:01.000Z",
+      "message": "feat: Ver información de mascota a partir de su nombre.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 17,
+      "additions": 12,
+      "deletions": 5,
       "date": "2025-10-23"
     },
     "coverage": 100,
