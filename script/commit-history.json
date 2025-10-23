@@ -418,12 +418,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a97a1fd6d9d1dfe6175e7eeb99a5f0540e83866f",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-10-23T13:09:05.000Z",
       "message": "fefactor: usar archivo css",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a97a1fd6d9d1dfe6175e7eeb99a5f0540e83866f"
     },
     "stats": {
       "total": 101,
@@ -448,6 +448,25 @@
       "total": 204,
       "additions": 197,
       "deletions": 7,
+      "date": "2025-10-23"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-10-23T16:10:43.000Z",
+      "message": "Merge",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 30,
+      "additions": 18,
+      "deletions": 12,
       "date": "2025-10-23"
     },
     "coverage": 66.67,
