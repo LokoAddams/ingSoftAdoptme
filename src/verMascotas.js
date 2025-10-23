@@ -10,4 +10,19 @@ function verMascotas(lista = [], hayConexion = true) {
     }
 }
 
-export {verMascotas};
+function verDetalleMas(hayConexion = false, nomMas, mascotasInfo) {
+    if (hayConexion) {
+        let mascota;
+
+        for (let i = 0; i<mascotasInfo.length; i++) {
+            mascota = mascotasInfo[i];
+            if(mascota[0] == nomMas){
+                return mascota;
+            }
+        }
+    } else {
+        return "Revise su conexión a internet.";
+    }
+}
+
+export {verMascotas, verDetalleMas};

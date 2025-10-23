@@ -361,12 +361,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e2f049c717adeff6ac49d15cead7701bb2e4aeae",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-10-23T08:18:48.000Z",
       "message": "refact: Se reacomodo la visualizacion de Formularios",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/e2f049c717adeff6ac49d15cead7701bb2e4aeae"
     },
     "stats": {
       "total": 35,
@@ -376,6 +376,139 @@
     },
     "coverage": 100,
     "test_count": 9,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "669233650c88dfe0afb0a3a8a56e9cc149c7bbc9",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T11:47:49.000Z",
+      "message": "feat: Ver información de mascota si no hay conexión a internet estable",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/669233650c88dfe0afb0a3a8a56e9cc149c7bbc9"
+    },
+    "stats": {
+      "total": 28,
+      "additions": 26,
+      "deletions": 2,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "126080184616200b06a25e9fa6f7483e08175152",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T11:51:59.000Z",
+      "message": "refactor: Ver información de mascota si no hay conexión a internet estable",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/126080184616200b06a25e9fa6f7483e08175152"
+    },
+    "stats": {
+      "total": 8,
+      "additions": 5,
+      "deletions": 3,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "5a5fe505e600e60e5ab7db52aa3e9bb8e7e256c4",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T11:58:50.000Z",
+      "message": "feat: Ver información de mascota",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/5a5fe505e600e60e5ab7db52aa3e9bb8e7e256c4"
+    },
+    "stats": {
+      "total": 10,
+      "additions": 9,
+      "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "81e8d50440df568edd73642060a8af8d38a77b5a",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T12:09:01.000Z",
+      "message": "feat: Ver información de mascota a partir de su nombre.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/81e8d50440df568edd73642060a8af8d38a77b5a"
+    },
+    "stats": {
+      "total": 17,
+      "additions": 12,
+      "deletions": 5,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "5b3ba730a0d65181be74cb66ba29d0eae2b19a17",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T12:42:47.000Z",
+      "message": "feat: Implementación de detalleMascota.html",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/5b3ba730a0d65181be74cb66ba29d0eae2b19a17"
+    },
+    "stats": {
+      "total": 32,
+      "additions": 32,
+      "deletions": 0,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "67d24acfed90b32a65d7230c7b154b03f0da0abd",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T13:46:40.000Z",
+      "message": "feat: Conexión de lista de mascotas disponibles a detalles de mascota",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/67d24acfed90b32a65d7230c7b154b03f0da0abd"
+    },
+    "stats": {
+      "total": 42,
+      "additions": 26,
+      "deletions": 16,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T13:56:18.000Z",
+      "message": "refactor: Ver detalle de mascota por su nombre",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 31,
+      "additions": 19,
+      "deletions": 12,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 11,
     "failed_tests": 0,
     "conclusion": "success"
   }
