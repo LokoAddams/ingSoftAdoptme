@@ -66,3 +66,9 @@ describe("Ver información de mascota si no hay conexión estable.", () => {
     expect(verDetalleMas()).toEqual("Revise su conexión a internet.");
   });
 });
+
+describe("Ver información de mascota.", () => {
+  it("deberia mostrar la información de las mascota", () => {
+    expect(verDetalleMas(true)).toEqual(["Apolo", "Perruno", "Pitbull", 2, "Macho", "Disponible", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg"]);
+  });
+});

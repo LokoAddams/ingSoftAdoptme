@@ -399,12 +399,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "126080184616200b06a25e9fa6f7483e08175152",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-10-23T11:51:59.000Z",
       "message": "refactor: Ver información de mascota si no hay conexión a internet estable",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/126080184616200b06a25e9fa6f7483e08175152"
     },
     "stats": {
       "total": 8,
@@ -414,6 +414,25 @@
     },
     "coverage": 100,
     "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T11:58:50.000Z",
+      "message": "feat: Ver información de mascota",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 10,
+      "additions": 9,
+      "deletions": 1,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 11,
     "failed_tests": 0,
     "conclusion": "success"
   }

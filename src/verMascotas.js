@@ -11,7 +11,9 @@ function verMascotas(lista = [], hayConexion = true) {
 }
 
 function verDetalleMas(hayConexion = false) {
-    if (!hayConexion) {
+    if (hayConexion) {
+        return ["Apolo", "Perruno", "Pitbull", 2, "Macho", "Disponible", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg"];
+    } else {
         return "Revise su conexión a internet.";
     }
 }
