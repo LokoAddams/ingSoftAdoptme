@@ -57,17 +57,36 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "a67c04095409feba8df84042617db39a3bedebdc",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-10-23T03:29:01.000Z",
       "message": "feat: Se creo la funcionalidad de ver el nombre del archivo seleccionado.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a67c04095409feba8df84042617db39a3bedebdc"
     },
     "stats": {
       "total": 4527,
       "additions": 2082,
       "deletions": 2445,
+      "date": "2025-10-23"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-10-23T03:29:55.000Z",
+      "message": "feat: Se creo la funcionalidad de abrir el selector de archivos.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 31,
+      "additions": 31,
+      "deletions": 0,
       "date": "2025-10-23"
     },
     "coverage": 0,
