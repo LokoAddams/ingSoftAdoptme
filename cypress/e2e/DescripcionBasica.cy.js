@@ -20,4 +20,12 @@ describe('File Upload Test', () => {
         cy.get('#subirDocumentoBtn').click()
         cy.get('input[type="file"]').should('be.visible')
     });
-})
+    it('Deberia encontrar los elementos de registrarse', () => {
+        cy.get('#nombre').should('exist')
+        cy.get('#especie').should('exist')
+        cy.get('#raza').should('exist')
+        cy.get('#sexo').should('exist')
+        cy.get('#edad').should('exist')
+        cy.get('#registrarBtn').should('exist')
+    }); 
+});
