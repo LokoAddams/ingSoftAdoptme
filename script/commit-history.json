@@ -190,12 +190,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "e05fb3bd9c4ae7dcefd0d06ef6cfa826571f3e44",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-10-23T05:21:11.000Z",
       "message": "feat: Verificar tipo de variable que devuelve verMascotas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/e05fb3bd9c4ae7dcefd0d06ef6cfa826571f3e44"
     },
     "stats": {
       "total": 27,
@@ -205,6 +205,25 @@
     },
     "coverage": 100,
     "test_count": 5,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-10-23T05:38:31.000Z",
+      "message": "feat: Mostrar mensaje 'Revise su conexión a internet.' si no hay conexión",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 21,
+      "additions": 16,
+      "deletions": 5,
+      "date": "2025-10-23"
+    },
+    "coverage": 100,
+    "test_count": 6,
     "failed_tests": 0,
     "conclusion": "success"
   }
