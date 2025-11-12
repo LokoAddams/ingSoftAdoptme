@@ -475,12 +475,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "56d61c0fdd6aee9e62b4085bbcf58783aad56d29",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-12T18:04:18.000Z",
       "message": "fix: Se arreglo la parte de registro.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/56d61c0fdd6aee9e62b4085bbcf58783aad56d29"
     },
     "stats": {
       "total": 77,
@@ -505,6 +505,25 @@
       "total": 572,
       "additions": 350,
       "deletions": 222,
+      "date": "2025-11-12"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-12T21:34:38.000Z",
+      "message": "fix: se arreglo.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 28,
+      "additions": 0,
+      "deletions": 28,
       "date": "2025-11-12"
     },
     "coverage": 66.67,
