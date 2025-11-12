@@ -3,23 +3,9 @@ describe('Test', () => {
         cy.visit('http://localhost:1234/descripcion-basica')
     })
 
-    // it('Deberia poder seleccionar un archivo', () => {
-    //     const fileName = 'test-image.jpg'
-    //     cy.get('input[type="file"]').attachFile(fileName)
-    //   cy.get('input[type="file"]').should('have.value', fileName)
-    // });
-    // it('Deberia mostrar el nombre del archivo seleccionado', () => {
-    //     const fileName = 'test-image.jpg'
-    //     cy.get('input[type="file"]').attachFile(fileName)
-    //     cy.get('#archivoSeleccionado').should('contain.text', `Archivo seleccionado: ${fileName}`)
-    // });
     it('Deberia mostrar mensaje cuando no hay archivo seleccionado', () => {
         cy.get('#archivoSeleccionado').should('contain.text', 'No hay archivo seleccionado')
     });
-    // it('Deberia abrir el selector de archivos al hacer click en el boton', () => {
-    //     cy.get('#subirDocumentoBtn').click()
-    //     cy.get('input[type="file"]').should('be.visible')
-    // });
     it('Deberia encontrar los elementos de registrarse', () => {
         cy.get('#nombre').should('exist')
         cy.get('#especie').should('exist')
@@ -35,10 +21,6 @@ describe('Test', () => {
         cy.get('#sexo').type('Macho').should('have.value', 'Macho')
         cy.get('#edad').type('3').should('have.value', '3')
     });
-    // it('Deberia mostrar mensaje de registro al hacer click en el boton registrar', () => {
-    //     cy.get('#registrarBtn').click()
-    //     cy.get('#registroMensaje').should('contain.text', 'se registro correctamente')
-    // });
     it('Deberia mostrar mensaje de falta completitud al intentar registrar sin llenar campos', () => {
         cy.get('#registrarBtn').click()
         cy.get('#registroMensaje').should('contain.text', 'Por favor complete todos los campos antes de registrar')
