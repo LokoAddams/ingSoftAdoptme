@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Registrar</title>
+</head>
+<body>
+    <h1>Registrar</h1>
+  <div class="Registrar-form">
+      <input type="text" id="nombre" placeholder="Nombre" />
+      <input type="especie" id="especie" placeholder="Especie" />
+      <input type="raza" id="raza" placeholder="Raza" />
+      <input type="sexo" id="sexo" placeholder="Sexo" />
+      <input type="edad" id="edad" placeholder="Edad" />
+      <button id="registrarBtn">Registrar</button>
+  </div>
+  <div class="SeleccionarArchivo-form">
+    <button id="subirDocumentoBtn">Subir Documento</button>
+    <input type="file" id="documento" style="display: none;" />
+    <div id="archivoSeleccionado"></div>
+  </div>
+    <div id="MarcarEstado" style="display: none;">
+      <h2>ESTADO DELA MASCOTA REGISTRADA</h2>
+      <label for="en proceso">En proceso de ser adoptado</label>
+      <input type="radio" id="en proceso" name="estado" value="en proceso">
+      <label for="disponible">Disponible para adopción</label>
+      <input type="radio" id="disponible" name="estado" value="disponible">
+      <label for="adoptado">Adoptado</label>
+      <input type="radio" id="adoptado" name="estado" value="adoptado">
+      <div id="resultEstadoMarc"></div>
+    </div>
+    
+</body>
+</html>
