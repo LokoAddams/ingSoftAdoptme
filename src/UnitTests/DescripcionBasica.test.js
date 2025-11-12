@@ -1,4 +1,4 @@
-import { MarcarEstado } from "./MarcarEstado";
+import { MarcarEstado } from "../MarcarEstado";
 
 describe('Pruebas para la función MarcarEstado', () => {
     it('Debería ser Marcar a la mascota como disponible', () => {

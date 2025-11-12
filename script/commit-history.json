@@ -437,12 +437,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "9b1735e136aac670045d4abdf3703050209c4585",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-10-23T15:51:25.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into SolicitudAdopcion",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/9b1735e136aac670045d4abdf3703050209c4585"
     },
     "stats": {
       "total": 204,
@@ -468,6 +468,25 @@
       "additions": 18,
       "deletions": 12,
       "date": "2025-10-23"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-12T18:22:01.000Z",
+      "message": "refactor: estructura de archivos",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 28,
+      "additions": 14,
+      "deletions": 14,
+      "date": "2025-11-12"
     },
     "coverage": 66.67,
     "test_count": 12,

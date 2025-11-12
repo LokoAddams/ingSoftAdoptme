@@ -1,4 +1,4 @@
-import { verMascotas } from "./verMascotas.js";
+import { verMascotas } from "../verMascotas.js";
 
 const form = document.querySelector("#verMasc-form");
 const div = document.querySelector("#resultado-div");
@@ -17,7 +17,7 @@ form.addEventListener("submit", (event) => {
       let mascota = mascotas[i];
 
       const a = document.createElement("a");
-      a.href = `./detalleMascota.html?nom=${encodeURIComponent(mascota[0])}`;
+      a.href = `detalleMascota.html?nom=${encodeURIComponent(mascota[0])}`;
       a.style.display = "block";     // para que se vea como tarjeta clickable
       a.style.cursor  = "pointer";
       a.style.textDecoration = "none";
