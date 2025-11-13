@@ -570,12 +570,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "fb15d0a85dd77a1fca74e41d5a584b39ed227b4a",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-12T21:34:38.000Z",
       "message": "fix: se arreglo.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/fb15d0a85dd77a1fca74e41d5a584b39ed227b4a"
     },
     "stats": {
       "total": 28,
@@ -619,6 +619,25 @@
       "total": 6,
       "additions": 3,
       "deletions": 3,
+      "date": "2025-11-13"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-13T05:07:34.000Z",
+      "message": "refactor: UI detalleMascota",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 101,
+      "additions": 85,
+      "deletions": 16,
       "date": "2025-11-13"
     },
     "coverage": 66.67,

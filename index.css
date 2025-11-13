@@ -95,3 +95,35 @@
 
   /* micro-interacciones */
   input:-webkit-autofill{ box-shadow:0 0 0 30px rgba(255,255,255,0.9) inset !important; }
+
+/* Ajustes para la página de detalle de mascota */
+#detalle-div{ padding:18px; max-width:680px; width:100%; box-sizing:border-box; }
+#detalle-div p{ margin:0; color:var(--electric-deep); font-weight:600; line-height:1.4; }
+#detalle-div img{ max-width:100%; height:auto; border-radius:12px; margin-top:12px; box-shadow:var(--shadow); display:block; }
+
+/* Si `#detalle-div` usa la clase del formulario, ajustamos algunos espacios */
+.SolicitudAdopcion-form #detalle-div{ padding:0; }
+
+/* Mejoras de tipografía y layout para detalle */
+.SolicitudAdopcion-form{ font-size:16px; }
+.detalle-info{ display:flex; flex-direction:column; gap:10px; margin-top:6px; }
+.detalle-item{ display:flex; justify-content:space-between; align-items:center; padding:10px; border-radius:10px; transition:background .12s ease, transform .12s ease, box-shadow .12s ease; }
+.detalle-item:hover{ background:rgba(14,165,255,0.04); transform:translateY(-3px); box-shadow:0 10px 28px rgba(2,6,23,0.06); }
+.detalle-label{ font-weight:700; color:var(--electric-deep); font-size:20px; }
+.detalle-value{ color:#0f172a; font-size:18px; font-weight:600; text-align:right; }
+.detalle-imagen{ max-width:100%; height:auto; border-radius:12px; margin-top:16px; box-shadow:var(--shadow); display:block; }
+
+/* Botón volver */
+/* Colocar el botón alineado con la tarjeta (izquierda del contenido centrado) */
+#backBtn{ background:transparent; border:1px solid rgba(14,165,255,0.14); color:var(--electric-deep); padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:700; margin-bottom:12px; align-self:flex-start; margin-left:calc(50% - 340px); }
+#backBtn:hover{ background:linear-gradient(90deg,var(--electric-blue), var(--electric-deep)); color:white; transform:translateY(-2px); }
+
+@media (max-width:520px){
+  .detalle-label{ font-size:18px; }
+  .detalle-value{ font-size:16px; }
+}
+
+/* Ajustes para pantallas pequeñas: evitar que el botón quede fuera de la pantalla */
+@media (max-width:760px){
+  #backBtn{ margin-left:16px; }
+}
