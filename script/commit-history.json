@@ -589,12 +589,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "09f09c69e5526a1235a2481309013fd7051875df",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-13T01:57:07.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/09f09c69e5526a1235a2481309013fd7051875df"
     },
     "stats": {
       "total": 600,
@@ -608,12 +608,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "09f09c69e5526a1235a2481309013fd7051875df",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-13T02:19:52.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/09f09c69e5526a1235a2481309013fd7051875df"
     },
     "stats": {
       "total": 6,
@@ -627,17 +627,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "33737a3ff402674962cd4f5d7ab8b3f68584349e",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-13T05:07:34.000Z",
       "message": "refactor: UI detalleMascota",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/33737a3ff402674962cd4f5d7ab8b3f68584349e"
     },
     "stats": {
       "total": 101,
       "additions": 85,
       "deletions": 16,
+      "date": "2025-11-13"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-13T05:07:56.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 220,
+      "additions": 118,
+      "deletions": 102,
       "date": "2025-11-13"
     },
     "coverage": 66.67,

@@ -1,6 +1,6 @@
 describe('Solicitud de Adopción UI', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:1234/')
+    cy.visit('http://localhost:1234/src/UI/FormSolicitudAdopcion.html')
   })
 
   it('Debería crear una SolicitudAdopcion al enviar el formulario', () => {
