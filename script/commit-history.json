@@ -513,12 +513,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "f4e2d10b0f6df4f995c67487a31f06069c01ec24",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-12T18:56:41.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme\nrefactor: estructura de archivos",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/f4e2d10b0f6df4f995c67487a31f06069c01ec24"
     },
     "stats": {
       "total": 249,
@@ -544,6 +544,63 @@
       "additions": 35,
       "deletions": 42,
       "date": "2025-11-12"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-12T19:30:41.000Z",
+      "message": "fix: arreglando descripcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 572,
+      "additions": 350,
+      "deletions": 222,
+      "date": "2025-11-12"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-12T21:34:38.000Z",
+      "message": "fix: se arreglo.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 28,
+      "additions": 0,
+      "deletions": 28,
+      "date": "2025-11-12"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-13T01:57:07.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 600,
+      "additions": 350,
+      "deletions": 250,
+      "date": "2025-11-13"
     },
     "coverage": 66.67,
     "test_count": 12,
