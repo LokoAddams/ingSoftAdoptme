@@ -532,12 +532,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "b753113ea62d61add6b95a259935c49d5afb5acb",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-12T19:03:28.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme\nrefactor: estructura de archivos",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/b753113ea62d61add6b95a259935c49d5afb5acb"
     },
     "stats": {
       "total": 77,
@@ -551,12 +551,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "487b619b670b0020cd5d050f67f082bb0fc581c6",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-12T19:30:41.000Z",
       "message": "fix: arreglando descripcion",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/487b619b670b0020cd5d050f67f082bb0fc581c6"
     },
     "stats": {
       "total": 572,
@@ -600,6 +600,25 @@
       "total": 600,
       "additions": 350,
       "deletions": 250,
+      "date": "2025-11-13"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-13T02:19:52.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 6,
+      "additions": 3,
+      "deletions": 3,
       "date": "2025-11-13"
     },
     "coverage": 66.67,
