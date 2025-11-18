@@ -684,17 +684,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "2b19fbce0a4ccacc961a7f51ac3ff0054d48eab4",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-18T13:23:04.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/2b19fbce0a4ccacc961a7f51ac3ff0054d48eab4"
     },
     "stats": {
       "total": 235,
       "additions": 207,
       "deletions": 28,
+      "date": "2025-11-18"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-18T13:28:50.000Z",
+      "message": "fix: Se resolvio conflictos.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 6,
+      "additions": 1,
+      "deletions": 5,
       "date": "2025-11-18"
     },
     "coverage": 66.67,
