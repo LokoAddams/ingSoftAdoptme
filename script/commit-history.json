@@ -741,12 +741,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0026285f519f6c4c80d53381a4754a35eeb72fa8",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-18T13:36:23.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/0026285f519f6c4c80d53381a4754a35eeb72fa8"
     },
     "stats": {
       "total": 44,
@@ -771,6 +771,25 @@
       "total": 37,
       "additions": 18,
       "deletions": 19,
+      "date": "2025-11-18"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-11-18T15:08:15.000Z",
+      "message": "refact: eliminación archivos inutilizados",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 96,
+      "additions": 0,
+      "deletions": 96,
       "date": "2025-11-18"
     },
     "coverage": 0,
