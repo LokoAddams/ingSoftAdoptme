@@ -665,17 +665,36 @@
     "conclusion": "success"
   },
   {
+    "sha": "50994ff8d2ea3c826b8e04099f9f19a781c83600",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-11-17T15:40:24.000Z",
+      "message": "style: implementación explorarMascotas.css",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/50994ff8d2ea3c826b8e04099f9f19a781c83600"
+    },
+    "stats": {
+      "total": 235,
+      "additions": 207,
+      "deletions": 28,
+      "date": "2025-11-17"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
     "sha": "HEAD",
     "author": "Adrian Claros",
     "commit": {
-      "date": "2025-11-18T13:13:51.000Z",
-      "message": "feat: Se agrego la seleccion predeterminada al registro.",
+      "date": "2025-11-18T13:23:04.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
       "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
     },
     "stats": {
-      "total": 78,
-      "additions": 58,
-      "deletions": 20,
+      "total": 235,
+      "additions": 207,
+      "deletions": 28,
       "date": "2025-11-18"
     },
     "coverage": 66.67,

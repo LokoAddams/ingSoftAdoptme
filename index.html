@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html xml:lang="es">
   <head>
     <title>Registrar</title>
@@ -6,11 +6,54 @@
   </head>
   <body>
     <a href="src/UI/explorarMascotas.html">EXPLORAR MASCOTAS</a>
-    <!-- <a href="detalleMascota.html">DETALLE MASCOTA</a> -->
+    <a href="detalleMascota.html">DETALLE MASCOTA</a> -->
     <a href="src/UI/RegistroMascota.html">REGISTRAR MASCOTA</a>
     <a href="src/UI/FormSolicitudAdopcion.html">REALIZAR SOLICITUD</a>
   
   
-    <script type="module" src="./src/presenter.js"></script>
+    
+  </body>
+</html> 
+
+<!DOCTYPE html>
+<html xml:lang="es">
+  <head>
+    <title>Lista de Mascotas Disponibles</title>
+    <link rel="stylesheet" href="src/UI/explorarMascotas.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  </head>
+  <!-- <body>
+    <h1>Ver Mascotas</h1>
+    <form id="verMasc-form">
+      <input type="submit" value="Ver Mascotas Disponibles" id="verMascotas-button" />
+    </form>
+    <div id="resultado-div"></div>
+
+    <script type="module" src="./explorarMascotasPresenter.js"></script>
+  </body> -->
+  <body>
+    <header>
+      <div id="cont-titulo">
+        Ver Mascotas Disponibles
+      </div>
+      <nav id="cont-nav">
+        <div id="cont-buscador">
+          <input type="text">
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div id="cont-links">
+          <ul>
+            <li><a href="./RegistroMascota.html">Descripción Básica</a></li>
+            <li><a href="src/UI/FormSolicitudAdopcion.html">Realizar Solicitud</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="resultado-div"></div>
+    </main>
+
+    <script type="module" src="src/UI/explorarMascotasPresenter.js"></script>
+    <!-- <script type="module" src="./src/presenter.js"></script> -->
   </body>
 </html>
