@@ -646,18 +646,37 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "802cb368f224e929531d705cc6ffff72348daba3",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-13T05:07:56.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/802cb368f224e929531d705cc6ffff72348daba3"
     },
     "stats": {
       "total": 220,
       "additions": 118,
       "deletions": 102,
       "date": "2025-11-13"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-18T13:13:51.000Z",
+      "message": "feat: Se agrego la seleccion predeterminada al registro.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 78,
+      "additions": 58,
+      "deletions": 20,
+      "date": "2025-11-18"
     },
     "coverage": 66.67,
     "test_count": 12,
