@@ -59,5 +59,19 @@ document.addEventListener('DOMContentLoaded', () => {
         imagen.alt = "Foto mascota disponible";
         imagen.className = 'detalle-imagen';
         detalleDiv.appendChild(imagen);
+
+        // Botón Adoptar dentro del contenedor de detalle
+        const adoptBtn = document.createElement('button');
+        adoptBtn.id = 'adoptBtn';
+        adoptBtn.type = 'button';
+        adoptBtn.className = 'adopt-btn';
+        adoptBtn.textContent = 'Adoptar';
+        // Navega a la pantalla de adopción (se crea `adoptarMascota.html` en src/UI)
+        const targetName = nomMas || detallesMas[0];
+        adoptBtn.addEventListener('click', () => {
+            const q = targetName ? ('?nom=' + encodeURIComponent(targetName)) : '';
+            window.location.href = './FormSolicitudAdopcion.html' + q;
+        });
+        detalleDiv.appendChild(adoptBtn);
     }
 });
