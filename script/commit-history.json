@@ -665,18 +665,37 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0b7346f19941a6f70db9ea0c05ad47763e26a5a6",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-11-17T15:40:24.000Z",
       "message": "style: implementación explorarMascotas.css",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/0b7346f19941a6f70db9ea0c05ad47763e26a5a6"
     },
     "stats": {
       "total": 235,
       "additions": 207,
       "deletions": 28,
       "date": "2025-11-17"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-18T13:19:32.000Z",
+      "message": "refact: UI detalleMascota redireccion a solicitud de adopcion",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 44,
+      "additions": 44,
+      "deletions": 0,
+      "date": "2025-11-18"
     },
     "coverage": 66.67,
     "test_count": 12,
