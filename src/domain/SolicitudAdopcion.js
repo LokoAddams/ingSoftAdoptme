@@ -1,4 +1,4 @@
-import Adoptante from "./Adoptante.js";
+import Adoptante from "./Adoptante";
 
 class SolicitudAdopcion {
   constructor(adoptante , mascota ) {

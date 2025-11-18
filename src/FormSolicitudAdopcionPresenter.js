@@ -32,9 +32,9 @@ if (botonEnviarSolicitud) {
       
       console.log("hola1");
       Promise.all([
-        import('../SolicitudAdopcion.js'),
-        import('../Adoptante.js'),
-        import('../Mascota.js')
+        import('./domain/SolicitudAdopcion.js'),
+        import('./domain/Adoptante.js'),
+        import('./domain/Mascota.js')
       ]).then(([{ default: SolicitudAdopcion }, { default: Adoptante }, { default: Mascota }]) => {
         (async () => {
           try {

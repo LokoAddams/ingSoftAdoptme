@@ -1,4 +1,4 @@
-import { verDetalleMas } from "../verMascotas.js";
+import { verDetalleMas } from "./services/verMascotas.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);

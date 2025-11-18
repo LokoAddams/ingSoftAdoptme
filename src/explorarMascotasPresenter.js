@@ -1,4 +1,4 @@
-import { verMascotas } from "../verMascotas.js";
+import { verMascotas } from "./services/verMascotas.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   event.preventDefault();
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let mascota = mascotas[i];
 
       const a = document.createElement("a");
-      a.href = `./src/UI/detalleMascota.html?nom=${encodeURIComponent(mascota[0])}`;
+      a.href = `./UI/detalleMascota.html?nom=${encodeURIComponent(mascota[0])}`;
       a.style.display = "block";     // para que se vea como tarjeta clickable
       a.style.cursor  = "pointer";
       a.style.textDecoration = "none";
