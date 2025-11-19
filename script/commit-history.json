@@ -912,12 +912,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "795b9cc331e1981a06ff527a1f59a64538bd6f1c",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-19T02:50:18.000Z",
       "message": "fix: Se arreglo algunas direcciiones de  testt..",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/795b9cc331e1981a06ff527a1f59a64538bd6f1c"
     },
     "stats": {
       "total": 4,
@@ -936,6 +936,25 @@
     "commit": {
       "date": "2025-11-19T02:51:07.000Z",
       "message": "fix: direccionamientos de test.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 2,
+      "additions": 1,
+      "deletions": 1,
+      "date": "2025-11-19"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T03:02:26.000Z",
+      "message": "fix: direccion en validarRegistro.",
       "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
     },
     "stats": {
