@@ -779,12 +779,12 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "9b42e9ec2f3d2abcd80fb02f9b4bc3d7d6b33771",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-11-18T15:08:15.000Z",
       "message": "refact: eliminación archivos inutilizados",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/9b42e9ec2f3d2abcd80fb02f9b4bc3d7d6b33771"
     },
     "stats": {
       "total": 96,
@@ -809,6 +809,25 @@
       "total": 92,
       "additions": 65,
       "deletions": 27,
+      "date": "2025-11-19"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T01:39:40.000Z",
+      "message": "Styles: Se agrego nuevos estilos a registro.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 20,
+      "additions": 20,
+      "deletions": 0,
       "date": "2025-11-19"
     },
     "coverage": 0,

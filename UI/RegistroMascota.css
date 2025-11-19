@@ -48,10 +48,30 @@
     background:rgba(255,255,255,0.9); outline:none; transition:box-shadow .15s ease, border-color .12s ease, transform .12s ease;
   }
 
+  /* Estilo para selects dentro del formulario para que coincidan con los inputs */
+  .Registrar-form select{
+    box-sizing:border-box; width:100%; padding:12px 14px; border-radius:10px; border:1px solid rgba(15,23,42,0.06);
+    background:rgba(255,255,255,0.9); outline:none; transition:box-shadow .15s ease, border-color .12s ease, transform .12s ease;
+    appearance: none; -webkit-appearance: none; -moz-appearance: none; cursor:pointer;
+    background-image: linear-gradient(45deg, transparent 50%, var(--electric-deep) 50%),
+                      linear-gradient(135deg, var(--electric-deep) 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(1em + 2px), calc(100% - 13px) calc(1em + 2px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+  }
+
   .Registrar-form input::placeholder{color:var(--muted);}
 
   .Registrar-form input:focus{
     border-color:var(--accent); box-shadow:0 6px 20px rgba(14,165,255,0.12); transform:translateY(-1px);
+  }
+
+  .Registrar-form select:focus{
+    border-color:var(--accent); box-shadow:0 6px 20px rgba(14,165,255,0.12); transform:translateY(-1px);
+  }
+
+  .Registrar-form label{
+    display:block; margin-bottom:6px; color:var(--electric-deep); font-weight:600;
   }
 
   .Registrar-form button{
