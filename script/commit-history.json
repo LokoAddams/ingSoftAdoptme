@@ -817,12 +817,12 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "a1cdceef8e4244f6fd37160aa80ecb1b158aad5c",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-19T01:39:40.000Z",
       "message": "Styles: Se agrego nuevos estilos a registro.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a1cdceef8e4244f6fd37160aa80ecb1b158aad5c"
     },
     "stats": {
       "total": 20,
@@ -851,6 +851,25 @@
     },
     "coverage": 100,
     "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T02:43:35.000Z",
+      "message": "fix: Se arreglo algunas direcciones de  testt.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 6,
+      "additions": 3,
+      "deletions": 3,
+      "date": "2025-11-19"
+    },
+    "coverage": 100,
+    "test_count": 3,
     "failed_tests": 0,
     "conclusion": "success"
   }

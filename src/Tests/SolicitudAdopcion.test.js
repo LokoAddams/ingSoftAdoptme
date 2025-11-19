@@ -1,5 +1,5 @@
 
-import SolicitudAdopcion from '../SolicitudAdopcion.js';
+import SolicitudAdopcion from './domain/SolicitudAdopcion.js';
 import Adoptante from '../Adoptante.js';
 import Mascota from '../Mascota.js';
 

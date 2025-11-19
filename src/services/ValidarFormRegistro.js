@@ -1,4 +1,4 @@
-import Mascota from '../domain/Mascota.js';
+import Mascota from './domain/Mascota.js';
 
 export function validarFormulario() {
   const nombre = (document.getElementById('nombre') || {}).value || '';
