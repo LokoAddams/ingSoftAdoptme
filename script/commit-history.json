@@ -760,12 +760,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a1d5d1fe280926d5e4c597635ae12ff9defa934c",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-11-18T14:45:42.000Z",
       "message": "refact: reorganización de archivos: arq. Hexagonal",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a1d5d1fe280926d5e4c597635ae12ff9defa934c"
     },
     "stats": {
       "total": 37,
@@ -791,6 +791,25 @@
       "additions": 0,
       "deletions": 96,
       "date": "2025-11-18"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T01:36:19.000Z",
+      "message": "refact: Se refactorizo registrar y descripcion basica.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 92,
+      "additions": 65,
+      "deletions": 27,
+      "date": "2025-11-19"
     },
     "coverage": 0,
     "test_count": 0,

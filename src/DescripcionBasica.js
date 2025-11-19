@@ -1,31 +1,42 @@
+import { MarcarEstado } from './services/MarcarEstado.js';
+import { validarFormulario } from './services/ValidarFormRegistro.js';
+import { mostrarArchivoSeleccionado } from './services/MostrarArchivoSeleccionado.js';
+
 const botonSubir = document.getElementById('subirDocumentoBtn');
 const archivoInput = document.getElementById('documento');
+const Estado = document.getElementById('MarcarEstado');
+const radios = document.querySelectorAll('input[name="estado"]');
+const result = document.getElementById('resultEstadoMarc');
 
-function mostrarArchivoSeleccionado() {
-  const archivo = archivoInput.files[0];
-  document.getElementById('archivoSeleccionado').innerText = archivo ? `Archivo seleccionado: ${archivo.name}` : 'No hay archivo seleccionado';
-}
 
 botonSubir.addEventListener('click', () => {
   archivoInput.click();
 });
 
 archivoInput.addEventListener('change', mostrarArchivoSeleccionado);
-function validarFormulario() {
-  const nombreMascota = document.getElementById('nombreMascota').value;
-  const edadMascota = document.getElementById('edadMascota').value;
-  const tipoMascota = document.getElementById('tipoMascota').value;
-  const razaMascota = document.getElementById('razaMascota').value;
-  const descripcionMascota = document.getElementById('descripcionMascota').value; 
-  if (!nombreMascota || !edadMascota || !tipoMascota || !razaMascota || !descripcionMascota) {
-    alert('Por favor, complete todos los campos del formulario.');
-    return false;
-  }
-}
+
 function registrarMascota() {
   const registrarbton = document.getElementById('registrarBtn');
   registrarbton.addEventListener('click', () => {
-
-  alert('Mascota registrada con éxito.');
+    if (validarFormulario()) {
+      alert('Mascota registrada con éxito.');
+      Estado.style.display = 'block';
+    }
   });
 }
+
+radios.forEach(radio => {
+  radio.addEventListener('change', () => {
+    const seleccionado = document.querySelector('input[name="estado"]:checked');
+
+    if (seleccionado) {
+      result.style.display = 'block'; 
+      result.textContent = `${MarcarEstado(seleccionado.value)}`;
+      console.log('Seleccionado:', seleccionado.value);
+    } else {
+      result.style.display = 'none'; 
+    }
+  });
+});
+
+registrarMascota();
