@@ -760,12 +760,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a1d5d1fe280926d5e4c597635ae12ff9defa934c",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-11-18T14:45:42.000Z",
       "message": "refact: reorganización de archivos: arq. Hexagonal",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a1d5d1fe280926d5e4c597635ae12ff9defa934c"
     },
     "stats": {
       "total": 37,
@@ -779,12 +779,12 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "9b42e9ec2f3d2abcd80fb02f9b4bc3d7d6b33771",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-11-18T15:08:15.000Z",
       "message": "refact: eliminación archivos inutilizados",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/9b42e9ec2f3d2abcd80fb02f9b4bc3d7d6b33771"
     },
     "stats": {
       "total": 96,
@@ -796,5 +796,157 @@
     "test_count": 0,
     "failed_tests": 0,
     "conclusion": "neutral"
+  },
+  {
+    "sha": "bd1ae31d24bcef840efd8121c021c2e23784eb9a",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T01:36:19.000Z",
+      "message": "refact: Se refactorizo registrar y descripcion basica.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/bd1ae31d24bcef840efd8121c021c2e23784eb9a"
+    },
+    "stats": {
+      "total": 92,
+      "additions": 65,
+      "deletions": 27,
+      "date": "2025-11-19"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "a1cdceef8e4244f6fd37160aa80ecb1b158aad5c",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T01:39:40.000Z",
+      "message": "Styles: Se agrego nuevos estilos a registro.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a1cdceef8e4244f6fd37160aa80ecb1b158aad5c"
+    },
+    "stats": {
+      "total": 20,
+      "additions": 20,
+      "deletions": 0,
+      "date": "2025-11-19"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "646d68318970ce84ec08845eccd958786f5ec35e",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T01:46:06.000Z",
+      "message": "fix: Se arreglo algunas direcciones de  test.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/646d68318970ce84ec08845eccd958786f5ec35e"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2,
+      "date": "2025-11-19"
+    },
+    "coverage": 100,
+    "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "fa67e6a3de5ccbd7d02a120ec6cb7629dd2f4888",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T02:43:35.000Z",
+      "message": "fix: Se arreglo algunas direcciones de  testt.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/fa67e6a3de5ccbd7d02a120ec6cb7629dd2f4888"
+    },
+    "stats": {
+      "total": 6,
+      "additions": 3,
+      "deletions": 3,
+      "date": "2025-11-19"
+    },
+    "coverage": 100,
+    "test_count": 3,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "753832f6009c7dfbd05bc07dcf7799d0c194c82f",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T02:45:44.000Z",
+      "message": "fix: Se arreglo algunas direcciiones de  testt.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/753832f6009c7dfbd05bc07dcf7799d0c194c82f"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2,
+      "date": "2025-11-19"
+    },
+    "coverage": 100,
+    "test_count": 3,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "a07dd131fd58b352605e54d3be69f01dd4517e84",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T02:48:44.000Z",
+      "message": "fix: Se arreglo algunas direcciiones de  testt..",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a07dd131fd58b352605e54d3be69f01dd4517e84"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2,
+      "date": "2025-11-19"
+    },
+    "coverage": 100,
+    "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T02:50:18.000Z",
+      "message": "fix: Se arreglo algunas direcciiones de  testt..",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2,
+      "date": "2025-11-19"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T02:51:07.000Z",
+      "message": "fix: direccionamientos de test.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 2,
+      "additions": 1,
+      "deletions": 1,
+      "date": "2025-11-19"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]
