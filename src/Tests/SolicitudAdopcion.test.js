@@ -1,7 +1,7 @@
 
 import SolicitudAdopcion from '../domain/SolicitudAdopcion.js';
-import Adoptante from '../Adoptante.js';
-import Mascota from '../Mascota.js';
+import Adoptante from '../domain/Adoptante.js';
+import Mascota from '../domain/Mascota.js';
 
 describe('SolicitudAdopcion - EnviarSolicitud', () => {
 	test('EnviarSolicitud debe construir una solicitud con adoptante, mascota, fecha y estado', () => {
