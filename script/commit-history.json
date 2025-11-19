@@ -798,12 +798,12 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "bd1ae31d24bcef840efd8121c021c2e23784eb9a",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-19T01:36:19.000Z",
       "message": "refact: Se refactorizo registrar y descripcion basica.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/bd1ae31d24bcef840efd8121c021c2e23784eb9a"
     },
     "stats": {
       "total": 92,
@@ -834,5 +834,24 @@
     "test_count": 0,
     "failed_tests": 0,
     "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-19T01:46:06.000Z",
+      "message": "fix: Se arreglo algunas direcciones de  test.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2,
+      "date": "2025-11-19"
+    },
+    "coverage": 100,
+    "test_count": 10,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]
