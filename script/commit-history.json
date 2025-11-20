@@ -931,12 +931,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c7752f7631fd37849e1659e7c3987113b0c8f294",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-19T02:51:07.000Z",
       "message": "fix: direccionamientos de test.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/c7752f7631fd37849e1659e7c3987113b0c8f294"
     },
     "stats": {
       "total": 2,
@@ -964,6 +964,25 @@
       "date": "2025-11-19"
     },
     "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-11-20T04:13:06.000Z",
+      "message": "refact: implementación de clase Mascota.js en verMascotas.js",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 93,
+      "additions": 64,
+      "deletions": 29,
+      "date": "2025-11-20"
+    },
+    "coverage": 70.91,
     "test_count": 12,
     "failed_tests": 0,
     "conclusion": "success"

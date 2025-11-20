@@ -1,6 +1,8 @@
-class Mascota {
-  constructor({ nombre = '', especie = '', raza = '', sexo = '', edad = 0, estado = 'disponible' } = {}) {
+export default class Mascota {
+  constructor({ nombre = '', img_ref = '', facilitador = '', especie = '', raza = '', sexo = '', edad = 0, estado = 'disponible'} = {}) {
     this.nombre = nombre;
+    this.img_ref = img_ref;
+    this.facilitador = facilitador;
     this.especie = especie;
     this.raza = raza;
     this.sexo = sexo;
@@ -8,5 +10,3 @@ class Mascota {
     this.estado = estado;
   }
 }
-
-export default Mascota;
