@@ -1,6 +1,7 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import "dotenv/config.js"; // carga .env
+import "dotenv/config.js"; 
+import { Mascota } from "./entities/mascota.entity.js";
 
 export const AppDataSource = new DataSource({
   type: "mongodb",
@@ -9,5 +10,5 @@ export const AppDataSource = new DataSource({
   useUnifiedTopology: true,
   synchronize: true, 
   logging: false,
-  entities: [],
+  entities: [Mascota],
 });

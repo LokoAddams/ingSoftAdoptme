@@ -1,11 +1,13 @@
 import express from "express";
 import { dbReady } from "../BD/conexionDB.js";
+import MascotaRouter from "./api/mascota.api.js";
 
 const app = express();
 
-// Middleware para JSON
 app.use(express.json());
 
+app.use("/api/mascotas", MascotaRouter);
 
-// Iniciamos backend
-app.listen(3001, () => console.log("Backend corriendo en http://localhost:3001"));
+await dbReady; // 👈 Esperamos BD antes de levantar server
+
+app.listen(3001, () => console.log("🔥 Backend en http://localhost:3001"));

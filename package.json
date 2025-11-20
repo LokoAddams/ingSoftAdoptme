@@ -5,6 +5,7 @@
   "default": "index.html",
   "type": "module",
   "scripts": {
+    "backend": "node ./backend/server.js",
     "start": "parcel ./*.html UI/*.html",
     "build": "parcel build ./*.html UI/*.html",
     "test": "node ./script/tddScript.js",
