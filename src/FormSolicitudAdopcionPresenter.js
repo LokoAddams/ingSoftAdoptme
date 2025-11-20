@@ -1,11 +1,14 @@
+import Adoptante from './domain/Adoptante.js';
+import Mascota from './domain/Mascota.js';
+
+
 const botonEnviarSolicitud = document.getElementById('enviarSolicitudBtn');
 let registroMensajeDiv = document.getElementById('registroMensaje');
 const Estado = document.getElementById('MarcarEstado');
 
-
 if (botonEnviarSolicitud) {
     botonEnviarSolicitud.addEventListener('click', () => {
-      const adoptante = {
+      const adoptante = new Adoptante({
         nombre: (document.getElementById('adoptanteNombre') || {}).value || '',
         cuestionario: {
           responsabilidad: (document.getElementById('cuestionarioResponsabilidad') || {}).value || '',
@@ -19,16 +22,16 @@ if (botonEnviarSolicitud) {
           email: (document.getElementById('adoptanteEmail') || {}).value || '',
           telefono: (document.getElementById('adoptanteTelefono') || {}).value || '',
         }
-      };
+      });
 
-      const mascota = {
+      const mascota = new Mascota({
         nombre: (document.getElementById('mascotaNombre') || {}).value || '',
         especie: (document.getElementById('mascotaEspecie') || {}).value || '',
         raza: (document.getElementById('mascotaRaza') || {}).value || '',
         sexo: (document.getElementById('mascotaSexo') || {}).value || '',
         edad: Number((document.getElementById('mascotaEdad') || {}).value) || 0,
         estado: (document.getElementById('mascotaEstado') || {}).value || 'disponible',
-      };
+      });
       
       console.log("hola1");
       Promise.all([
