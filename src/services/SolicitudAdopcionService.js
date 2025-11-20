@@ -1,8 +1,8 @@
 import SolicitudAdopcionRepository from "../infraestructure/SolicitudAdopcionRepository";
 
 class SolicitudAdopcionService {
-  constructor() {
-    this.solicitudAdopcionRepository = new SolicitudAdopcionRepository();
+  constructor(solicitudAdopcionRepository) {
+    this.solicitudAdopcionRepository = solicitudAdopcionRepository;
   }
 
   async createSolicitud(adoptante, mascota) {

@@ -3,12 +3,14 @@ import SolicitudAdopcion from '../domain/SolicitudAdopcion.js';
 import Adoptante from '../domain/Adoptante.js'; 
 import Mascota from '../domain/Mascota.js';
 import SolicitudAdopcionService from '../services/SolicitudAdopcionService.js';
+import SolicitudAdopcionRepository from '../infraestructure/SolicitudAdopcionRepository.js';
 
 describe('SolicitudAdopcion - EnviarSolicitud', () => {
 	let solicitudAdopcionService;
 
 	beforeEach(() => {
-		solicitudAdopcionService = new SolicitudAdopcionService();
+		
+		solicitudAdopcionService = new SolicitudAdopcionService(new SolicitudAdopcionRepository(new Date()));
 	});
 
 	test('EnviarSolicitud debe fallar cuando no hay conexión a internet', async () => {

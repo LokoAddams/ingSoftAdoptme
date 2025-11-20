@@ -1,13 +1,13 @@
 import Adoptante from './domain/Adoptante.js';
 import Mascota from './domain/Mascota.js';
 import SolicitudAdopcionService from './services/SolicitudAdopcionService.js';
-
+import SolicitudAdopcionRepository from './infraestructure/SolicitudAdopcionRepository.js';
 
 const botonEnviarSolicitud = document.getElementById('enviarSolicitudBtn');
 let registroMensajeDiv = document.getElementById('registroMensaje');
 const Estado = document.getElementById('MarcarEstado');
 
-let solicitudAdopcionService = new SolicitudAdopcionService();
+let solicitudAdopcionService = new SolicitudAdopcionService(new SolicitudAdopcionRepository(new Date()));
 
 if (botonEnviarSolicitud) {
     botonEnviarSolicitud.addEventListener('click', () => {
