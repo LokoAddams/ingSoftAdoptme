@@ -1,4 +1,4 @@
-import { verDetalleMas } from "./services/verMascotas.js";
+import { verDetalleMascota } from "./services/verMascotas.js";
 import Mascota from "./domain/Mascota.js";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const conexion = navigator.onLine;
     
-    let detallesMas = verDetalleMascota(conexion, nomMas, [["Apolo", "Perro", "Pitbull", 2, "Macho", "Disponible", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg"], ["Perlita", "Perro", "Chihuahua", 2, "Hembra", "Disponible", "https://apupabove.com/cdn/shop/articles/Chihuahua_2ab3f5c4-9781-48ed-8119-7f780902c133_1200x1200.jpg?v=1742407300"], ["Bruno", "Perro", "Salchicha", 2, "Macho", "Disponible", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/MiniDachshund1_wb.jpg/330px-MiniDachshund1_wb.jpg"]]);
+    let detallesMascota = verDetalleMascota(conexion, nomMascota, listaDeMascotasBD);
     
     // Limpiamos el contenedor antes de armar el contenido
     detalleDiv.innerHTML = "";
@@ -73,8 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
         adoptBtn.type = 'button';
         adoptBtn.className = 'adopt-btn';
         adoptBtn.textContent = 'Adoptar';
+        console.log("hola");
         // Navega a la pantalla de adopción (se crea `adoptarMascota.html` en src/UI)
-        const targetName = nomMas || detallesMascota.nombre;
+        const targetName = nomMascota || detallesMascota.nombre;
         adoptBtn.addEventListener('click', () => {
             const q = targetName ? ('?nom=' + encodeURIComponent(targetName)) : '';
             window.location.href = './FormSolicitudAdopcion.html' + q;

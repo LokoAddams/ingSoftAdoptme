@@ -1,5 +1,5 @@
-import Adoptante from '../Adoptante.js';
-import Mascota from '../Mascota.js';
+import Adoptante from './domain/Adoptante.js';
+import Mascota from './domain/Mascota.js';
 
 
 const botonEnviarSolicitud = document.getElementById('enviarSolicitudBtn');

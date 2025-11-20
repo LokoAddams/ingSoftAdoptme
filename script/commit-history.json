@@ -779,17 +779,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a6a550ee169ceb79c8eb2c666c83563efe2abc58",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-20T05:04:25.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a6a550ee169ceb79c8eb2c666c83563efe2abc58"
     },
     "stats": {
       "total": 452,
       "additions": 224,
       "deletions": 228,
+      "date": "2025-11-20"
+    },
+    "coverage": 70.91,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-20T05:05:29.000Z",
+      "message": "fix: ruta de solicitudAdopcion.cy.js",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 15,
+      "additions": 8,
+      "deletions": 7,
       "date": "2025-11-20"
     },
     "coverage": 70.91,
