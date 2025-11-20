@@ -16,6 +16,7 @@
 // pestaña "Adoptar", se mostrará el mensaje "Revise su conexión a internet.".
 
 import { verMascotas, verDetalleMas } from '../services/verMascotas.js';
+import Mascota from '../domain/Mascota.js';
 
 describe("Ver Mascota (no hay mascotas disponibles).", () => {
   it("deberia mostrar 'Lo siento, por el momento no hay mascotas disponibles.'", () => {
@@ -31,19 +32,29 @@ describe("Ver Mascota (si no hay mascotas disponibles en la lista).", () => {
 
 describe("Ver nombre, imagen y facilitador de una Mascota.", () => {
   it("deberia mostrar el nombre, imagen y facilitador de la mascota que está en la lista.", () => {
-    expect(verMascotas([["Apolo", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", "Centro Patitas al rescate"]])).toEqual([["Apolo", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", "Centro Patitas al rescate"]]);
+    const mascota = new Mascota({ nombre: "Apolo", img_ref: "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", facilitador: "Centro Patitas al rescate", especie: "Perro", raza: "Pitbull", sexo: "Macho", edad: 2, estado: "Disponible"});
+    const listaMascotas = [mascota];
+    expect(verMascotas(listaMascotas)).toEqual([["Apolo", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", "Centro Patitas al rescate"]]);
   });
 });
 
 describe("Ver nombre, imagen y facilitador de varias Mascotas.", () => {
   it("deberia mostrar el nombre, imagen y facilitador de las mascotas que están en la lista.", () => {
-    expect(verMascotas([["Apolo", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", "Centro Patitas al rescate"], ["Perlita", "https://apupabove.com/cdn/shop/articles/Chihuahua_2ab3f5c4-9781-48ed-8119-7f780902c133_1200x1200.jpg?v=1742407300", "Rescatista María Prado"], ["Bruno", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/MiniDachshund1_wb.jpg/330px-MiniDachshund1_wb.jpg", "Albergue Huellitas Libres"]])).toEqual([["Apolo", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", "Centro Patitas al rescate"], ["Perlita", "https://apupabove.com/cdn/shop/articles/Chihuahua_2ab3f5c4-9781-48ed-8119-7f780902c133_1200x1200.jpg?v=1742407300", "Rescatista María Prado"], ["Bruno", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/MiniDachshund1_wb.jpg/330px-MiniDachshund1_wb.jpg", "Albergue Huellitas Libres"]]);
+    const mascota1 = new Mascota({ nombre: "Apolo", img_ref: "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", facilitador: "Centro Patitas al rescate", especie: "Perro", raza: "Pitbull", sexo: "Macho", edad: 2, estado: "Disponible"});
+    const mascota2 = new Mascota({ nombre: "Perlita", img_ref: "https://apupabove.com/cdn/shop/articles/Chihuahua_2ab3f5c4-9781-48ed-8119-7f780902c133_1200x1200.jpg?v=1742407300", facilitador: "Rescatista María Prado", especie: "Perro", raza: "Chihuahua", sexo: "Hembra", edad: 3, estado: "Disponible"});
+    const mascota3 = new Mascota({ nombre: "Bruno", img_ref: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/MiniDachshund1_wb.jpg/330px-MiniDachshund1_wb.jpg", facilitador: "Albergue Huellitas Libres", especie: "Perro", raza: "Dachshund", sexo: "Macho", edad: 4, estado: "Disponible"});
+    const listaMascotas = [mascota1, mascota2, mascota3];
+    expect(verMascotas(listaMascotas)).toEqual([["Apolo", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", "Centro Patitas al rescate"], ["Perlita", "https://apupabove.com/cdn/shop/articles/Chihuahua_2ab3f5c4-9781-48ed-8119-7f780902c133_1200x1200.jpg?v=1742407300", "Rescatista María Prado"], ["Bruno", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/MiniDachshund1_wb.jpg/330px-MiniDachshund1_wb.jpg", "Albergue Huellitas Libres"]]);
   });
 });
 
 describe("Ver mascota (la conexión no es estable).", () => {
   it("deberia mostrar el mensaje 'Revise su conexión a internet.'.", () => {
-    expect(verMascotas([["Apolo", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", "Centro Patitas al rescate"], ["Perlita", "https://apupabove.com/cdn/shop/articles/Chihuahua_2ab3f5c4-9781-48ed-8119-7f780902c133_1200x1200.jpg?v=1742407300", "Rescatista María Prado"], ["Bruno", "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/MiniDachshund1_wb.jpg/330px-MiniDachshund1_wb.jpg", "Albergue Huellitas Libres"]], false)).toEqual("Revise su conexión a internet.");
+    const mascota1 = new Mascota({ nombre: "Apolo", img_ref: "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", facilitador: "Centro Patitas al rescate", especie: "Perro", raza: "Pitbull", sexo: "Macho", edad: 2, estado: "Disponible"});
+    const mascota2 = new Mascota({ nombre: "Perlita", img_ref: "https://apupabove.com/cdn/shop/articles/Chihuahua_2ab3f5c4-9781-48ed-8119-7f780902c133_1200x1200.jpg?v=1742407300", facilitador: "Rescatista María Prado", especie: "Perro", raza: "Chihuahua", sexo: "Hembra", edad: 3, estado: "Disponible"});
+    const mascota3 = new Mascota({ nombre: "Bruno", img_ref: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/MiniDachshund1_wb.jpg/330px-MiniDachshund1_wb.jpg", facilitador: "Albergue Huellitas Libres", especie: "Perro", raza: "Dachshund", sexo: "Macho", edad: 4, estado: "Disponible"});
+    const listaMascotas = [mascota1, mascota2, mascota3];
+    expect(verMascotas(listaMascotas, false)).toEqual("Revise su conexión a internet.");
   });
 });
 
@@ -69,6 +80,10 @@ describe("Ver información de mascota si no hay conexión estable.", () => {
 
 describe("Ver información de mascota por medio de su nombre.", () => {
   it("deberia mostrar la información de las mascota por el nombre", () => {
-    expect(verDetalleMas(true, "Apolo", [["Apolo", "Perro", "Pitbull", 2, "Macho", "Disponible", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg"]])).toEqual(["Apolo", "Perro", "Pitbull", 2, "Macho", "Disponible", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg"]);
+    const mascota1 = new Mascota({ nombre: "Apolo", img_ref: "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", facilitador: "Centro Patitas al rescate", especie: "Perro", raza: "Pitbull", sexo: "Macho", edad: 2, estado: "Disponible"});
+    const mascota2 = new Mascota({ nombre: "Perlita", img_ref: "https://apupabove.com/cdn/shop/articles/Chihuahua_2ab3f5c4-9781-48ed-8119-7f780902c133_1200x1200.jpg?v=1742407300", facilitador: "Rescatista María Prado", especie: "Perro", raza: "Chihuahua", sexo: "Hembra", edad: 3, estado: "Disponible"});
+    const mascota3 = new Mascota({ nombre: "Bruno", img_ref: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/MiniDachshund1_wb.jpg/330px-MiniDachshund1_wb.jpg", facilitador: "Albergue Huellitas Libres", especie: "Perro", raza: "Dachshund", sexo: "Macho", edad: 4, estado: "Disponible"});
+    const listaMascotas = [mascota1, mascota2, mascota3];
+    expect(verDetalleMas(true, "Apolo", listaMascotas)).toEqual({ nombre: "Apolo", img_ref: "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", facilitador: "Centro Patitas al rescate", especie: "Perro", raza: "Pitbull", sexo: "Macho", edad: 2, estado: "Disponible"});
   });
 });
