@@ -684,12 +684,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "bf2fbbba7b2b76188d9de506aa5d142fd0f7f55c",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-18T13:19:32.000Z",
       "message": "refact: UI detalleMascota redireccion a solicitud de adopcion",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/bf2fbbba7b2b76188d9de506aa5d142fd0f7f55c"
     },
     "stats": {
       "total": 44,
@@ -753,6 +753,25 @@
       "additions": 44,
       "deletions": 0,
       "date": "2025-11-18"
+    },
+    "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-20T04:23:48.000Z",
+      "message": "refactor: usar clases Mascota y Adoptante",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 42,
+      "additions": 27,
+      "deletions": 15,
+      "date": "2025-11-20"
     },
     "coverage": 66.67,
     "test_count": 12,

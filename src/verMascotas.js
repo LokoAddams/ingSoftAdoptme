@@ -10,7 +10,7 @@ function verMascotas(lista = [], hayConexion = true) {
     }
 }
 
-function verDetalleMas(hayConexion = false, nomMas, mascotasInfo) {
+function verDetalleMascota(hayConexion = false, nomMas, mascotasInfo) {
     if (hayConexion) {
         let mascota;
 
@@ -25,4 +25,4 @@ function verDetalleMas(hayConexion = false, nomMas, mascotasInfo) {
     }
 }
 
-export {verMascotas, verDetalleMas};
+export {verMascotas, verDetalleMascota};

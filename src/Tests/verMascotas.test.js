@@ -15,7 +15,7 @@
 // Si el ciudadano no cuenta con una conexión a internet estable al hacer click en la 
 // pestaña "Adoptar", se mostrará el mensaje "Revise su conexión a internet.".
 
-import { verMascotas, verDetalleMas } from "../verMascotas";
+import { verMascotas, verDetalleMascota } from "../verMascotas";
 
 describe("Ver Mascota (no hay mascotas disponibles).", () => {
   it("deberia mostrar 'Lo siento, por el momento no hay mascotas disponibles.'", () => {
@@ -63,12 +63,12 @@ describe("Ver mascota (la conexión no es estable).", () => {
 
 describe("Ver información de mascota si no hay conexión estable.", () => {
   it("deberia mostrar 'Revise su conexión a internet.'", () => {
-    expect(verDetalleMas()).toEqual("Revise su conexión a internet.");
+    expect(verDetalleMascota()).toEqual("Revise su conexión a internet.");
   });
 });
 
 describe("Ver información de mascota por medio de su nombre.", () => {
   it("deberia mostrar la información de las mascota por el nombre", () => {
-    expect(verDetalleMas(true, "Apolo", [["Apolo", "Perro", "Pitbull", 2, "Macho", "Disponible", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg"]])).toEqual(["Apolo", "Perro", "Pitbull", 2, "Macho", "Disponible", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg"]);
+    expect(verDetalleMascota(true, "Apolo", [["Apolo", "Perro", "Pitbull", 2, "Macho", "Disponible", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg"]])).toEqual(["Apolo", "Perro", "Pitbull", 2, "Macho", "Disponible", "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg"]);
   });
 });
