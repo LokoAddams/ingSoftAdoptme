@@ -2,9 +2,16 @@
 import SolicitudAdopcion from '../domain/SolicitudAdopcion.js';
 import Adoptante from '../domain/Adoptante.js'; 
 import Mascota from '../domain/Mascota.js';
+import SolicitudAdopcionService from '../services/SolicitudAdopcionService.js';
 
 describe('SolicitudAdopcion - EnviarSolicitud', () => {
-	test('EnviarSolicitud debe construir una solicitud con adoptante, mascota, fecha y estado', () => {
+	let solicitudAdopcionService;
+
+	beforeEach(() => {
+		solicitudAdopcionService = new SolicitudAdopcionService();
+	});
+
+	test('EnviarSolicitud debe construir una solicitud con adoptante, mascota, fecha y estado', async () => {
 		const adoptante = new Adoptante({
 			nombre: 'Juan Pérez',
 			cuestionario: {
@@ -30,7 +37,7 @@ describe('SolicitudAdopcion - EnviarSolicitud', () => {
 			estado: 'disponible'
 		});
 
-		const resultado = new SolicitudAdopcion(adoptante, mascota);
+		const resultado = await solicitudAdopcionService.createSolicitud(adoptante, mascota);
 
 		expect(resultado).toBeDefined();
 

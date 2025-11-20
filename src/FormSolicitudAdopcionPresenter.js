@@ -1,10 +1,13 @@
 import Adoptante from './domain/Adoptante.js';
 import Mascota from './domain/Mascota.js';
+import SolicitudAdopcionService from './services/SolicitudAdopcionService.js';
 
 
 const botonEnviarSolicitud = document.getElementById('enviarSolicitudBtn');
 let registroMensajeDiv = document.getElementById('registroMensaje');
 const Estado = document.getElementById('MarcarEstado');
+
+let solicitudAdopcionService = new SolicitudAdopcionService();
 
 if (botonEnviarSolicitud) {
     botonEnviarSolicitud.addEventListener('click', () => {
@@ -44,7 +47,7 @@ if (botonEnviarSolicitud) {
             const adoptanteInstance = new Adoptante(adoptante);
             const mascotaInstance = new Mascota(mascota);
             // usar la factory asíncrona que valida conectividad
-            const solicitud = await SolicitudAdopcion.create(adoptanteInstance, mascotaInstance);
+            const solicitud = await solicitudAdopcionService.createSolicitud(adoptanteInstance, mascotaInstance);
 
             window.__ultimaSolicitudAdopcion = solicitud;
             const mensajeDiv = document.getElementById('solicitudMensaje');

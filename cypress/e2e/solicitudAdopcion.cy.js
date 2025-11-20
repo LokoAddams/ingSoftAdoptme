@@ -77,7 +77,7 @@ describe('Solicitud de Adopción UI', () => {
 
   it('Debería mostrar un mensaje cuando la verificación de conectividad falla', () => {
     // Interceptamos la comprobación de conectividad (HEAD /favicon.ico) y forzamos un error de red
-    cy.intercept({ method: 'HEAD', url: '/favicon.ico' }, { forceNetworkError: true }).as('checkOnline');
+    cy.intercept({ method: 'HEAD', url: '**/favicon.ico' }, { forceNetworkError: true }).as('checkOnline');
 
     cy.get('#adoptanteNombre').type('Juan Pérez')
     cy.get('#adoptanteEmail').type('juan.perez@example.com')
