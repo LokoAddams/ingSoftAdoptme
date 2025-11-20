@@ -817,12 +817,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "6dd588bc48150824df3a722ce4c53243d5668b8c",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-20T06:30:11.000Z",
       "message": "refact: aplicando arquitectura hexagonal en SolicitudAdopcion",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/6dd588bc48150824df3a722ce4c53243d5668b8c"
     },
     "stats": {
       "total": 119,
@@ -832,6 +832,25 @@
     },
     "coverage": 84.62,
     "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-20T07:28:59.000Z",
+      "message": "refactor: cobertura de archivos",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 86,
+      "additions": 47,
+      "deletions": 39,
+      "date": "2025-11-20"
+    },
+    "coverage": 98.31,
+    "test_count": 13,
     "failed_tests": 0,
     "conclusion": "success"
   }

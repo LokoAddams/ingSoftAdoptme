@@ -1,4 +1,3 @@
-import Adoptante from "./Adoptante";
 
 class SolicitudAdopcion {
 
@@ -11,25 +10,6 @@ class SolicitudAdopcion {
 
     this.estado = 'pendiente';
     this.fechaSolicitud = fechaSolicitud;
-  }
-
-  getEstado(){
-    return this.estado;
-  }
-  setEstado(nuevoEstado){
-    this.estado = nuevoEstado;
-  }
-
-  getAdoptante(){
-    return this.adoptante;
-  }
-
-  getMascota(){
-    return this.mascota;
-  }
-
-  getFechaSolicitud(){
-    return this.fechaSolicitud;
   }
 }
 

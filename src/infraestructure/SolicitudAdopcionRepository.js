@@ -5,11 +5,8 @@ class SolicitudAdopcionRepository {
     this.fechaActual = fechaActual;
   }
 
-  async checkOnline(timeout = 3000) {
-    if (typeof fetch !== 'function') {
-      return true;
-    }
-
+  async checkOnline() {
+    const timeout = 3000;
     const controller = new AbortController();
     const signal = controller.signal;
     const id = setTimeout(() => controller.abort(), timeout);
