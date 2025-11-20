@@ -798,17 +798,36 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "41599fc17111d69c98c59b0d29d0c5f56ab680d3",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-20T05:05:29.000Z",
       "message": "fix: ruta de solicitudAdopcion.cy.js",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/41599fc17111d69c98c59b0d29d0c5f56ab680d3"
     },
     "stats": {
       "total": 15,
       "additions": 8,
       "deletions": 7,
+      "date": "2025-11-20"
+    },
+    "coverage": 70.91,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-11-20T12:25:03.000Z",
+      "message": "style: modificación estilos de detalleMascota.html",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 2,
+      "deletions": 2,
       "date": "2025-11-20"
     },
     "coverage": 70.91,
