@@ -741,12 +741,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0026285f519f6c4c80d53381a4754a35eeb72fa8",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-18T13:36:23.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/0026285f519f6c4c80d53381a4754a35eeb72fa8"
     },
     "stats": {
       "total": 44,
@@ -760,12 +760,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "77df36a040f16a995b576d3269c1c2199e25e74a",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-20T04:23:48.000Z",
       "message": "refactor: usar clases Mascota y Adoptante",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/77df36a040f16a995b576d3269c1c2199e25e74a"
     },
     "stats": {
       "total": 42,
@@ -774,6 +774,25 @@
       "date": "2025-11-20"
     },
     "coverage": 66.67,
+    "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-20T05:04:25.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 452,
+      "additions": 224,
+      "deletions": 228,
+      "date": "2025-11-20"
+    },
+    "coverage": 70.91,
     "test_count": 12,
     "failed_tests": 0,
     "conclusion": "success"

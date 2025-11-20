@@ -11,6 +11,7 @@
   <div class="Registrar-form">
       <input type="text" id="nombre" placeholder="Nombre" />
       <input type="especie" id="especie" placeholder="Especie" />
+     <input type="edad" id="edad" placeholder="Edad" />
       <label for="Raza">Raza:</label>
       <select id="Raza" name=" Raza"> 
         <option value="Labrador">Labrador</option>
@@ -30,18 +31,13 @@
         <option value="Macho">Macho</option>
         <option value="Hembra">Hembra</option>
       </select>
-      <input type="edad" id="edad" placeholder="Edad" />
-      <button id="registrarBtn">Registrar</button>
-  </div>
-
-
-  <div class="SeleccionarArchivo-form">
-    <h5> Subir detalles extras de mascota</h5>
-    <button id="subirDocumentoBtn">Subir Documento</button>
+        <div class="SeleccionarArchivo-form">
+    <h5> Subir fotos de la mascota</h5>
+    <button id="subirDocumentoBtn">Seleccionar fotos</button>
     <input type="file" id="documento" style="display: none;" />
     <div id="archivoSeleccionado"></div>
   </div>
-    <div id="MarcarEstado" style="display: none;">
+      <div id="MarcarEstado" style="display: none;">
       <h2>ESTADO DE LA MASCOTA REGISTRADA</h2>
       <label for="en proceso">En proceso de ser adoptado</label>
       <input type="radio" id="en proceso" name="estado" value="en proceso">
@@ -51,7 +47,9 @@
       <input type="radio" id="adoptado" name="estado" value="adoptado">
       <div id="resultEstadoMarc"></div>
     </div>
+      <button id="registrarBtn">Registrar</button>
+  </div>
     
-    <script src="./DescripcionBasica.js"></script>
+    <script type="module" src="../src/DescripcionBasica.js"></script>
 </body>
 </html>
