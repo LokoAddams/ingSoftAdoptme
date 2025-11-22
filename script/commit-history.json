@@ -171,12 +171,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "ffe489b982d0ccdff73ca0839fd00602c9cdd1aa",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-11-20T14:32:12.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/ffe489b982d0ccdff73ca0839fd00602c9cdd1aa"
     },
     "stats": {
       "total": 175,
@@ -239,6 +239,25 @@
       "total": 39,
       "additions": 39,
       "deletions": 0,
+      "date": "2025-11-22"
+    },
+    "coverage": 98.31,
+    "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-22T20:31:32.000Z",
+      "message": "fixed: Endpoint GetMascota devuelve id ahora",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 11,
+      "additions": 9,
+      "deletions": 2,
       "date": "2025-11-22"
     },
     "coverage": 98.31,

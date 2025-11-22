@@ -7,10 +7,17 @@ const MascotaRouter = Router();
 
 // GET todas
 MascotaRouter.get("/", async (req, res) => {
-  const repo = AppDataSource.getRepository(Mascota);
+  const repo = AppDataSource.getMongoRepository(Mascota);
   const mascotas = await repo.find();
-  res.json(mascotas);
+
+  const result = mascotas.map(m => ({
+    ...m,
+    id: m._id.toString()        
+  }));
+
+  res.json(result);
 });
+
 
 // POST crear nueva mascota
 MascotaRouter.post("/", async (req, res) => {
