@@ -1,21 +1,22 @@
-// src/entities/mascota.entity.js
 import { EntitySchema } from "typeorm";
+import { ObjectId } from "mongodb";
 
 export const Mascota = new EntitySchema({
   name: "Mascota",
   columns: {
-    id: {
-      type: "objectId",
+    // ID de Mongo
+    _id: {
+      type: ObjectId,   
+      objectId: true,   
       primary: true,
-      generated: true
     },
+
     nombre: { type: String },
     especie: { type: String },
     raza: { type: String },
-    sexo: { type: String },
     edad: { type: Number },
     estado: { type: String },
     img_ref: { type: String },
-    facilitador: { type: String }
-  }
+    facilitador: { type: String },
+  },
 });

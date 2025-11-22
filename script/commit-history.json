@@ -133,12 +133,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "59a5670ca9addd186ca0ec487810fb8bfe0fc80c",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-11-20T14:15:24.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/59a5670ca9addd186ca0ec487810fb8bfe0fc80c"
     },
     "stats": {
       "total": 173,
@@ -202,6 +202,25 @@
       "additions": 116,
       "deletions": 59,
       "date": "2025-11-20"
+    },
+    "coverage": 98.31,
+    "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-22T15:06:27.000Z",
+      "message": "feat: Se agrego Endpoint Post para mascotas",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 51,
+      "additions": 43,
+      "deletions": 8,
+      "date": "2025-11-22"
     },
     "coverage": 98.31,
     "test_count": 13,
