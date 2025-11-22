@@ -43,5 +43,44 @@ MascotaRouter.post("/", async (req, res) => {
   }
 });
 
+// PATCH actualizar mascota
+MascotaRouter.patch("/:id/estado", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { estado } = req.body;
+
+    if (!estado) {
+      return res.status(400).json({ message: "estado es obligatorio" });
+    }
+
+    // validar formato de ObjectId
+    if (!ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "id inválido" });
+    }
+
+    const repo = AppDataSource.getMongoRepository(Mascota);
+    const objectId = new ObjectId(id);
+
+    const mascota = await repo.findOne({
+      where: { _id: objectId },
+    });
+
+    if (!mascota) {
+      return res.status(404).json({ message: "Mascota no encontrada" });
+    }
+
+    mascota.estado = estado;
+
+    const actualizada = await repo.save(mascota);
+
+    return res.json(actualizada);
+  } catch (error) {
+    console.error("Error al actualizar estado de mascota:", error);
+    return res
+      .status(500)
+      .json({ message: "Error interno al actualizar estado" });
+  }
+});
+
 
 export default MascotaRouter;

@@ -152,12 +152,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "5deb019cc844d0d50c5bedbcada1c28728bafdd3",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-11-20T14:27:40.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/5deb019cc844d0d50c5bedbcada1c28728bafdd3"
     },
     "stats": {
       "total": 175,
@@ -220,6 +220,25 @@
       "total": 51,
       "additions": 43,
       "deletions": 8,
+      "date": "2025-11-22"
+    },
+    "coverage": 98.31,
+    "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-22T20:18:59.000Z",
+      "message": "feat: Se agrego Endpoint Patch Mascotas",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 39,
+      "additions": 39,
+      "deletions": 0,
       "date": "2025-11-22"
     },
     "coverage": 98.31,
