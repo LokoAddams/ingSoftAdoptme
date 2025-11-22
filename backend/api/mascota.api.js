@@ -18,6 +18,31 @@ MascotaRouter.get("/", async (req, res) => {
   res.json(result);
 });
 
+// GET por ID
+MascotaRouter.get("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    // validar formato de ObjectId
+    if (!ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "id inválido" });
+    }
+    const repo = AppDataSource.getMongoRepository(Mascota);
+    const objectId = new ObjectId(id);
+    const mascota = await repo.findOne({
+      where: { _id: objectId },
+    });
+    if (!mascota) {
+      return res.status(404).json({ message: "Mascota no encontrada" });
+    }
+    return res.json({
+      ...mascota,
+      id: mascota._id.toString(), 
+    });
+  } catch (error) {
+    console.error("Error al obtener mascota por ID:", error);
+    return res.status(500).json({ message: "Error interno al obtener mascota" });
+  }
+});
 
 // POST crear nueva mascota
 MascotaRouter.post("/", async (req, res) => {
