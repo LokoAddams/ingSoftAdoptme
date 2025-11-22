@@ -95,12 +95,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "3d142c4c54c7b637ff0ea01659dc550c8d15ec1e",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-20T14:06:28.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/3d142c4c54c7b637ff0ea01659dc550c8d15ec1e"
     },
     "stats": {
       "total": 4,
@@ -163,6 +163,25 @@
       "total": 128,
       "additions": 117,
       "deletions": 11,
+      "date": "2025-11-22"
+    },
+    "coverage": 98.31,
+    "test_count": 13,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-22T21:48:23.000Z",
+      "message": "fix: Solicitud adopcion faltaba fetch",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 80,
+      "additions": 43,
+      "deletions": 37,
       "date": "2025-11-22"
     },
     "coverage": 98.31,
