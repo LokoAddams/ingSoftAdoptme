@@ -830,12 +830,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "16df70d62934a3ac1d39819af716baa08c6f0a5f",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T14:06:16.000Z",
       "message": "fix: recuperar imagenes deploy backend o localhost",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/16df70d62934a3ac1d39819af716baa08c6f0a5f"
     },
     "stats": {
       "total": 20,
@@ -849,12 +849,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "16df70d62934a3ac1d39819af716baa08c6f0a5f",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T14:07:49.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/16df70d62934a3ac1d39819af716baa08c6f0a5f"
     },
     "stats": {
       "total": 99,
@@ -975,6 +975,44 @@
       "additions": 21,
       "deletions": 17,
       "date": "2025-11-25"
+    },
+    "coverage": 73.68,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-27T02:21:04.000Z",
+      "message": "refact: Se movio la recuperacion de imagenes del presenter al Service",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 34,
+      "additions": 18,
+      "deletions": 16,
+      "date": "2025-11-27"
+    },
+    "coverage": 73.68,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-27T02:24:22.000Z",
+      "message": "refact: Se movio la recuperacion de imagenes del presenter al Service",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 34,
+      "additions": 18,
+      "deletions": 16,
+      "date": "2025-11-27"
     },
     "coverage": 73.68,
     "test_count": 40,

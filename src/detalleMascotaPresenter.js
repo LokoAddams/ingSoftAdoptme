@@ -1,5 +1,6 @@
 import  MascotaRepository  from './infraestructure/MascotaRepository.js';
 import Mascota from './domain/Mascota.js';
+import { buildImgUrl } from './services/ObtenerImagenMascotaService.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const params = new URLSearchParams(window.location.search);
@@ -61,22 +62,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         detalleDiv.appendChild(infoContainer);
 
         const img = document.createElement('img');
-        // Determinar URL base del API según entorno (coincide con otros repos)
-        const _hostname =
-            typeof window !== 'undefined' && window.location && window.location.hostname
-                ? window.location.hostname
-                : 'localhost';
-        const API_URL = _hostname === 'localhost' ? 'http://localhost:3001' : 'https://ingsoftadoptme.onrender.com';
-
-        const buildImgUrl = (imgRef) => {
-            if (!imgRef) return '';
-            // si ya es absoluta
-            if (/^https?:\/\//i.test(imgRef)) return imgRef;
-            // si empieza con slash, unimos directamente
-            if (imgRef.startsWith('/')) return `${API_URL}${imgRef}`;
-            // si viene como uploads/filename
-            return `${API_URL}${imgRef}`;
-        };
 
         img.src = buildImgUrl(detallesMascota.img_ref) || '';
         img.alt = `Foto de ${detallesMascota.nombre || 'mascota'}`;
