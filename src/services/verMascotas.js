@@ -1,18 +1,14 @@
-function verMascotas(lista = [], hayConexion = true) {
+async function verMascotas(hayConexion = true) {
     if(hayConexion) {
-        if (lista.length == 0) {
-            return "Lo siento, por el momento no hay mascotas disponibles.";
-        } else {
-            let resultado = [];
-            let mascota;
-            for (let i = 0; i < lista.length; i++) {
-                mascota = [lista[i].nombre, lista[i].img_ref, lista[i].facilitador];
-                resultado.push(mascota);
-            }
-            return resultado;
+        const res = await fetch('http://localhost:3001/api/mascotas');
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const mascotas = await res.json();
+        if (!Array.isArray(mascotas) || mascotas.length === 0) {
+            throw new Error("No hay mascotas disponibles.");
         }
+        return mascotas;
     } else {
-        return "Revise su conexión a internet.";
+        throw new Error("Revise su conexión a internet.");
     }
 }
 
