@@ -868,12 +868,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0e46df54e425cd9fef3b5d9db499190db0a47a54",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T14:08:33.000Z",
       "message": "refact: server",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/0e46df54e425cd9fef3b5d9db499190db0a47a54"
     },
     "stats": {
       "total": 14,
@@ -887,12 +887,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "0e46df54e425cd9fef3b5d9db499190db0a47a54",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T14:18:26.000Z",
       "message": "refact: url para imagenes en deploy",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/0e46df54e425cd9fef3b5d9db499190db0a47a54"
     },
     "stats": {
       "total": 30,
@@ -1018,5 +1018,43 @@
     "test_count": 40,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-11-27T04:18:24.000Z",
+      "message": "feat: Cambiar estado de solicitud.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 137,
+      "additions": 135,
+      "deletions": 2,
+      "date": "2025-11-27"
+    },
+    "coverage": 64.93,
+    "test_count": 40,
+    "failed_tests": 1,
+    "conclusion": "failure"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-11-27T04:18:45.000Z",
+      "message": "feat: Cambiar estado de solicitud.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 137,
+      "additions": 135,
+      "deletions": 2,
+      "date": "2025-11-27"
+    },
+    "coverage": 64.93,
+    "test_count": 40,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]

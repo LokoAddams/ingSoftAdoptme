@@ -122,3 +122,32 @@ header {
     transform:translateY(-6px); 
     box-shadow:0 12px 36px rgba(2,6,23,0.12);
 }
+
+.cont-botones-estado {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-aceptar, .btn-rechazar {
+    width: 20%;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+.btn-aceptar {
+    background-color: var(--electric-deep);
+    color: white;
+}
+
+.btn-rechazar {
+    border: 2px solid var(--electric-deep);
+    color: var(--electric-deep);
+}

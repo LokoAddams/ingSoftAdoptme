@@ -15,6 +15,12 @@ class SolicitudAdopcionService {
   async getTodasLasSolicitudes() {
     return await this.solicitudAdopcionRepository.obtenerTodasSolicitudes();
   }
+
+  async actualizarEstadoSolicitud(solicitudId, nuevoEstado) {
+    await this.validarConexion.validarConexionInternet();
+    await this.validarConexion.validarConexionBackend();
+    return await this.solicitudAdopcionRepository.actualizarEstado(solicitudId, nuevoEstado);
+  }
 }
 
 export default SolicitudAdopcionService;
