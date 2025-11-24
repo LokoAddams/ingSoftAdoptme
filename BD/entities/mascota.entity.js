@@ -16,6 +16,7 @@ export const Mascota = new EntitySchema({
     raza: { type: String },
     edad: { type: Number },
     estado: { type: String },
+    sexo: { type: String },
     img_ref: { type: String },
     facilitador: { type: String },
   },

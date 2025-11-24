@@ -47,7 +47,7 @@ MascotaRouter.get("/:id", async (req, res) => {
 // POST crear nueva mascota
 MascotaRouter.post("/", async (req, res) => {
   try {
-    const { nombre, especie, raza, edad, estado, img_ref, facilitador } = req.body;
+    const { nombre, especie, raza, edad, estado, sexo, img_ref, facilitador } = req.body;
 
     // validaciones básicas
     if (!nombre || !especie) {
@@ -61,6 +61,7 @@ MascotaRouter.post("/", async (req, res) => {
       especie,
       raza,
       edad,
+      sexo,
       estado: estado ?? "Disponible",
       img_ref,
       facilitador,

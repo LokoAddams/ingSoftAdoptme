@@ -190,12 +190,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "faf51e7b1b2c09c9ef75dbceb709eaab4878f851",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-11-24T01:27:51.000Z",
       "message": "feat: Implementacion Repositorio Mascotas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/faf51e7b1b2c09c9ef75dbceb709eaab4878f851"
     },
     "stats": {
       "total": 82,
@@ -258,6 +258,25 @@
       "total": 100,
       "additions": 50,
       "deletions": 50,
+      "date": "2025-11-24"
+    },
+    "coverage": 98.39,
+    "test_count": 14,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-24T22:22:28.000Z",
+      "message": "fixed: Se agrego atributo sexo en BD para mascotas",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 3,
+      "deletions": 1,
       "date": "2025-11-24"
     },
     "coverage": 98.39,
