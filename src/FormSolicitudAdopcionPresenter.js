@@ -2,12 +2,42 @@ import Adoptante from './domain/Adoptante.js';
 import Mascota from './domain/Mascota.js';
 import SolicitudAdopcionService from './services/SolicitudAdopcionService.js';
 import SolicitudAdopcionRepository from './infraestructure/SolicitudAdopcionRepository.js';
+import { verDetalleMascota } from './services/verMascotas.js';
 
 const botonEnviarSolicitud = document.getElementById('enviarSolicitudBtn');
 let registroMensajeDiv = document.getElementById('registroMensaje');
 const Estado = document.getElementById('MarcarEstado');
 
 let solicitudAdopcionService = new SolicitudAdopcionService(new SolicitudAdopcionRepository(new Date()));
+
+// Si venimos con ?id=..., pedimos la mascota al backend y precargamos los campos
+(async () => {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (id) {
+      const m = await verDetalleMascota(navigator.onLine, id);
+      const setVal = (id, value) => {
+        const el = document.getElementById(id);
+        if (el) el.value = value;
+      };
+      setVal('mascotaNombre', m.nombre || '');
+      setVal('mascotaEspecie', m.especie || '');
+      setVal('mascotaRaza', m.raza || '');
+      setVal('mascotaSexo', m.sexo || '');
+      setVal('mascotaEdad', m.edad || '');
+      const estadoEl = document.getElementById('mascotaEstado');
+      if (estadoEl && m.estado) {
+        const optValue = m.estado.toString().toLowerCase();
+        const match = Array.from(estadoEl.options).find(o => o.value.toLowerCase() === optValue || o.value === m.estado);
+        if (match) estadoEl.value = match.value;
+      }
+      
+    }
+  } catch (err) {
+    console.error('Error procesando query string en FormSolicitudAdopcionPresenter', err);
+  }
+})();
 
 if (botonEnviarSolicitud) {
     botonEnviarSolicitud.addEventListener('click', () => {
@@ -36,7 +66,6 @@ if (botonEnviarSolicitud) {
         estado: (document.getElementById('mascotaEstado') || {}).value || 'disponible',
       });
       
-      console.log("hola1");
       Promise.all([
         import('./domain/SolicitudAdopcion.js'),
         import('./domain/Adoptante.js'),

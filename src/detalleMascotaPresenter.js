@@ -1,21 +1,20 @@
 import { verDetalleMascota } from "./services/verMascotas.js";
 import Mascota from "./domain/Mascota.js";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const params = new URLSearchParams(window.location.search);
-    const nomMascota = params.get('nom');
+    const idMascota = params.get('id');
     
     const detalleDiv = document.querySelector("#detalle-div");
 
-    const mascota1 = new Mascota({ nombre: "Apolo", img_ref: "https://www.mediterraneannatural.com/wp-content/uploads/2019/08/Guia-completa-de-las-razas-de-perros-Pit-Bull-Terrier-Americano-3.jpg", facilitador: "Centro Patitas al rescate", especie: "Perro", raza: "Pitbull", sexo: "Macho", edad: 2, estado: "Disponible"});
-    const mascota2 = new Mascota({ nombre: "Perlita", img_ref: "https://apupabove.com/cdn/shop/articles/Chihuahua_2ab3f5c4-9781-48ed-8119-7f780902c133_1200x1200.jpg?v=1742407300", facilitador: "Rescatista María Prado", especie: "Perro", raza: "Chihuahua", sexo: "Hembra", edad: 3, estado: "Disponible"});
-    const mascota3 = new Mascota({ nombre: "Bruno", img_ref: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/MiniDachshund1_wb.jpg/330px-MiniDachshund1_wb.jpg", facilitador: "Albergue Huellitas Libres", especie: "Perro", raza: "Dachshund", sexo: "Macho", edad: 4, estado: "Disponible"});
-    const mascota4 = new Mascota({ nombre: "Estela", img_ref: "https://upload.wikimedia.org/wikipedia/commons/a/a0/English_Cocker_Simon_Left.jpg", facilitador: "Rescatista María Prado", especie: "Perro", raza: "Cocker Spaniel", sexo: "Hembra", edad: 3, estado: "Disponible"});
-    let listaDeMascotasBD = [mascota1, mascota2, mascota3, mascota4];
-    
     const conexion = navigator.onLine;
-    
-    let detallesMascota = verDetalleMascota(conexion, nomMascota, listaDeMascotasBD);
+
+    let detallesMascota;
+
+    // Si no obtuvimos detalles desde API, usamos el fallback por nombre/local
+    if (idMascota) {
+        detallesMascota = await verDetalleMascota(conexion, idMascota);
+    }
     
     // Limpiamos el contenedor antes de armar el contenido
     detalleDiv.innerHTML = "";
@@ -73,11 +72,23 @@ document.addEventListener('DOMContentLoaded', () => {
         adoptBtn.type = 'button';
         adoptBtn.className = 'adopt-btn';
         adoptBtn.textContent = 'Adoptar';
-        console.log("hola");
         // Navega a la pantalla de adopción (se crea `adoptarMascota.html` en src/UI)
-        const targetName = nomMascota || detallesMascota.nombre;
+        const targetName =  detallesMascota.id;
         adoptBtn.addEventListener('click', () => {
-            const q = targetName ? ('?nom=' + encodeURIComponent(targetName)) : '';
+            const mascotaPayload = {
+                nombre: detallesMascota.nombre || '',
+                especie: detallesMascota.especie || '',
+                raza: detallesMascota.raza || '',
+                sexo: detallesMascota.sexo || '',
+                edad: detallesMascota.edad || 0,
+                estado: detallesMascota.estado || '',
+                img_ref: detallesMascota.img_ref || '',
+                facilitador: detallesMascota.facilitador || '',
+                id: detallesMascota.id || ''
+            };
+            
+
+            const q = targetName ? ('?id=' + encodeURIComponent(targetName)) : '';
             window.location.href = './FormSolicitudAdopcion.html' + q;
         });
         detalleDiv.appendChild(adoptBtn);

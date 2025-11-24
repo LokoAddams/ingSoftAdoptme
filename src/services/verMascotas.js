@@ -11,19 +11,24 @@ async function verMascotas(hayConexion = true) {
         throw new Error("Revise su conexión a internet.");
     }
 }
-
-function verDetalleMascota(hayConexion = false, nomMas, mascotasInfo) {
+async function verDetalleMascota(hayConexion = false, idMascota = null) {
     if (hayConexion) {
-        let mascota;
-
-        for (let i = 0; i<mascotasInfo.length; i++) {
-            mascota = mascotasInfo[i];
-            if(mascota.nombre == nomMas){
-                return mascota;
+        if (idMascota) {
+            try {
+                const res = await fetch(`http://localhost:3001/api/mascotas/${encodeURIComponent(idMascota)}`);
+                if (res.ok) {
+                    return await res.json();
+                } else {
+                    throw new Error(`HTTP ${res.status}`);
+                }
+            } catch (err) {
+                throw err; // <-- re-lanzar el error para que el llamador/tests lo reciban
             }
+        } else {
+            throw new Error('id de mascota no proporcionado.');
         }
     } else {
-        return "Revise su conexión a internet.";
+        throw new Error("Revise su conexión a internet.");
     }
 }
 

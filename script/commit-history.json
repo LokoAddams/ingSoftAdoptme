@@ -152,12 +152,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a57dc3563583f5e038d1e4a0d2229b03749a7ecf",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-22T21:47:10.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a57dc3563583f5e038d1e4a0d2229b03749a7ecf"
     },
     "stats": {
       "total": 128,
@@ -224,6 +224,25 @@
     },
     "coverage": 98.31,
     "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-24T19:22:22.000Z",
+      "message": "refact: recuperar informacion de mascota para detalleMascota y SolicitudAdopcion de la base de datos con id mascota",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 136,
+      "additions": 101,
+      "deletions": 35,
+      "date": "2025-11-24"
+    },
+    "coverage": 98.39,
+    "test_count": 14,
     "failed_tests": 0,
     "conclusion": "success"
   }
