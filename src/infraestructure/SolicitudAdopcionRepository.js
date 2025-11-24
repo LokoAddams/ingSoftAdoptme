@@ -11,7 +11,7 @@ const API_URL =
     : "https://ingsoftadoptme.onrender.com"; // producción
 
 
-function mapJsonToSolicitudAdopcion(json = {}) {
+/*function mapJsonToSolicitudAdopcion(json = {}) {
   const adoptanteNombre = json.adoptanteNombre || (json.adoptante && json.adoptante.nombre) || '';
   const mascotaId = json.mascotaId || (json.mascota && (json.mascota.id || json.mascota._id)) || null;
 
@@ -21,7 +21,29 @@ function mapJsonToSolicitudAdopcion(json = {}) {
   const fecha = json.fechaSolicitud || json.createdAt || json.fecha || null;
 
   return new SolicitudAdopcion(adoptante, mascota, fecha);
+}*/
+
+function mapJsonToSolicitudAdopcion(json = {}) {
+  const adoptanteNombre =
+    json.adoptanteNombre ||
+    (json.adoptante && json.adoptante.nombre) ||
+    '';
+
+  const mascotaId =
+    json.mascotaId ||
+    (json.mascota && (json.mascota.id || json.mascota._id)) ||
+    null;
+
+  const adoptante = new Adoptante({ nombre: adoptanteNombre });
+  const mascota = new Mascota({ id: mascotaId });
+
+  const fecha  = json.fechaSolicitud || json.createdAt || json.fecha || null;
+  const estado = json.estado || 'pendiente';
+  const id     = json.id || json._id || null; 
+
+  return new SolicitudAdopcion(adoptante, mascota, fecha, id, estado);
 }
+
 class SolicitudAdopcionRepository {
   constructor() {
   }
@@ -75,6 +97,31 @@ class SolicitudAdopcionRepository {
 
     const jsonArray = await res.json(); // es un array como el de Postman
     return jsonArray.map(mapJsonToSolicitudAdopcion);
+  }
+
+  async actualizarEstado(solicitudId, nuevoEstado) {
+    const res = await fetch(`${API_URL}/api/solicitudes/${solicitudId}/estado`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ estado: nuevoEstado }),
+    });
+
+    if (!res.ok) {
+      let message = 'Error al actualizar estado de la solicitud';
+      try {
+        const body = await res.json();
+        if (body && body.message) message = body.message;
+      } catch (e) {
+        try {
+          const text = await res.text();
+          if (text) message = text;
+        } catch (e2) {}
+      }
+      throw new Error(message);
+    }
+
+    const json = await res.json();
+    return mapJsonToSolicitudAdopcion(json);
   }
 }
 export default SolicitudAdopcionRepository;

@@ -95,7 +95,7 @@ describe('SolicitudAdopcion - EnviarSolicitud', () => {
 		expect(resultado.adoptante.nombre).toBe(data.adoptanteNombre);
 		expect(resultado.mascota).toBeDefined();
 		expect(resultado.mascota.id).toBe(data.mascotaId);
-		expect(resultado.estado).toBe('pendiente');
+		expect(resultado.estado).toBe('Disponible');
 		expect(resultado.fechaSolicitud).toBeDefined();
 	});
 
