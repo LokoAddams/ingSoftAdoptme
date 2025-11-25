@@ -716,12 +716,12 @@
     "coverage": 90.32
   },
   {
-    "sha": "HEAD",
+    "sha": "1245a4adeb87e2814a0cf0adde25e4e0b77e8126",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T13:13:18.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/1245a4adeb87e2814a0cf0adde25e4e0b77e8126"
     },
     "stats": {
       "total": 307,
@@ -860,6 +860,25 @@
       "total": 99,
       "additions": 69,
       "deletions": 30,
+      "date": "2025-11-25"
+    },
+    "coverage": 77.78,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-25T14:08:33.000Z",
+      "message": "refact: server",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 14,
+      "additions": 7,
+      "deletions": 7,
       "date": "2025-11-25"
     },
     "coverage": 77.78,
