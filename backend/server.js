@@ -7,6 +7,7 @@ const app = express();
 
 app.use(express.json());
 
+app.use('/uploads', express.static('backend/uploads'));
 const allowedOrigins = [
   "http://localhost:1234",
   "http://localhost:3001",
