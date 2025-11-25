@@ -1,4 +1,4 @@
-import { MascotaRepository } from "./infraestructure/MascotaRepository.js";
+import  MascotaRepository from "./infraestructure/MascotaRepository.js";
 import Mascota from "./domain/Mascota.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Intentamos obtener la lista real desde el backend
   try {
     try{
-      const mascotas = await mascotaRepository.obtenerMascotas(navigator.onLine);
+      const mascotas = await mascotaRepository.obtenerMascotas();
       mascotas.forEach((m) => {
         // Crear el enlace que envuelve la tarjeta (igual que la versión anterior)
         const a = document.createElement('a');

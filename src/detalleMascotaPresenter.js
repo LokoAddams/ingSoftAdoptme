@@ -1,5 +1,5 @@
-import { MascotaRepository } from "./infraestructure/MascotaRepository.js";
-import Mascota from "./domain/Mascota.js";
+import  MascotaRepository  from './infraestructure/MascotaRepository.js';
+import Mascota from './domain/Mascota.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const params = new URLSearchParams(window.location.search);
@@ -7,14 +7,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     
     const detalleDiv = document.querySelector("#detalle-div");
 
-    const conexion = navigator.onLine;
 
     let detallesMascota;
     const mascotaRepository = new MascotaRepository();
 
     // Si no obtuvimos detalles desde API, usamos el fallback por nombre/local
     if (idMascota) {
-        detallesMascota = await mascotaRepository.obtenerDetalleMascota(conexion, idMascota);
+        detallesMascota = await mascotaRepository.obtenerDetalleMascotaPorId(idMascota);
     }
     
     // Limpiamos el contenedor antes de armar el contenido

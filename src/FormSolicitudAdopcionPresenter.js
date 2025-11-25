@@ -2,9 +2,7 @@ import Adoptante from './domain/Adoptante.js';
 import Mascota from './domain/Mascota.js';
 import SolicitudAdopcionService from './services/SolicitudAdopcionService.js';
 import SolicitudAdopcionRepository from './infraestructure/SolicitudAdopcionRepository.js';
-import { MascotaRepository } from "./infraestructure/MascotaRepository.js";
-
-
+import MascotaRepository  from './infraestructure/MascotaRepository.js';
 const botonEnviarSolicitud = document.getElementById('enviarSolicitudBtn');
 let registroMensajeDiv = document.getElementById('registroMensaje');
 const Estado = document.getElementById('MarcarEstado');
@@ -17,7 +15,7 @@ let mascotaRepository = new MascotaRepository();
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
     if (id) {
-      const m = await mascotaRepository.obtenerDetalleMascota(navigator.onLine, id);
+      const m = await mascotaRepository.obtenerDetalleMascotaPorId( id);
       const setVal = (id, value) => {
         const el = document.getElementById(id);
         if (el) el.value = value;

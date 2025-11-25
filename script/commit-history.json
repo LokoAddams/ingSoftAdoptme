@@ -228,12 +228,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a5b1d177f473933ae9330bbb6cc1da2089616d49",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-24T19:22:22.000Z",
       "message": "refact: recuperar informacion de mascota para detalleMascota y SolicitudAdopcion de la base de datos con id mascota",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a5b1d177f473933ae9330bbb6cc1da2089616d49"
     },
     "stats": {
       "total": 136,
@@ -319,6 +319,25 @@
     },
     "coverage": 75,
     "test_count": 14,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-25T03:06:19.000Z",
+      "message": "refactor: arquitectura hexagonal MascotaService y MascotaRepository",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 469,
+      "additions": 382,
+      "deletions": 87,
+      "date": "2025-11-25"
+    },
+    "coverage": 84.34,
+    "test_count": 15,
     "failed_tests": 0,
     "conclusion": "success"
   }
