@@ -209,12 +209,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "43024d8ee3f099c34fd69b3c1151522c446f7703",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-24T18:54:56.000Z",
       "message": "refact: recuperar mascotas de la Base de Datos",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/43024d8ee3f099c34fd69b3c1151522c446f7703"
     },
     "stats": {
       "total": 262,
@@ -267,6 +267,25 @@
   },
   {
     "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-24T22:22:28.000Z",
+      "message": "fixed: Se agrego atributo sexo en BD para mascotas",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 3,
+      "deletions": 1,
+      "date": "2025-11-24"
+    },
+    "coverage": 98.39,
+    "test_count": 14,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T00:48:16.000Z",
@@ -277,6 +296,25 @@
       "total": 136,
       "additions": 73,
       "deletions": 63,
+      "date": "2025-11-25"
+    },
+    "coverage": 75,
+    "test_count": 14,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-25T00:51:53.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 3,
+      "deletions": 1,
       "date": "2025-11-25"
     },
     "coverage": 75,
