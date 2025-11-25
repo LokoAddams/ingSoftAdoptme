@@ -360,12 +360,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "eb918864698f29ca7f2df4481e21116e7b0d3657",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-11-25T02:52:38.000Z",
       "message": "feat: Se agrego endpoint Patch en Solicitud",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/eb918864698f29ca7f2df4481e21116e7b0d3657"
     },
     "stats": {
       "total": 67,
@@ -466,6 +466,25 @@
       "total": 52,
       "additions": 10,
       "deletions": 42,
+      "date": "2025-11-25"
+    },
+    "coverage": 92.11,
+    "test_count": 15,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-25T04:01:22.000Z",
+      "message": "Feat: Timeout despues de registrar.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 5,
+      "additions": 4,
+      "deletions": 1,
       "date": "2025-11-25"
     },
     "coverage": 92.11,
