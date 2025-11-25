@@ -98,8 +98,8 @@ header {
     width: 100%;
 }
 
-main {
-    height: 500px;
+#cont-solicitudes {
+    height: auto;
     width: 100%;
     padding: 20px 0 20px 0;
     display: flex;

@@ -531,12 +531,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "8486e0ad127ac21f7020d6f319d317513e21054e",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-11-25T04:36:12.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into agregarMenu",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/8486e0ad127ac21f7020d6f319d317513e21054e"
     },
     "stats": {
       "total": 5219,
@@ -679,5 +679,24 @@
     "test_count": 0,
     "failed_tests": 0,
     "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-11-25T12:06:13.000Z",
+      "message": "feat: implementacion de verSolicitudes con service",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 156,
+      "additions": 146,
+      "deletions": 10,
+      "date": "2025-11-25"
+    },
+    "coverage": 77.78,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
   }
 ]
