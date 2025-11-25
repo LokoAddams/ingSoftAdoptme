@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 
 import SolicitudAdopcion from '../domain/SolicitudAdopcion.js';
 import Adoptante from '../domain/Adoptante.js'; 
@@ -8,17 +11,40 @@ import ValidarConexion from '../infraestructure/ValidarConexion.js';
 
 describe('SolicitudAdopcion - EnviarSolicitud', () => {
 	let solicitudAdopcionService;
-
+	const mockInternetConnection = (status) => {
+        Object.defineProperty(navigator, 'onLine', {
+            value: status,
+            configurable: true
+        });
+    };
 	beforeEach(() => {
 		solicitudAdopcionService = new SolicitudAdopcionService(new SolicitudAdopcionRepository(), new ValidarConexion());
+
+		// Mock global.fetch for health-check and POST /api/solicitudes
+		jest.spyOn(global, 'fetch').mockImplementation(async (url, opts) => {
+			const u = String(url);
+			if (u === 'http://localhost:3001' || u === 'https://ingsoftadoptme.onrender.com') {
+				return { ok: true, status: 200, json: async () => ({ status: 'ok' }) };
+			}
+			if (u.includes('/api/solicitudes') && opts && opts.method === 'POST') {
+				// simulate backend validation error for invalid mascotaId
+				return { ok: false, status: 400, json: async () => ({ message: 'mascotaId inválido' }) };
+			}
+			// fallback
+			return { ok: true, status: 200, json: async () => ({}) };
+		});
 	});
+
+	beforeAll(() => {
+        window.alert = jest.fn(); 
+    });
 
 	afterEach(() => {
 		jest.restoreAllMocks();
 	});
 
 	test('EnviarSolicitud debe fallar cuando no hay conexión a internet', async () => {
-		navigator.onLine = false;
+		mockInternetConnection(false);
 		const data = {
 			mascotaId: "6925071aa83df10a4b76900c",
 			adoptanteNombre: "Juan Pérez"
@@ -27,7 +53,7 @@ describe('SolicitudAdopcion - EnviarSolicitud', () => {
 	});
 
 	test('EnviarSolicitud debe fallar cuando id no existe', async () => {
-		navigator.onLine = true;
+		mockInternetConnection(true);
 		const data = {
 			mascotaId: "id-inexistente",
 			adoptanteNombre: "Juan Pérez"
@@ -36,7 +62,7 @@ describe('SolicitudAdopcion - EnviarSolicitud', () => {
 	});
 
 	test('EnviarSolicitud debe construir una solicitud con adoptante, mascota, fecha y estado', async () => {
-		navigator.onLine = true;
+		mockInternetConnection(true);
 		const data = { mascotaId: '6925071aa83df10a4b76900c', adoptanteNombre: 'Juan Pérez' };
 
 		// mock fetch: health-check to API_URL and POST /api/solicitudes

@@ -13,6 +13,12 @@ function setupBrowserGlobals() {
   // default online; tests may toggle this value
   Object.defineProperty(global.navigator, 'onLine', { value: true, configurable: true, writable: true });
 }
+const mockInternetConnection = (status) => {
+        Object.defineProperty(navigator, 'onLine', {
+            value: status,
+            configurable: true
+        });
+    };
 
 function createFetchMock({ healthOk = true, mascotasResponse = { ok: true, status: 200, json: async () => [] } } = {}) {
   return async (url) => {
@@ -71,7 +77,7 @@ describe('obtenerMascotas', () => {
 
   it('retorna un mensaje cuando no hay conexión', async () => {
     // use the real ValidarConexion; simulate offline
-    global.navigator.onLine = false;
+    mockInternetConnection(false);
     await expect(mascotaService.obtenerMascotas()).rejects.toThrow('Revise su conexión a internet.');
   });
 
@@ -163,7 +169,7 @@ describe("obtenerDetalleMascotaPorId", () => {
   });
 
   it("deberia mostrar 'Revise su conexión a internet.'",  async () => {
-    global.navigator.onLine = false;
+    mockInternetConnection(false);
     await expect(mascotaService.obtenerDetalleMascotaPorId()).rejects.toThrow('Revise su conexión a internet.');
   });
   it('lanza error con código HTTP cuando la respuesta no es ok', async () => {

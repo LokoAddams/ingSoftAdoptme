@@ -60,11 +60,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         detalleDiv.appendChild(infoContainer);
 
-        const imagen = document.createElement("img");
-        imagen.src = detallesMascota.img_ref;
-        imagen.alt = "Foto mascota disponible";
-        imagen.className = 'detalle-imagen';
-        detalleDiv.appendChild(imagen);
+        const img = document.createElement('img');
+        img.src = `http://localhost:3001${detallesMascota.img_ref}` || '';
+        img.alt = `Foto de ${detallesMascota.nombre || 'mascota'}`;
+        detalleDiv.appendChild(img);
 
         // Botón Adoptar dentro del contenedor de detalle
         const adoptBtn = document.createElement('button');
