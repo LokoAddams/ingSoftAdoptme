@@ -1,13 +1,15 @@
 import SolicitudAdopcionRepository from "../infraestructure/SolicitudAdopcionRepository";
 
 class SolicitudAdopcionService {
-  constructor(solicitudAdopcionRepository) {
+  constructor(solicitudAdopcionRepository, validarConexion) {
     this.solicitudAdopcionRepository = solicitudAdopcionRepository;
+    this.validarConexion = validarConexion;
   }
 
-  async createSolicitud(adoptante, mascota) {
-    const fechaActual = new Date().toISOString();
-    return await this.solicitudAdopcionRepository.create(adoptante, mascota, fechaActual);
+  async createSolicitud(mascotaId, adoptanteNombre) {
+    await this.validarConexion.validarConexionInternet();
+    await this.validarConexion.validarConexionBackend();
+    return await this.solicitudAdopcionRepository.create(mascotaId, adoptanteNombre);
   }
 }
 

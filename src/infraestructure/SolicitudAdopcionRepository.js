@@ -1,36 +1,45 @@
 import SolicitudAdopcion from '../domain/SolicitudAdopcion.js';
+import Adoptante from '../domain/Adoptante.js';
+import Mascota from '../domain/Mascota.js';
+const _hostname =
+  typeof window !== "undefined" && window.location && window.location.hostname
+    ? window.location.hostname
+    : "localhost";
+const API_URL =
+  _hostname === "localhost"
+    ? "http://localhost:3001" // desarrollo
+    : "https://ingsoftadoptme.onrender.com"; // producción
 
+
+function mapJsonToSolicitudAdopcion(json = {}) {
+  const adoptanteNombre = json.adoptanteNombre || (json.adoptante && json.adoptante.nombre) || '';
+  const mascotaId = json.mascotaId || (json.mascota && (json.mascota.id || json.mascota._id)) || null;
+
+  const adoptante = new Adoptante({ nombre: adoptanteNombre });
+  const mascota = new Mascota({ id: mascotaId });
+
+  const fecha = json.fechaSolicitud || json.createdAt || json.fecha || null;
+
+  return new SolicitudAdopcion(adoptante, mascota, fecha);
+}
 class SolicitudAdopcionRepository {
-  constructor(fechaActual) {
-    this.fechaActual = fechaActual;
+  constructor() {
   }
 
-  async checkOnline() {
-    const timeout = 3000;
-    const controller = new AbortController();
-    const signal = controller.signal;
-    const id = setTimeout(() => controller.abort(), timeout);
+  async create(mascotaId, adoptanteNombre) {
+    const res = await fetch(`${API_URL}/api/solicitudes`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ mascotaId: mascotaId, adoptanteNombre: adoptanteNombre })
+      
+    });
 
-    const faviconUrl = (globalThis && globalThis.location && globalThis.location.origin)
-      ? new URL('/favicon.ico', globalThis.location.origin).toString()
-      : 'https://example.com/favicon.ico';
-
-    try {
-      await fetch(faviconUrl, { method: 'HEAD', cache: 'no-store', signal });
-      clearTimeout(id);
-      return true;
-    } catch (err) {
-      clearTimeout(id);
-      return false;
+    if (!res.ok) {
+      throw new Error("Error al crear solicitud de adopción");
     }
-  }
 
-  async create(adoptante, mascota, fechaActual) {
-    const online = await this.checkOnline();
-    if (!online) {
-      throw new Error('No se puede crear una solicitud de adopción sin conexión a internet');
-    }
-    return new SolicitudAdopcion(adoptante, mascota, fechaActual);
+    const json = await res.json();
+    return mapJsonToSolicitudAdopcion(json);
   }
 }
 export default SolicitudAdopcionRepository;

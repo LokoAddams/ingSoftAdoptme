@@ -4,92 +4,64 @@ import Adoptante from '../domain/Adoptante.js';
 import Mascota from '../domain/Mascota.js';
 import SolicitudAdopcionService from '../services/SolicitudAdopcionService.js';
 import SolicitudAdopcionRepository from '../infraestructure/SolicitudAdopcionRepository.js';
+import ValidarConexion from '../infraestructure/ValidarConexion.js';
 
 describe('SolicitudAdopcion - EnviarSolicitud', () => {
 	let solicitudAdopcionService;
 
 	beforeEach(() => {
-		
-		solicitudAdopcionService = new SolicitudAdopcionService(new SolicitudAdopcionRepository(new Date()));
+		solicitudAdopcionService = new SolicitudAdopcionService(new SolicitudAdopcionRepository(), new ValidarConexion());
+	});
+
+	afterEach(() => {
+		jest.restoreAllMocks();
 	});
 
 	test('EnviarSolicitud debe fallar cuando no hay conexión a internet', async () => {
-		const adoptante = new Adoptante({
-			nombre: 'Juan Pérez',
-			cuestionario: {
-				responsabilidad: 'Porque quiero compañía y cuidar de un animal',
-				ambiente: 'grande',
-				Problemas_de_salud: 'No',
-				ninos: 'Si',
-				otras_mascotas: 'No',
-				economia: 500,
-			},
-			contacto: {
-				email: 'juan.perez@example.com',
-				telefono: '555-1234'
-			}
-		});
-
-		const mascota = new Mascota({
-			nombre: 'Luna',
-			especie: 'Perro',
-			raza: 'Labrador',
-			sexo: 'Hembra',
-			edad: 2,
-			estado: 'disponible'
-		});
-
-		// Simular fallo de red para la comprobación de conectividad
-		const fetchMock = jest.spyOn(global, 'fetch').mockRejectedValue(new Error('Network Error'));
-
-		await expect(solicitudAdopcionService.createSolicitud(adoptante, mascota)).rejects.toThrow('No se puede crear una solicitud de adopción sin conexión a internet');
-
-		fetchMock.mockRestore();
+		navigator.onLine = false;
+		const data = {
+			mascotaId: "6924f95da3569087c92ce8b1",
+			adoptanteNombre: "Juan Pérez"
+		}
+		await expect(solicitudAdopcionService.createSolicitud(data.mascotaId, data.adoptanteNombre)).rejects.toThrow('Revise su conexión a internet.');
 	});
 
 	test('EnviarSolicitud debe construir una solicitud con adoptante, mascota, fecha y estado', async () => {
-    // Mock de conexión exitosa
-    const fetchMock = jest.spyOn(global, 'fetch').mockResolvedValue({ ok: true });
+		navigator.onLine = true;
+		const data = { mascotaId: '6924f95da3569087c92ce8b1', adoptanteNombre: 'Juan Pérez' };
 
-    const adoptante = new Adoptante({
-        nombre: 'Juan Pérez',
-        cuestionario: {
-            responsabilidad: 'Porque quiero compañía y cuidar de un animal',
-            ambiente: 'grande',
-            Problemas_de_salud: 'No',
-            ninos: 'Si',
-            otras_mascotas: 'No',
-            economia: 500,
-        },
-        contacto: {
-            email: 'juan.perez@example.com',
-            telefono: '555-1234'
-        }
-    });
+		// mock fetch: health-check to API_URL and POST /api/solicitudes
+		jest.spyOn(global, 'fetch').mockImplementation(async (url, opts) => {
+			const u = String(url);
+			if (u === 'http://localhost:3001' || u === 'https://ingsoftadoptme.onrender.com') {
+				return { ok: true, status: 200, json: async () => ({ status: 'ok' }) };
+			}
+			if (u.includes('/api/solicitudes') && opts && opts.method === 'POST') {
+				return {
+					ok: true,
+					status: 201,
+					json: async () => ({
+						mascotaId: data.mascotaId,
+						adoptanteNombre: data.adoptanteNombre,
+						estado: 'pendiente',
+						fechaSolicitud: new Date().toISOString(),
+						id: 'generated-id-123'
+					})
+				};
+			}
+			// fallback
+			return { ok: true, status: 200, json: async () => ({}) };
+		});
 
-    const mascota = new Mascota({
-        nombre: 'Luna',
-        especie: 'Perro',
-        raza: 'Labrador',
-        sexo: 'Hembra',
-        edad: 2,
-        estado: 'disponible'
-    });
+		const resultado = await solicitudAdopcionService.createSolicitud(data.mascotaId, data.adoptanteNombre);
 
-    const resultado = await solicitudAdopcionService.createSolicitud(adoptante, mascota);
-
-    expect(resultado).toBeDefined();
-
-    expect(resultado).toMatchObject({
-        adoptante: adoptante,
-        mascota: mascota,
-        estado: expect.any(String),
-        fechaSolicitud: expect.any(String)
-    });
-
-    expect(resultado.estado).toBe('pendiente');
-
-    fetchMock.mockRestore();
+		expect(resultado).toBeDefined();
+		expect(resultado.adoptante).toBeDefined();
+		expect(resultado.adoptante.nombre).toBe(data.adoptanteNombre);
+		expect(resultado.mascota).toBeDefined();
+		expect(resultado.mascota.id).toBe(data.mascotaId);
+		expect(resultado.estado).toBe('pendiente');
+		expect(resultado.fechaSolicitud).toBeDefined();
 	});
 
 

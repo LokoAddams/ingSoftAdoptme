@@ -109,6 +109,6 @@ describe('Solicitud de Adopción UI', () => {
 
     // Esperar a que la comprobación (interceptada) ocurra y luego verificar el mensaje
     cy.wait('@checkOnline')
-    cy.get('#solicitudMensaje').should('contain.text', 'No se puede crear una solicitud de adopción sin conexión a internet')
+    cy.get('#solicitudMensaje').should('contain.text', 'Revise su conexión a internet.')
   })
 })
