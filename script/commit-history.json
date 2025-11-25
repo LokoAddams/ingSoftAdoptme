@@ -624,12 +624,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a8961ddbced8825691c405c9b4ef676efe129dc5",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T06:48:52.000Z",
       "message": "refact: tests para deploy",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a8961ddbced8825691c405c9b4ef676efe129dc5"
     },
     "stats": {
       "total": 121,
@@ -783,6 +783,25 @@
     "stats": {
       "total": 2,
       "additions": 1,
+      "deletions": 1,
+      "date": "2025-11-25"
+    },
+    "coverage": 77.78,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-25T13:48:37.000Z",
+      "message": "fix: nettfly",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 3,
+      "additions": 2,
       "deletions": 1,
       "date": "2025-11-25"
     },

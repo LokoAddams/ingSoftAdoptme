@@ -12,7 +12,8 @@ const allowedOrigins = [
 	"http://localhost:1234",
 	"http://localhost:3001",
 	"https://ingsoftadoptme.onrender.com",
-	"https://69259c45a6b6980008278f56--adoptmebombastic.netlify.app"
+	"https://69259c45a6b6980008278f56--adoptmebombastic.netlify.app",
+	"https://6925b2566e0190d210e03c9e--adoptmebombastic.netlify.app"
 ];
 
 // Middleware CORS simple - permite llamadas desde el frontend de desarrollo
