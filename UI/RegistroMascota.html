@@ -3,15 +3,35 @@
 <head>
     
     <title>Registrar</title>
-        <link rel="stylesheet" href="./RegistroMascota.css">
+    <link rel="stylesheet" href="./RegistroMascota.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
 </head>
 <body>
+  <header>
+      <div id="cont-titulo">
+        Adopt Me
+      </div>
+      <nav id="cont-nav">
+        <div id="cont-buscador">
+          <input type="text">
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div id="cont-links">
+          <ul>
+            <li><a href="./RegistroMascota.html">Registrar Mascota</a></li>
+            <li><a href="">Ver Solicitudes</a></li>
+          </ul>
+        </div>
+      </nav>
+  </header>
+  
+  <main>
     <h1>Registrar Mascota</h1>
-  <div class="Registrar-form">
+    <div class="Registrar-form">
       <input type="text" id="nombre" placeholder="Nombre" />
       <input type="especie" id="especie" placeholder="Especie" />
-     <input type="edad" id="edad" placeholder="Edad" />
+      <input type="edad" id="edad" placeholder="Edad" />
       <label for="Raza">Raza:</label>
       <select id="Raza" name=" Raza"> 
         <option value="Labrador">Labrador</option>
@@ -31,25 +51,25 @@
         <option value="Macho">Macho</option>
         <option value="Hembra">Hembra</option>
       </select>
-        <div class="SeleccionarArchivo-form">
-    <h5> Subir fotos de la mascota</h5>
-    <button id="subirDocumentoBtn">Seleccionar fotos</button>
-    <input type="file" id="documento" name="imagen" style="display: none;" />
-    <div id="archivoSeleccionado"></div>
-  </div>
+      <div class="SeleccionarArchivo-form">
+        <h5> Subir fotos de la mascota</h5>
+        <button id="subirDocumentoBtn">Seleccionar fotos</button>
+        <input type="file" id="documento" name="imagen" style="display: none;" />
+        <div id="archivoSeleccionado"></div>
+      </div>
       <div id="MarcarEstado" style="display: none;">
-      <h2>ESTADO DE LA MASCOTA REGISTRADA</h2>
-      <label for="en proceso">En proceso de ser adoptado</label>
-      <input type="radio" id="en proceso" name="estado" value="en proceso">
-      <label for="disponible">Disponible para adopción</label>
-      <input type="radio" id="disponible" name="estado" value="disponible">
-      <label for="adoptado">Adoptado</label>
-      <input type="radio" id="adoptado" name="estado" value="adoptado">
-      <div id="resultEstadoMarc"></div>
-    </div>
+        <h2>ESTADO DE LA MASCOTA REGISTRADA</h2>
+        <label for="en proceso">En proceso de ser adoptado</label>
+        <input type="radio" id="en proceso" name="estado" value="en proceso">
+        <label for="disponible">Disponible para adopción</label>
+        <input type="radio" id="disponible" name="estado" value="disponible">
+        <label for="adoptado">Adoptado</label>
+        <input type="radio" id="adoptado" name="estado" value="adoptado">
+        <div id="resultEstadoMarc"></div>
+      </div>
       <button id="registrarBtn">Registrar</button>
-  </div>
-    
+    </div>
+  </main>
     <script type="module" src="../src/DescripcionBasica.js"></script>
 </body>
 </html>

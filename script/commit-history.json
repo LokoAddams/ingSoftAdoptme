@@ -417,12 +417,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "4eccbfeed65967de18c1321e968cef64eef60efb",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T03:13:09.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/4eccbfeed65967de18c1321e968cef64eef60efb"
     },
     "stats": {
       "total": 0,
@@ -527,6 +527,25 @@
     },
     "coverage": 93.02,
     "test_count": 39,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-11-25T04:36:12.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into agregarMenu",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 5219,
+      "additions": 2490,
+      "deletions": 2729,
+      "date": "2025-11-25"
+    },
+    "coverage": 92.11,
+    "test_count": 20,
     "failed_tests": 0,
     "conclusion": "success"
   }
