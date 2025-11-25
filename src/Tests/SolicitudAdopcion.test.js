@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 
 import SolicitudAdopcion from '../domain/SolicitudAdopcion.js';
 import Adoptante from '../domain/Adoptante.js'; 
