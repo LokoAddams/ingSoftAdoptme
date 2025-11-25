@@ -436,12 +436,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "8188c401080583c9df77018b7f7d6fffc51d717b",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-25T03:24:49.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/8188c401080583c9df77018b7f7d6fffc51d717b"
     },
     "stats": {
       "total": 501,
@@ -542,6 +542,25 @@
       "total": 5219,
       "additions": 2490,
       "deletions": 2729,
+      "date": "2025-11-25"
+    },
+    "coverage": 92.11,
+    "test_count": 20,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-11-25T06:12:00.000Z",
+      "message": "feat: implementación verSolicitudes.html",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 163,
+      "additions": 160,
+      "deletions": 3,
       "date": "2025-11-25"
     },
     "coverage": 92.11,

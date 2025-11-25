@@ -1,0 +1,1 @@
+const contSolicitudes = document.getElementById('cont-solicitudes');
