@@ -493,12 +493,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "c2887c14a0fe859e3900f76cfdc774a9b7dcc2f1",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T04:24:47.000Z",
       "message": "refact: guardar solicitud adopcion en la Base de datos",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/c2887c14a0fe859e3900f76cfdc774a9b7dcc2f1"
     },
     "stats": {
       "total": 205,
@@ -635,6 +635,25 @@
       "total": 121,
       "additions": 115,
       "deletions": 6,
+      "date": "2025-11-25"
+    },
+    "coverage": 90.32,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-25T07:00:41.000Z",
+      "message": "fix: imagen en detalleMascota",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 9,
+      "additions": 4,
+      "deletions": 5,
       "date": "2025-11-25"
     },
     "coverage": 90.32,
