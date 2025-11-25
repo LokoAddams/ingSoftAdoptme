@@ -53,5 +53,28 @@ class SolicitudAdopcionRepository {
     const json = await res.json();
     return mapJsonToSolicitudAdopcion(json);
   }
+
+  async obtenerTodasSolicitudes() {
+    const res = await fetch(`${API_URL}/api/solicitudes`);
+
+    if (!res.ok) {
+      let message = 'Error al obtener solicitudes de adopción';
+      try {
+        const body = await res.json();
+        if (body && body.message) message = body.message;
+      } catch (e) {
+        try {
+          const text = await res.text();
+          if (text) message = text;
+        } catch (e2) {
+          // ignore
+        }
+      }
+      throw new Error(message);
+    }
+
+    const jsonArray = await res.json(); // es un array como el de Postman
+    return jsonArray.map(mapJsonToSolicitudAdopcion);
+  }
 }
 export default SolicitudAdopcionRepository;

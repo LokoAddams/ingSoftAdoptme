@@ -11,6 +11,10 @@ class SolicitudAdopcionService {
     await this.validarConexion.validarConexionBackend();
     return await this.solicitudAdopcionRepository.create(mascotaId, adoptanteNombre);
   }
+
+  async getTodasLasSolicitudes() {
+    return await this.solicitudAdopcionRepository.obtenerTodasSolicitudes();
+  }
 }
 
 export default SolicitudAdopcionService;
