@@ -20,7 +20,7 @@
     -webkit-font-smoothing:antialiased;
   }
 
-  body{display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding:40px 16px 20px;}
+  body{display:flex; flex-direction:column; align-items:center; justify-content:flex-start; padding:0px 16px 20px;}
 
   h1{width:100%; text-align:center; color:var(--electric-deep); margin-bottom:18px;}
 
@@ -156,4 +156,87 @@
 @media (max-width:520px){
   .SolicitudAdopcion-form .adopt-btn,
   .adopt-btn{ width:100%; text-align:center; }
+}
+
+header {
+    background-color: var(--electric-blue);
+    width: 100%;
+    height: 13vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+#cont-titulo {
+    height: 80%;
+    width: 30%;
+    font-size: 2rem;
+    align-content: center;
+    font-weight: bolder;
+    color: white;
+}
+
+#cont-nav {
+    height: 80%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#cont-buscador {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cont-buscador input {
+    width: 87%;
+    height: 30px;
+    border-radius: 25px;
+}
+
+#cont-buscador button {
+    width: 10%;
+    height: 45px;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--electric-deep);
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+#cont-links {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+#cont-links ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#cont-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+#esp-header {
+    height: 15vh;
+    width: 100%;
 }

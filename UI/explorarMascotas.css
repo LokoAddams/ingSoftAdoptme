@@ -1,5 +1,5 @@
 :root{
-    --electric-blue: #0ea5ff; /* azul eléctrico */
+    --electric-blue: #0ea7ff; /* azul eléctrico */
     --electric-deep: #0077cc;
     --card-bg: linear-gradient(135deg, rgba(14,165,255,0.06), rgba(0,119,204,0.03));
     --accent: #0b84ff;
@@ -23,6 +23,8 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 2;
 }
 
 #cont-titulo {
@@ -91,12 +93,18 @@ header {
     font-size: 1.05rem;
 }
 
+#esp-header {
+    height: 13vh;
+    width: 100%;
+}
+
 main {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 
 #resultado-div {
