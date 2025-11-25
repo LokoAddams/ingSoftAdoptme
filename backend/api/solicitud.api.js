@@ -120,5 +120,72 @@ SolicitudRouter.get("/:id", async (req, res) => {
 });
 
 
+// PATCH /api/solicitudes/:id/estado
+SolicitudRouter.patch("/:id/estado", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { estado } = req.body;
+
+    // validar body
+    if (!estado) {
+      return res.status(400).json({ message: "estado es obligatorio" });
+    }
+
+    // opcional: validar que sea uno de estos valores
+    const estadosValidos = ["pendiente", "aprobada", "rechazada"];
+    if (!estadosValidos.includes(estado)) {
+      return res.status(400).json({ message: "estado inválido" });
+    }
+
+    // validar id de solicitud
+    if (!ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "id inválido" });
+    }
+
+    const sRepo = solicitudRepo();
+    const mRepo = mascotaRepo();
+    const objectId = new ObjectId(id);
+
+    // buscar solicitud
+    const solicitud = await sRepo.findOne({
+      where: { _id: objectId },
+    });
+
+    if (!solicitud) {
+      return res.status(404).json({ message: "Solicitud no encontrada" });
+    }
+
+    // actualizar estado de la solicitud
+    solicitud.estado = estado;
+    const actualizada = await sRepo.save(solicitud);
+
+    // sincronizar estado de la mascota asociada (si existe)
+    if (solicitud.mascotaId) {
+      const mascota = await mRepo.findOne({
+        where: { _id: solicitud.mascotaId },
+      });
+
+      if (mascota) {
+        if (estado === "aprobada") {
+          mascota.estado = "Adoptado";
+        } else if (estado === "rechazada") {
+          mascota.estado = "Disponible";
+        } else if (estado === "pendiente") {
+          mascota.estado = "pendiente";
+        }
+        await mRepo.save(mascota);
+      }
+    }
+
+    return res.json(mapSolicitudEntityToDto(actualizada));
+  } catch (error) {
+    console.error("Error al actualizar estado de solicitud:", error);
+    return res
+      .status(500)
+      .json({ message: "Error interno al actualizar estado de solicitud" });
+  }
+});
+
+
 
 export default SolicitudRouter;
