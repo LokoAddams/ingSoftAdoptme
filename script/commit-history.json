@@ -662,12 +662,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "3d9eb257e40e598e5628ec5cecec64be5abb8b3f",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-11-25T10:13:19.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into verSolicitudes",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/3d9eb257e40e598e5628ec5cecec64be5abb8b3f"
     },
     "stats": {
       "total": 135,
@@ -681,12 +681,12 @@
     "conclusion": "neutral"
   },
   {
-    "sha": "HEAD",
+    "sha": "3d9eb257e40e598e5628ec5cecec64be5abb8b3f",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-11-25T12:06:13.000Z",
       "message": "feat: implementacion de verSolicitudes con service",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/3d9eb257e40e598e5628ec5cecec64be5abb8b3f"
     },
     "stats": {
       "total": 156,
@@ -822,6 +822,44 @@
       "total": 3,
       "additions": 1,
       "deletions": 2,
+      "date": "2025-11-25"
+    },
+    "coverage": 77.78,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-25T13:57:00.000Z",
+      "message": "Fixed: App en deploy",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 64,
+      "additions": 34,
+      "deletions": 30,
+      "date": "2025-11-25"
+    },
+    "coverage": 0,
+    "test_count": 0,
+    "failed_tests": 0,
+    "conclusion": "neutral"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-25T14:01:12.000Z",
+      "message": "Fixed: App en deploy",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 99,
+      "additions": 69,
+      "deletions": 30,
       "date": "2025-11-25"
     },
     "coverage": 77.78,
