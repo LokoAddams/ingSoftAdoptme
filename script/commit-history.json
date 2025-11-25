@@ -341,12 +341,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "1bdf274bd784cdfcdc8c5dcdf47b996c110775d6",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-11-25T02:39:06.000Z",
       "message": "feat: Se agrego endpoint Patch en Solicitud",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/1bdf274bd784cdfcdc8c5dcdf47b996c110775d6"
     },
     "stats": {
       "total": 67,
@@ -451,6 +451,25 @@
     },
     "coverage": 91.78,
     "test_count": 12,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-25T03:30:02.000Z",
+      "message": "fix: descripcion basica tests arreglados.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 52,
+      "additions": 10,
+      "deletions": 42,
+      "date": "2025-11-25"
+    },
+    "coverage": 92.11,
+    "test_count": 15,
     "failed_tests": 0,
     "conclusion": "success"
   }
