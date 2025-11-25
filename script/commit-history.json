@@ -398,12 +398,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "87495d9ec41699dd5167fa14f452882f33073ce4",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T03:06:19.000Z",
       "message": "refactor: arquitectura hexagonal MascotaService y MascotaRepository",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/87495d9ec41699dd5167fa14f452882f33073ce4"
     },
     "stats": {
       "total": 469,
@@ -508,6 +508,25 @@
     },
     "coverage": 92.11,
     "test_count": 20,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-25T04:25:27.000Z",
+      "message": "test: Se agrego test de registro y se creo carpeta marcarEstado test.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 5222,
+      "additions": 2480,
+      "deletions": 2742,
+      "date": "2025-11-25"
+    },
+    "coverage": 93.02,
+    "test_count": 39,
     "failed_tests": 0,
     "conclusion": "success"
   }
