@@ -266,12 +266,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "558d5ca2c770f1c21429ef80db85c8600748b705",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-11-24T22:22:28.000Z",
       "message": "fixed: Se agrego atributo sexo en BD para mascotas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/558d5ca2c770f1c21429ef80db85c8600748b705"
     },
     "stats": {
       "total": 4,
@@ -334,6 +334,25 @@
       "total": 2,
       "additions": 1,
       "deletions": 1,
+      "date": "2025-11-25"
+    },
+    "coverage": 98.31,
+    "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-25T03:16:53.000Z",
+      "message": "feat: se aniadio la funcionalidad de guardar la imagen.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 26,
+      "additions": 21,
+      "deletions": 5,
       "date": "2025-11-25"
     },
     "coverage": 98.31,

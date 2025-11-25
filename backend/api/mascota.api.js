@@ -2,6 +2,20 @@ import { Router } from "express";
 import { AppDataSource } from "../../BD/data-source.js";
 import { Mascota } from "../../BD/entities/mascota.entity.js";
 import { ObjectId } from "mongodb";
+import multer from "multer";
+import path from "path";
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'backend/uploads/');
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, file.fieldname + '-' + uniqueSuffix + path.extname(file.originalname));
+  }
+});
+
+const upload = multer({ storage: storage });
 
 const MascotaRouter = Router();
 
@@ -43,11 +57,11 @@ MascotaRouter.get("/:id", async (req, res) => {
     return res.status(500).json({ message: "Error interno al obtener mascota" });
   }
 });
-
-// POST crear nueva mascota
-MascotaRouter.post("/", async (req, res) => {
+    //Imagen
+    MascotaRouter.post("/", upload.single('imagen'), async (req, res) => {
   try {
-    const { nombre, especie, raza, edad, estado, sexo, img_ref, facilitador } = req.body;
+    const { nombre, especie, raza, edad, sexo, estado, facilitador } = req.body;
+    const img_ref = req.file ? `/uploads/${req.file.filename}` : null;
 
     // validaciones básicas
     if (!nombre || !especie) {
@@ -60,7 +74,7 @@ MascotaRouter.post("/", async (req, res) => {
       nombre,
       especie,
       raza,
-      edad,
+      edad: parseInt(edad), 
       sexo,
       estado: estado ?? "Disponible",
       img_ref,

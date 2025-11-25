@@ -6,6 +6,8 @@ const app = express();
 
 app.use(express.json());
 
+app.use('/uploads', express.static('backend/uploads'));
+
 // Middleware CORS simple - permite llamadas desde el frontend de desarrollo
 app.use((req, res, next) => {
 	// Cambia el origen según necesites; para desarrollo se permite el origen del dev server
