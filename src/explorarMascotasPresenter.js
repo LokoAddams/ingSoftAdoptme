@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         p.textContent = m.raza || '';
         // imagen
         const img = document.createElement('img');
-        img.src = m.img_ref || '';
+        img.src = `http://localhost:3001${m.img_ref}` || '';
         img.alt = `Foto de ${m.nombre || 'mascota'}`;
   
         inner.appendChild(titulo);

@@ -285,12 +285,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "4215ec6f2657203be524ddd54c0e5a509595877b",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-25T01:38:47.000Z",
       "message": "refact: se refactorizo para hacer uso de la base de datos.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/4215ec6f2657203be524ddd54c0e5a509595877b"
     },
     "stats": {
       "total": 130,
@@ -353,6 +353,25 @@
       "total": 26,
       "additions": 21,
       "deletions": 5,
+      "date": "2025-11-25"
+    },
+    "coverage": 98.31,
+    "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-25T03:20:50.000Z",
+      "message": "fix: actualizar estado y registro arreglados.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 395,
+      "additions": 371,
+      "deletions": 24,
       "date": "2025-11-25"
     },
     "coverage": 98.31,

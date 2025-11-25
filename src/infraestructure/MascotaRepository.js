@@ -1,3 +1,4 @@
+import Mascota from "../domain/Mascota.js";
 
 const API_URL =
   window.location.hostname === "localhost"
@@ -58,7 +59,7 @@ export class MascotaRepository {
     return mapJsonToMascota(json);
   }
 
-  async actualizarEstado(id, nuevoEstado) {
+  /*async actualizarEstado(id, nuevoEstado) {
     const res = await fetch(`${API_URL}/api/mascotas/${id}/estado`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
@@ -74,5 +75,5 @@ export class MascotaRepository {
 
     const json = await res.json();
     return mapJsonToMascota(json);
-  }
+  }*/
 }

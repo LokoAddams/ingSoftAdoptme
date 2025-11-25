@@ -35,12 +35,12 @@ registrarbton.addEventListener('click', () => {
     registrarNuevaMascota(formData)
     .then(data => {
       console.log('Success:', data);
-      alert('Mascota registrada con éxito.');
+      alert('Mascota registrada.');
       Estado.style.display = 'block';
     })
     .catch((error) => {
       console.error('Error:', error);
-      alert('Hubo un error al registrar la mascota. Por favor, inténtelo de nuevo.');
+      alert('Error al registrar la mascota.');
     });
   }
 });
