@@ -512,12 +512,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "47f549747ade8cbf225c494a3f36a6479a316f1e",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-25T04:25:27.000Z",
       "message": "test: Se agrego test de registro y se creo carpeta marcarEstado test.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/47f549747ade8cbf225c494a3f36a6479a316f1e"
     },
     "stats": {
       "total": 5222,
@@ -654,6 +654,25 @@
       "total": 9,
       "additions": 4,
       "deletions": 5,
+      "date": "2025-11-25"
+    },
+    "coverage": 90.32,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-25T13:11:18.000Z",
+      "message": "refactor: permisos BD para el deploy",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 3,
+      "additions": 2,
+      "deletions": 1,
       "date": "2025-11-25"
     },
     "coverage": 90.32,

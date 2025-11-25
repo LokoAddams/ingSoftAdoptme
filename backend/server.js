@@ -11,7 +11,8 @@ app.use('/uploads', express.static('backend/uploads'));
 const allowedOrigins = [
   "http://localhost:1234",
   "http://localhost:3001",
-  "https://ingsoftadoptme.onrender.com"
+  "https://ingsoftadoptme.onrender.com",
+	"https://69259c45a6b6980008278f56--adoptmebombastic.netlify.app/"
 ];
 
 // Middleware CORS simple - permite llamadas desde el frontend de desarrollo
