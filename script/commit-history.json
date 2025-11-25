@@ -379,12 +379,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "293654d20171cc718a00278323eae7c43212e762",
+    "sha": "0d3f7501dce07d279349a637db8296368ded8a25",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-11-25T02:52:52.000Z",
       "message": "feat: Se agrego endpoint Patch en Solicitud",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/293654d20171cc718a00278323eae7c43212e762"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/0d3f7501dce07d279349a637db8296368ded8a25"
     },
     "stats": {
       "total": 79,
@@ -436,12 +436,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "8188c401080583c9df77018b7f7d6fffc51d717b",
+    "sha": "03b291506dfe06969c2f17686d584dd992a2bb5e",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-25T03:24:49.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/8188c401080583c9df77018b7f7d6fffc51d717b"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/03b291506dfe06969c2f17686d584dd992a2bb5e"
     },
     "stats": {
       "total": 501,
@@ -455,36 +455,17 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "a8f53023f29402c762ca68b9db9cea2b55ad3b5c",
     "author": "Adrian Claros",
     "commit": {
       "date": "2025-11-25T03:30:02.000Z",
       "message": "fix: descripcion basica tests arreglados.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/a8f53023f29402c762ca68b9db9cea2b55ad3b5c"
     },
     "stats": {
       "total": 52,
       "additions": 10,
       "deletions": 42,
-      "date": "2025-11-25"
-    },
-    "coverage": 92.11,
-    "test_count": 15,
-    "failed_tests": 0,
-    "conclusion": "success"
-  },
-  {
-    "sha": "HEAD",
-    "author": "Adrian Claros",
-    "commit": {
-      "date": "2025-11-25T04:01:22.000Z",
-      "message": "Feat: Timeout despues de registrar.",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
-    },
-    "stats": {
-      "total": 5,
-      "additions": 4,
-      "deletions": 1,
       "date": "2025-11-25"
     },
     "coverage": 92.11,
@@ -508,6 +489,25 @@
     },
     "coverage": 92.11,
     "test_count": 20,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-25T04:24:47.000Z",
+      "message": "refact: guardar solicitud adopcion en la Base de datos",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 205,
+      "additions": 96,
+      "deletions": 109,
+      "date": "2025-11-25"
+    },
+    "coverage": 95.83,
+    "test_count": 6,
     "failed_tests": 0,
     "conclusion": "success"
   },
@@ -551,21 +551,57 @@
   },
   {
     "sha": "HEAD",
-    "author": "Vanessa745",
+    "author": "LokoAddams",
     "commit": {
-      "date": "2025-11-25T06:12:00.000Z",
-      "message": "feat: implementación verSolicitudes.html",
+      "date": "2025-11-25T05:57:02.000Z",
+      "message": "refact: registrar solicitud de adopcion en Base de datos",
       "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
     },
     "stats": {
-      "total": 163,
-      "additions": 160,
-      "deletions": 3,
+      "total": 141,
+      "additions": 78,
+      "deletions": 63,
       "date": "2025-11-25"
     },
-    "coverage": 92.11,
-    "test_count": 20,
+    "coverage": 89.16,
+    "test_count": 16
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-25T06:03:05.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 5496,
+      "additions": 2738,
+      "deletions": 2758,
+      "date": "2025-11-25"
+    },
+    "coverage": 90.32,
+    "test_count": 40,
     "failed_tests": 0,
     "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Vanessa745",
+    "commit": {
+      "date": "2025-11-25T06:14:46.000Z",
+      "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into verSolicitudes",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 328,
+      "additions": 165,
+      "deletions": 163,
+      "date": "2025-11-25"
+    },
+    "coverage": 81.93,
+    "test_count": 21,
+    "failed_tests": 1,
+    "conclusion": "failure"
   }
 ]

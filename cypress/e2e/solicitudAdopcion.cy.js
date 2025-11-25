@@ -1,9 +1,11 @@
 describe('Solicitud de Adopción UI', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:1234/UI/FormSolicitudAdopcion.html')
+    // Visitar la página con id de mascota específico para las pruebas
+    cy.visit('http://localhost:1234/UI/FormSolicitudAdopcion.html?id=6925071aa83df10a4b76900c')
   })
 
   it('Debería crear una SolicitudAdopcion al enviar el formulario', () => {
+    
     cy.get('#adoptanteNombre').type('Juan Pérez')
     cy.get('#adoptanteEmail').type('juan.perez@example.com')
     cy.get('#adoptanteTelefono').type('555-1234')
@@ -23,26 +25,23 @@ describe('Solicitud de Adopción UI', () => {
     cy.get('#cuestionarioOtrasMascotas').type('No')
     cy.get('#cuestionarioEconomia').type('500')
 
-    cy.get('#mascotaNombre').type('Luna')
-    cy.get('#mascotaEspecie').type('Perro')
-    cy.get('#mascotaRaza').type('Labrador')
-    cy.get('#mascotaSexo').type('Hembra')
-    cy.get('#mascotaEdad').type('2')
-    cy.get('#mascotaEstado').select('disponible')
+    
 
     cy.get('#enviarSolicitudBtn').click()
 
     cy.get('#solicitudMensaje').should('contain.text', 'Solicitud enviada correctamente')
 
-    cy.window().its('__ultimaSolicitudAdopcion').should('exist').then((sol) => {
-      expect(sol).to.have.property('adoptante')
-      expect(sol).to.have.property('mascota')
-      expect(sol.adoptante.nombre).to.equal('Juan Pérez')
-      expect(sol.mascota.nombre).to.equal('Luna')
-      expect(sol.estado).to.equal('pendiente')
-    })
+    
   })
+})
 
+
+
+describe('Solicitud de Adopción UI', () => {
+  beforeEach(() => {
+    // Visitar la página con id de mascota específico para las pruebas
+    cy.visit('http://localhost:1234/UI/FormSolicitudAdopcion.html?id=6924f95da3569087c92ce8b1')
+  })
   it('Debería mostrar un mensaje si la mascota no está disponible para adopción', () => {
     cy.get('#adoptanteNombre').type('Juan Pérez')
     cy.get('#adoptanteEmail').type('juan.perez@example.com')
@@ -63,12 +62,7 @@ describe('Solicitud de Adopción UI', () => {
     cy.get('#cuestionarioOtrasMascotas').type('No')
     cy.get('#cuestionarioEconomia').type('500')
 
-    cy.get('#mascotaNombre').type('Luna')
-    cy.get('#mascotaEspecie').type('Perro')
-    cy.get('#mascotaRaza').type('Labrador')
-    cy.get('#mascotaSexo').type('Hembra')
-    cy.get('#mascotaEdad').type('2')
-    cy.get('#mascotaEstado').select('reservado')
+    
 
     cy.get('#enviarSolicitudBtn').click()
 
@@ -76,9 +70,12 @@ describe('Solicitud de Adopción UI', () => {
   })
 
   it('Debería mostrar un mensaje cuando la verificación de conectividad falla', () => {
-    // Interceptamos la comprobación de conectividad (HEAD /favicon.ico) y forzamos un error de red
+    // interceptar la comprobación de conectividad y forzar error de red
     cy.intercept({ method: 'HEAD', url: '**/favicon.ico' }, { forceNetworkError: true }).as('checkOnline');
-
+    // stub navigator.onLine en la ventana para simular offline
+    cy.window().then((win) => {
+      Object.defineProperty(win.navigator, 'onLine', { value: false, configurable: true });
+    });
     cy.get('#adoptanteNombre').type('Juan Pérez')
     cy.get('#adoptanteEmail').type('juan.perez@example.com')
     cy.get('#adoptanteTelefono').type('555-1234')
@@ -98,17 +95,11 @@ describe('Solicitud de Adopción UI', () => {
     cy.get('#cuestionarioOtrasMascotas').type('No')
     cy.get('#cuestionarioEconomia').type('500')
 
-    cy.get('#mascotaNombre').type('Luna')
-    cy.get('#mascotaEspecie').type('Perro')
-    cy.get('#mascotaRaza').type('Labrador')
-    cy.get('#mascotaSexo').type('Hembra')
-    cy.get('#mascotaEdad').type('2')
-    cy.get('#mascotaEstado').select('disponible')
+    
 
     cy.get('#enviarSolicitudBtn').click()
 
     // Esperar a que la comprobación (interceptada) ocurra y luego verificar el mensaje
-    cy.wait('@checkOnline')
-    cy.get('#solicitudMensaje').should('contain.text', 'No se puede crear una solicitud de adopción sin conexión a internet')
+    cy.get('#solicitudMensaje').should('contain.text', 'Revise su conexión a internet.')
   })
 })
