@@ -735,12 +735,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "7116f208aa7e389126939a4c0895e69eecdc1bf6",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T13:24:33.000Z",
       "message": "refact: post image",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/7116f208aa7e389126939a4c0895e69eecdc1bf6"
     },
     "stats": {
       "total": 2,
@@ -879,6 +879,25 @@
       "total": 14,
       "additions": 7,
       "deletions": 7,
+      "date": "2025-11-25"
+    },
+    "coverage": 77.78,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-25T14:18:26.000Z",
+      "message": "refact: url para imagenes en deploy",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 30,
+      "additions": 22,
+      "deletions": 8,
       "date": "2025-11-25"
     },
     "coverage": 77.78,

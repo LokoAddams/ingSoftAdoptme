@@ -28,7 +28,21 @@ document.addEventListener("DOMContentLoaded", async () => {
         p.textContent = m.raza || '';
         // imagen
         const img = document.createElement('img');
-        img.src = `http://localhost:3001${m.img_ref}` || '';
+        // Construir API_URL igual que en otros presenters/repositories
+        const _hostname =
+          typeof window !== 'undefined' && window.location && window.location.hostname
+            ? window.location.hostname
+            : 'localhost';
+        const API_URL = _hostname === 'localhost' ? 'http://localhost:3001' : 'https://ingsoftadoptme.onrender.com';
+
+        const buildImgUrl = (imgRef) => {
+          if (!imgRef) return '';
+          if (/^https?:\/\//i.test(imgRef)) return imgRef;
+          if (imgRef.startsWith('/')) return `${API_URL}${imgRef}`;
+          return `${API_URL}/${imgRef}`;
+        };
+
+        img.src = buildImgUrl(m.img_ref) || '';
         img.alt = `Foto de ${m.nombre || 'mascota'}`;
   
         inner.appendChild(titulo);

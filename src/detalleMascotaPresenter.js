@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             // si empieza con slash, unimos directamente
             if (imgRef.startsWith('/')) return `${API_URL}${imgRef}`;
             // si viene como uploads/filename
-            return `${API_URL}/${imgRef}`;
+            return `${API_URL}${imgRef}`;
         };
 
         img.src = buildImgUrl(detallesMascota.img_ref) || '';
