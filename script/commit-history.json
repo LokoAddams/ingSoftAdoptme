@@ -247,12 +247,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "31aff14fe4c27536d6cf911271dc6966fa94f22d",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-24T19:27:41.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/31aff14fe4c27536d6cf911271dc6966fa94f22d"
     },
     "stats": {
       "total": 100,
@@ -315,6 +315,25 @@
       "total": 131,
       "additions": 97,
       "deletions": 34,
+      "date": "2025-11-25"
+    },
+    "coverage": 98.31,
+    "test_count": 11,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-25T03:15:57.000Z",
+      "message": "fix: Se aniado formado para imagen.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 2,
+      "additions": 1,
+      "deletions": 1,
       "date": "2025-11-25"
     },
     "coverage": 98.31,
