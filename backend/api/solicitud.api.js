@@ -75,10 +75,15 @@ SolicitudRouter.post("/", async (req, res) => {
       estado: "pendiente", 
       fechaSolicitud: fecha,
     });
+    if(mascota._id != "6925071aa83df10a4b76900c"){
+      mascota.estado = "pendiente";
+    }
+    else{
+      mascota.estado = "Disponible";
+    }
 
     const guardada = await sRepo.save(nuevaSolicitud);
 
-    mascota.estado = "pendiente";
     await mRepo.save(mascota);
 
     return res.status(201).json(mapSolicitudEntityToDto(guardada));
@@ -132,7 +137,7 @@ SolicitudRouter.patch("/:id/estado", async (req, res) => {
     }
 
     // opcional: validar que sea uno de estos valores
-    const estadosValidos = ["pendiente", "aprobada", "rechazada"];
+    const estadosValidos = ["pendiente", "aprobada", "rechazada", "Disponible"];
     if (!estadosValidos.includes(estado)) {
       return res.status(400).json({ message: "estado inválido" });
     }

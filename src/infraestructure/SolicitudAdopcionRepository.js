@@ -30,12 +30,24 @@ class SolicitudAdopcionRepository {
     const res = await fetch(`${API_URL}/api/solicitudes`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ mascotaId: mascotaId, adoptanteNombre: adoptanteNombre })
-      
+      body: JSON.stringify({ "mascotaId": mascotaId, "adoptanteNombre": adoptanteNombre })
     });
 
     if (!res.ok) {
-      throw new Error("Error al crear solicitud de adopción");
+      // tratar de extraer el mensaje de error devuelto por el servidor
+      let message = 'Error al crear solicitud de adopción';
+      try {
+        const body = await res.json();
+        if (body && body.message) message = body.message;
+      } catch (e) {
+        try {
+          const text = await res.text();
+          if (text) message = text;
+        } catch (e2) {
+          // ignore
+        }
+      }
+      throw new Error(message);
     }
 
     const json = await res.json();

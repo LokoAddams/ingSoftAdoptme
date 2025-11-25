@@ -69,31 +69,23 @@ if (botonEnviarSolicitud) {
         estado: (document.getElementById('mascotaEstado') || {}).value || 'disponible',
       });
       
-      Promise.all([
-        import('./domain/SolicitudAdopcion.js'),
-        import('./domain/Adoptante.js'),
-        import('./domain/Mascota.js')
-      ]).then(([{ default: SolicitudAdopcion }, { default: Adoptante }, { default: Mascota }]) => {
-        (async () => {
-          try {
-            const adoptanteInstance = new Adoptante(adoptante);
-            const mascotaInstance = new Mascota(mascota);
-            // usar la factory asíncrona que valida conectividad
-            const solicitud = await solicitudAdopcionService.createSolicitud(mascotaInstance.id, adoptanteInstance.nombre);
+      (async () => {
+        try {
+          // Leer directamente el nombre del adoptante y el id de la mascota
+          // desde los valores actuales del formulario para evitar inconsistencias
+          const adoptanteNombre = (document.getElementById('adoptanteNombre') || {}).value || '';
+          const mascotaIdToSend = mascota.id || currentMascotaId || undefined;
 
-            window.__ultimaSolicitudAdopcion = solicitud;
-            const mensajeDiv = document.getElementById('solicitudMensaje');
-            if (mensajeDiv) mensajeDiv.innerText = 'Solicitud enviada correctamente';
-          } catch (err) {
-            const mensajeDiv = document.getElementById('solicitudMensaje');
-            if (mensajeDiv) mensajeDiv.innerText = err && err.message ? err.message : 'Error al crear la solicitud';
-            console.error('Error creando SolicitudAdopcion', err);
-          }
-        })();
-      }).catch((err) => {
-        const mensajeDiv = document.getElementById('solicitudMensaje');
-        if (mensajeDiv) mensajeDiv.innerText = err.message || 'Error al enviar la solicitud';
-        console.error('Error creando SolicitudAdopcion', err);
-      });
+          const solicitud = await solicitudAdopcionService.createSolicitud(mascotaIdToSend, adoptanteNombre);
+
+          window.__ultimaSolicitudAdopcion = solicitud;
+          const mensajeDiv = document.getElementById('solicitudMensaje');
+          if (mensajeDiv) mensajeDiv.innerText = 'Solicitud enviada correctamente';
+        } catch (err) {
+          const mensajeDiv = document.getElementById('solicitudMensaje');
+          if (mensajeDiv) mensajeDiv.innerText = err && err.message ? err.message : 'Error al crear la solicitud';
+          console.error('Error creando SolicitudAdopcion', err);
+        }
+      })();
     });
   }

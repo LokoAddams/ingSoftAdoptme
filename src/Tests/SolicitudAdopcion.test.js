@@ -20,15 +20,24 @@ describe('SolicitudAdopcion - EnviarSolicitud', () => {
 	test('EnviarSolicitud debe fallar cuando no hay conexión a internet', async () => {
 		navigator.onLine = false;
 		const data = {
-			mascotaId: "6924f95da3569087c92ce8b1",
+			mascotaId: "6925071aa83df10a4b76900c",
 			adoptanteNombre: "Juan Pérez"
 		}
 		await expect(solicitudAdopcionService.createSolicitud(data.mascotaId, data.adoptanteNombre)).rejects.toThrow('Revise su conexión a internet.');
 	});
 
+	test('EnviarSolicitud debe fallar cuando id no existe', async () => {
+		navigator.onLine = true;
+		const data = {
+			mascotaId: "id-inexistente",
+			adoptanteNombre: "Juan Pérez"
+		}
+		await expect(solicitudAdopcionService.createSolicitud(data.mascotaId, data.adoptanteNombre)).rejects.toThrow('mascotaId inválido');
+	});
+
 	test('EnviarSolicitud debe construir una solicitud con adoptante, mascota, fecha y estado', async () => {
 		navigator.onLine = true;
-		const data = { mascotaId: '6924f95da3569087c92ce8b1', adoptanteNombre: 'Juan Pérez' };
+		const data = { mascotaId: '6925071aa83df10a4b76900c', adoptanteNombre: 'Juan Pérez' };
 
 		// mock fetch: health-check to API_URL and POST /api/solicitudes
 		jest.spyOn(global, 'fetch').mockImplementation(async (url, opts) => {
@@ -43,7 +52,7 @@ describe('SolicitudAdopcion - EnviarSolicitud', () => {
 					json: async () => ({
 						mascotaId: data.mascotaId,
 						adoptanteNombre: data.adoptanteNombre,
-						estado: 'pendiente',
+						estado: 'Disponible', //mascota de pruebas que siempre se matiene disponible
 						fechaSolicitud: new Date().toISOString(),
 						id: 'generated-id-123'
 					})

@@ -16,7 +16,8 @@ export default class ValidarConexion {
         ? "http://localhost:3001" // desarrollo
         : "https://ingsoftadoptme.onrender.com"; // producción
 
-      const respuesta = await fetch(`${API_URL}/api/mascotas`);
+    // Llamar a un endpoint que exista en el backend (root devuelve 404)
+    const respuesta = await fetch(`${API_URL}`);
     if (!respuesta.ok) {
       throw new Error("Hubo un error con la conexion a nuestro servidor.");
     }

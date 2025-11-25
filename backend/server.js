@@ -30,6 +30,11 @@ app.use((req, res, next) => {
 	next();
 });
 
+// Health-check root endpoint: devuelve 200 para que el frontend y tests lo puedan verificar
+app.get('/', (req, res) => {
+	return res.json({ status: 'ok' });
+});
+
 app.use("/api/mascotas", MascotaRouter);
 app.use("/api/solicitudes", SolicitudRouter); 
 
