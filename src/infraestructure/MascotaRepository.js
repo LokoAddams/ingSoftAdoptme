@@ -42,11 +42,20 @@ export default class MascotaRepository {
   }
 
   async crearMascota(mascotaData) {
-    const res = await fetch(`${API_URL}/api/mascotas`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(mascotaData),
-    });
+    const url = `${API_URL}/api/mascotas`;
+
+    const options = { method: "POST" };
+
+    if (mascotaData instanceof FormData) {
+      // Caso con imagen
+      options.body = mascotaData;
+    } else {
+      // Caso JSON (sin imagen)
+      options.headers = { "Content-Type": "application/json" };
+      options.body = JSON.stringify(mascotaData);
+    }
+
+    const res = await fetch(url, options);
 
     if (!res.ok) {
       throw new Error("Error al crear mascota");
@@ -54,7 +63,7 @@ export default class MascotaRepository {
 
     const json = await res.json();
     return mapJsonToMascota(json);
-  }
+}
 
   /*async actualizarEstado(id, nuevoEstado) {
     const res = await fetch(`${API_URL}/api/mascotas/${id}/estado`, {
