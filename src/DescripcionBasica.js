@@ -1,12 +1,15 @@
-import { MarcarEstado } from './services/MarcarEstado.js';
 import { validarFormulario } from './services/ValidarFormRegistro.js';
 import { mostrarArchivoSeleccionado } from './services/MostrarArchivoSeleccionado.js';
+import { registrarNuevaMascota } from './services/RegistroMascotaService.js';
+import { inicializarEstadoMascota } from './services/CambiarEstado.js';
+
 
 const botonSubir = document.getElementById('subirDocumentoBtn');
 const archivoInput = document.getElementById('documento');
 const Estado = document.getElementById('MarcarEstado');
 const radios = document.querySelectorAll('input[name="estado"]');
 const result = document.getElementById('resultEstadoMarc');
+const registrarbton = document.getElementById('registrarBtn');
 
 
 botonSubir.addEventListener('click', () => {
@@ -15,28 +18,31 @@ botonSubir.addEventListener('click', () => {
 
 archivoInput.addEventListener('change', mostrarArchivoSeleccionado);
 
-function registrarMascota() {
-  const registrarbton = document.getElementById('registrarBtn');
-  registrarbton.addEventListener('click', () => {
-    if (validarFormulario()) {
+registrarbton.addEventListener('click', () => {
+  if (validarFormulario()) {
+    const formData = new FormData();
+    formData.append('nombre', document.getElementById('nombre').value);
+    formData.append('especie', document.getElementById('especie').value);
+    formData.append('edad', document.getElementById('edad').value);
+    formData.append('raza', document.getElementById('Raza').value);
+    formData.append('sexo', document.getElementById('Sexo').value);
+    
+    const imagenInput = document.getElementById('documento');
+    if (imagenInput.files.length > 0) {
+      formData.append('imagen', imagenInput.files[0]);
+    }
+
+    registrarNuevaMascota(formData)
+    .then(data => {
+      console.log('Success:', data);
       alert('Mascota registrada con éxito.');
       Estado.style.display = 'block';
-    }
-  });
-}
-
-radios.forEach(radio => {
-  radio.addEventListener('change', () => {
-    const seleccionado = document.querySelector('input[name="estado"]:checked');
-
-    if (seleccionado) {
-      result.style.display = 'block'; 
-      result.textContent = `${MarcarEstado(seleccionado.value)}`;
-      console.log('Seleccionado:', seleccionado.value);
-    } else {
-      result.style.display = 'none'; 
-    }
-  });
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('Hubo un error al registrar la mascota. Por favor, inténtelo de nuevo.');
+    });
+  }
 });
 
-registrarMascota();
+inicializarEstadoMascota('input[name="estado"]', '#resultEstadoMarc');

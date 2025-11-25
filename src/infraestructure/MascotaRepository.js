@@ -1,4 +1,3 @@
-import { Mascota } from "../domain/Mascota.js";
 
 const API_URL =
   window.location.hostname === "localhost"
