@@ -61,7 +61,7 @@ MascotaRouter.get("/:id", async (req, res) => {
     MascotaRouter.post("/", upload.single('imagen'), async (req, res) => {
   try {
     const { nombre, especie, raza, edad, sexo, estado, facilitador } = req.body;
-    const img_ref = req.file ? `backend/uploads/${req.file.filename}` : null;
+    const img_ref = req.file ? `uploads/${req.file.filename}` : null;
 
     // validaciones básicas
     if (!nombre || !especie) {
