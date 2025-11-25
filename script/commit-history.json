@@ -605,12 +605,12 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "632234a82ec11d709560090649a113cc10bea1e6",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-25T06:41:40.000Z",
       "message": "fix: obtener imagenes de mascotas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/632234a82ec11d709560090649a113cc10bea1e6"
     },
     "stats": {
       "total": 5,
@@ -765,6 +765,25 @@
       "total": 24,
       "additions": 15,
       "deletions": 9,
+      "date": "2025-11-25"
+    },
+    "coverage": 77.78,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-25T13:30:41.000Z",
+      "message": "fix: post imagen",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 2,
+      "additions": 1,
+      "deletions": 1,
       "date": "2025-11-25"
     },
     "coverage": 77.78,
