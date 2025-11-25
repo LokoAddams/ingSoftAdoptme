@@ -379,12 +379,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "293654d20171cc718a00278323eae7c43212e762",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-11-25T02:52:52.000Z",
       "message": "feat: Se agrego endpoint Patch en Solicitud",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/293654d20171cc718a00278323eae7c43212e762"
     },
     "stats": {
       "total": 79,
@@ -489,6 +489,25 @@
     },
     "coverage": 92.11,
     "test_count": 15,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "Adrian Claros",
+    "commit": {
+      "date": "2025-11-25T04:09:01.000Z",
+      "message": "test: cobertura en descripcion basica.",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 24,
+      "additions": 22,
+      "deletions": 2,
+      "date": "2025-11-25"
+    },
+    "coverage": 92.11,
+    "test_count": 20,
     "failed_tests": 0,
     "conclusion": "success"
   }
