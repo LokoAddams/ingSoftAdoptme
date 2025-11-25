@@ -23,12 +23,13 @@ let currentMascotaId = null;
         const el = document.getElementById(id);
         if (el) el.value = value;
       };
+      const estadoEl = document.getElementById('mascotaEstado');
       setVal('mascotaNombre', m.nombre || '');
       setVal('mascotaEspecie', m.especie || '');
       setVal('mascotaRaza', m.raza || '');
       setVal('mascotaSexo', m.sexo || '');
       setVal('mascotaEdad', m.edad || '');
-      const estadoEl = document.getElementById('mascotaEstado');
+      setVal('mascotaEstado', m.estado || '');
       if (estadoEl && m.estado) {
         const optValue = m.estado.toString().toLowerCase();
         const match = Array.from(estadoEl.options).find(o => o.value.toLowerCase() === optValue || o.value === m.estado);
