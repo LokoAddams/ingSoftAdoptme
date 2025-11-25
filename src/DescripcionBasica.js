@@ -36,7 +36,9 @@ registrarbton.addEventListener('click', () => {
     .then(data => {
       console.log('Success:', data);
       alert('Mascota registrada.');
-      Estado.style.display = 'block';
+      setTimeout(() => {
+        window.location.href = '../index.html';
+      }, 1000);
     })
     .catch((error) => {
       console.error('Error:', error);
