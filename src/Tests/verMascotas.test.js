@@ -1,6 +1,38 @@
 import Mascota from '../domain/Mascota.js';
-import { verMascotas, verDetalleMascota } from '../services/verMascotas.js';
+import { MascotaService } from '../services/MascotaService.js';
+import MascotaRepository from '../infraestructure/MascotaRepository.js';
+import { ValidarConexion } from '../infraestructure/ValidarConexion.js';
 
+// Helpers: provide browser-like globals and a conditional fetch mock so
+// the real ValidarConexion methods can run inside Node/Jest.
+function setupBrowserGlobals() {
+  if (typeof global.window === 'undefined') global.window = { location: { hostname: 'localhost', search: '' } };
+  else global.window.location = global.window.location || { hostname: 'localhost', search: '' };
+
+  if (typeof global.navigator === 'undefined') global.navigator = {};
+  // default online; tests may toggle this value
+  Object.defineProperty(global.navigator, 'onLine', { value: true, configurable: true, writable: true });
+}
+
+function createFetchMock({ healthOk = true, mascotasResponse = { ok: true, status: 200, json: async () => [] } } = {}) {
+  return async (url) => {
+    const u = String(url);
+    // ValidarConexion.validarConexionBackend() does a fetch(API_URL) where API_URL is either
+    // http://localhost:3001 or https://ingsoftadoptme.onrender.com
+    if (u === 'http://localhost:3001' || u === 'https://ingsoftadoptme.onrender.com') {
+      if (healthOk) return { ok: true, status: 200, json: async () => ({ status: 'ok' }) };
+      return { ok: false, status: 500, json: async () => { throw new Error('HTTP 500'); } };
+    }
+
+    // llamadas a /api/mascotas o /api/mascotas/:id
+    if (u.includes('/api/mascotas')) {
+      return typeof mascotasResponse === 'function' ? mascotasResponse(u) : mascotasResponse;
+    }
+
+    // fallback
+    return { ok: true, status: 200, json: async () => ({}) };
+  };
+}
 // 3.1. Ver listado general de mascotas disponibles
 
 // Como: Interesado/Adoptante/Ciudadano
@@ -19,31 +51,42 @@ import { verMascotas, verDetalleMascota } from '../services/verMascotas.js';
 // pestaña "Adoptar", se mostrará el mensaje "Revise su conexión a internet.".
 
 
-describe('verMascotas', () => {
+describe('obtenerMascotas', () => {
   afterEach(() => jest.restoreAllMocks());
+  let mascotaService;
+  let mascotaRepository;
+  let validarConexion;
+  beforeEach(() => {
+    setupBrowserGlobals();
+
+    validarConexion = new ValidarConexion();
+    mascotaRepository = new MascotaRepository();
+    mascotaService = new MascotaService(mascotaRepository, validarConexion);
+
+    // default fetch: health ok and API returns empty array for mascotas
+    jest.spyOn(global, 'fetch').mockImplementation(
+      createFetchMock({ healthOk: true, mascotasResponse: { ok: true, status: 200, json: async () => [] } })
+    );
+  });
 
   it('retorna un mensaje cuando no hay conexión', async () => {
-    try {
-      await verMascotas(false);
-    } catch (error) {
-      expect(error.message).toBe('Revise su conexión a internet.');
-      
-    }
+    // use the real ValidarConexion; simulate offline
+    global.navigator.onLine = false;
+    await expect(mascotaService.obtenerMascotas()).rejects.toThrow('Revise su conexión a internet.');
   });
 
   it('devuelve un array vacío cuando la API responde con []', async () => {
-    jest.spyOn(global, 'fetch').mockResolvedValue({ ok: true, json: async () => [] });
-    try {
-      const result = await verMascotas(true);
-    } catch (error) {
-      expect(error.message).toBe('No hay mascotas disponibles.');
-    }
+    // default mock (set in beforeEach) returns [] for /api/mascotas
+    await expect(mascotaService.obtenerMascotas()).rejects.toThrow('No hay mascotas disponibles.');
   });
 
   it('lanza error con código HTTP cuando la respuesta no es ok', async () => {
-    jest.spyOn(global, 'fetch').mockResolvedValue({ ok: false, status: 500 });
-    await expect(verMascotas(true)).rejects.toThrow('HTTP 500');
+    jest.spyOn(global, 'fetch').mockImplementation(
+      createFetchMock({ healthOk: true, mascotasResponse: { ok: false, status: 500, json: async () => { throw new Error('HTTP 500'); } } })
+    );
+    await expect(mascotaService.obtenerMascotas()).rejects.toThrow('HTTP 500');
   });
+
 
   it('devuelve un array cuyos objetos contienen las claves esperadas', async () => {
     const apiData = [
@@ -73,7 +116,7 @@ describe('verMascotas', () => {
 
     jest.spyOn(global, 'fetch').mockResolvedValue({ ok: true, json: async () => apiData });
 
-    const result = await verMascotas(true);
+    const result = await mascotaService.obtenerMascotas();
     expect(Array.isArray(result)).toBe(true);
 
     const requiredKeys = ['_id', 'nombre', 'especie', 'raza', 'edad', 'estado', 'img_ref', 'facilitador', 'id'];
@@ -100,24 +143,39 @@ describe('verMascotas', () => {
 // Si el ciudadano no cuenta con una conexión de internet estable al hacer click en la mascota, se mostrará 
 // el mensaje “Revise su conexión a internet.”.
 
-describe("verDetalleMascota", () => {
+describe("obtenerDetalleMascotaPorId", () => {
   afterEach(() => jest.restoreAllMocks());
+  let mascotaService;
+  let mascotaRepository;
+  let validarConexion;
+
+  beforeEach(() => {
+    setupBrowserGlobals();
+
+    validarConexion = new ValidarConexion();
+    mascotaRepository = new MascotaRepository();
+    mascotaService = new MascotaService(mascotaRepository, validarConexion);
+
+    // default fetch: health ok and return empty object for detalle
+    jest.spyOn(global, 'fetch').mockImplementation(
+      createFetchMock({ healthOk: true, mascotasResponse: { ok: true, status: 200, json: async () => ({}) } })
+    );
+  });
 
   it("deberia mostrar 'Revise su conexión a internet.'",  async () => {
-    try {
-      const result = await verDetalleMascota();
-    } catch (error) {
-      expect(error.message).toBe('Revise su conexión a internet.');
-    }
+    global.navigator.onLine = false;
+    await expect(mascotaService.obtenerDetalleMascotaPorId()).rejects.toThrow('Revise su conexión a internet.');
   });
   it('lanza error con código HTTP cuando la respuesta no es ok', async () => {
-      jest.spyOn(global, 'fetch').mockResolvedValue({ ok: false, status: 500 });
+      jest.spyOn(global, 'fetch').mockImplementation(
+        createFetchMock({ healthOk: true, mascotasResponse: { ok: false, status: 500, json: async () => { throw new Error('HTTP 500'); } } })
+      );
       // pasar un id para que la función realice la llamada fetch por id
-      await expect(verDetalleMascota(true, 'some-id')).rejects.toThrow('HTTP 500');
+      await expect(mascotaService.obtenerDetalleMascotaPorId('some-id')).rejects.toThrow('HTTP 500');
   });
   it("deberia mostrar la información de la mascota por el id", async () => {
     const apiItem = {
-      _id: '6921d0e55bd8ce602b65311e',
+      id: '6921d0e55bd8ce602b65311e',
       nombre: 'Juanito',
       especie: 'Perro',
       raza: 'bulldog',
@@ -127,12 +185,26 @@ describe("verDetalleMascota", () => {
       facilitador: 'Andres Calamaro',
       id: '6921d0e55bd8ce602b65311e'
     };
-    jest.spyOn(global, 'fetch').mockResolvedValue({ ok: true, json: async () => apiItem });
-    const result = await verDetalleMascota(true, apiItem.id);
-    const requiredKeys = ['_id','nombre','especie','raza','edad','estado','img_ref','facilitador','id'];
+    jest.spyOn(global, 'fetch').mockImplementation(
+      createFetchMock({ healthOk: true, mascotasResponse: { ok: true, status: 200, json: async () => apiItem } })
+    );
+    const result = await mascotaService.obtenerDetalleMascotaPorId(apiItem.id);
+    const requiredKeys = ['id','nombre','especie','raza','edad','estado','img_ref','facilitador','id'];
+    
     requiredKeys.forEach(k => expect(result).toHaveProperty(k));
   });
   it('lanza error si no se proporciona id', async () => {
-    await expect(verDetalleMascota(true)).rejects.toThrow('id de mascota no proporcionado.');
+    await expect(mascotaService.obtenerDetalleMascotaPorId()).rejects.toThrow('id de mascota no proporcionado.');
+  });
+});
+
+describe('ValidarConexion (unidad)', () => {
+  afterEach(() => jest.restoreAllMocks());
+  it('validarConexionBackend lanza cuando el health-check falla', async () => {
+    setupBrowserGlobals();
+    const validar = new ValidarConexion();
+    // mock fetch so health-check returns ok:false
+    jest.spyOn(global, 'fetch').mockImplementation(createFetchMock({ healthOk: false }));
+    await expect(validar.validarConexionBackend()).rejects.toThrow('Hubo un error con la conexion a nuestro servidor.');
   });
 });

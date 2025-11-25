@@ -1,11 +1,12 @@
 import Mascota from "../domain/Mascota.js";
-
+const _hostname =
+  typeof window !== "undefined" && window.location && window.location.hostname
+    ? window.location.hostname
+    : "localhost";
 const API_URL =
-  window.location.hostname === "localhost"
-    ? "http://localhost:3001"                    // desarrollo
+  _hostname === "localhost"
+    ? "http://localhost:3001" // desarrollo
     : "https://ingsoftadoptme.onrender.com"; // producción
-
-
 function mapJsonToMascota(json) {
   return new Mascota({
     id: json.id ?? json._id,   
@@ -19,27 +20,23 @@ function mapJsonToMascota(json) {
     facilitador: json.facilitador,
   });
 }
+export default class MascotaRepository {
 
-export class MascotaRepository {
-
-  async obtenerTodas() {
+  async obtenerMascotas() {
     const res = await fetch(`${API_URL}/api/mascotas`);
-    if (!res.ok) {
-      throw new Error("Error al obtener mascotas");
+    const mascotas = await res.json();
+    if (!Array.isArray(mascotas) || mascotas.length === 0) {
+        throw new Error("No hay mascotas disponibles.");
     }
-    const data = await res.json(); // array JSON
-    return data.map(mapJsonToMascota); // array de Mascota
+    return mascotas;
   }
 
-
-  async obtenerPorId(id) {
-    const res = await fetch(`${API_URL}/api/mascotas/${id}`);
-    if (!res.ok) {
-      if (res.status === 404) {
-            throw new Error("No Se encontró la mascota");
-      }
-      throw new Error("Error al obtener mascota por ID");
+  async obtenerDetalleMascotaPorId(idMascota = null) {
+    if (!idMascota) {
+      throw new Error('id de mascota no proporcionado.');
     }
+
+    const res = await fetch(`${API_URL}/api/mascotas/${encodeURIComponent(idMascota)}`);
     const json = await res.json();
     return mapJsonToMascota(json);
   }

@@ -2,21 +2,20 @@ import Adoptante from './domain/Adoptante.js';
 import Mascota from './domain/Mascota.js';
 import SolicitudAdopcionService from './services/SolicitudAdopcionService.js';
 import SolicitudAdopcionRepository from './infraestructure/SolicitudAdopcionRepository.js';
-import { verDetalleMascota } from './services/verMascotas.js';
-
+import MascotaRepository  from './infraestructure/MascotaRepository.js';
 const botonEnviarSolicitud = document.getElementById('enviarSolicitudBtn');
 let registroMensajeDiv = document.getElementById('registroMensaje');
 const Estado = document.getElementById('MarcarEstado');
 
 let solicitudAdopcionService = new SolicitudAdopcionService(new SolicitudAdopcionRepository(new Date()));
-
+let mascotaRepository = new MascotaRepository();
 // Si venimos con ?id=..., pedimos la mascota al backend y precargamos los campos
 (async () => {
   try {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
     if (id) {
-      const m = await verDetalleMascota(navigator.onLine, id);
+      const m = await mascotaRepository.obtenerDetalleMascotaPorId( id);
       const setVal = (id, value) => {
         const el = document.getElementById(id);
         if (el) el.value = value;
