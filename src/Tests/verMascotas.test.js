@@ -1,5 +1,6 @@
 import Mascota from '../domain/Mascota.js';
-import { verMascotas, verDetalleMascota } from '../services/verMascotas.js';
+import { MascotaRepository } from "../infraestructure/MascotaRepository.js";
+
 
 // 3.1. Ver listado general de mascotas disponibles
 
@@ -19,12 +20,17 @@ import { verMascotas, verDetalleMascota } from '../services/verMascotas.js';
 // pestaña "Adoptar", se mostrará el mensaje "Revise su conexión a internet.".
 
 
-describe('verMascotas', () => {
+describe('obtenerMascotas', () => {
   afterEach(() => jest.restoreAllMocks());
+  let mascotaRepository;
+
+  beforeEach(() => {
+    mascotaRepository = new MascotaRepository();
+  });
 
   it('retorna un mensaje cuando no hay conexión', async () => {
     try {
-      await verMascotas(false);
+      await mascotaRepository.obtenerMascotas(false);
     } catch (error) {
       expect(error.message).toBe('Revise su conexión a internet.');
       
@@ -34,7 +40,7 @@ describe('verMascotas', () => {
   it('devuelve un array vacío cuando la API responde con []', async () => {
     jest.spyOn(global, 'fetch').mockResolvedValue({ ok: true, json: async () => [] });
     try {
-      const result = await verMascotas(true);
+      const result = await mascotaRepository.obtenerMascotas(true);
     } catch (error) {
       expect(error.message).toBe('No hay mascotas disponibles.');
     }
@@ -42,7 +48,7 @@ describe('verMascotas', () => {
 
   it('lanza error con código HTTP cuando la respuesta no es ok', async () => {
     jest.spyOn(global, 'fetch').mockResolvedValue({ ok: false, status: 500 });
-    await expect(verMascotas(true)).rejects.toThrow('HTTP 500');
+    await expect(mascotaRepository.obtenerMascotas(true)).rejects.toThrow('HTTP 500');
   });
 
   it('devuelve un array cuyos objetos contienen las claves esperadas', async () => {
@@ -73,7 +79,7 @@ describe('verMascotas', () => {
 
     jest.spyOn(global, 'fetch').mockResolvedValue({ ok: true, json: async () => apiData });
 
-    const result = await verMascotas(true);
+    const result = await mascotaRepository.obtenerMascotas(true);
     expect(Array.isArray(result)).toBe(true);
 
     const requiredKeys = ['_id', 'nombre', 'especie', 'raza', 'edad', 'estado', 'img_ref', 'facilitador', 'id'];
@@ -100,12 +106,17 @@ describe('verMascotas', () => {
 // Si el ciudadano no cuenta con una conexión de internet estable al hacer click en la mascota, se mostrará 
 // el mensaje “Revise su conexión a internet.”.
 
-describe("verDetalleMascota", () => {
+describe("obtenerDetalleMascota", () => {
   afterEach(() => jest.restoreAllMocks());
+  let mascotaRepository;
+
+  beforeEach(() => {
+    mascotaRepository = new MascotaRepository();
+  });
 
   it("deberia mostrar 'Revise su conexión a internet.'",  async () => {
     try {
-      const result = await verDetalleMascota();
+      const result = await mascotaRepository.obtenerDetalleMascota();
     } catch (error) {
       expect(error.message).toBe('Revise su conexión a internet.');
     }
@@ -113,7 +124,7 @@ describe("verDetalleMascota", () => {
   it('lanza error con código HTTP cuando la respuesta no es ok', async () => {
       jest.spyOn(global, 'fetch').mockResolvedValue({ ok: false, status: 500 });
       // pasar un id para que la función realice la llamada fetch por id
-      await expect(verDetalleMascota(true, 'some-id')).rejects.toThrow('HTTP 500');
+      await expect(mascotaRepository.obtenerDetalleMascota(true, 'some-id')).rejects.toThrow('HTTP 500');
   });
   it("deberia mostrar la información de la mascota por el id", async () => {
     const apiItem = {
@@ -128,11 +139,11 @@ describe("verDetalleMascota", () => {
       id: '6921d0e55bd8ce602b65311e'
     };
     jest.spyOn(global, 'fetch').mockResolvedValue({ ok: true, json: async () => apiItem });
-    const result = await verDetalleMascota(true, apiItem.id);
+    const result = await mascotaRepository.obtenerDetalleMascota(true, apiItem.id);
     const requiredKeys = ['_id','nombre','especie','raza','edad','estado','img_ref','facilitador','id'];
     requiredKeys.forEach(k => expect(result).toHaveProperty(k));
   });
   it('lanza error si no se proporciona id', async () => {
-    await expect(verDetalleMascota(true)).rejects.toThrow('id de mascota no proporcionado.');
+    await expect(mascotaRepository.obtenerDetalleMascota(true)).rejects.toThrow('id de mascota no proporcionado.');
   });
 });

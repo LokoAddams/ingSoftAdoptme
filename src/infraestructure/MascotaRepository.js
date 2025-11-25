@@ -1,8 +1,13 @@
-import { Mascota } from "../domain/Mascota.js";
+import Mascota from "../domain/Mascota.js";
+
+const _hostname =
+  typeof window !== "undefined" && window.location && window.location.hostname
+    ? window.location.hostname
+    : "localhost";
 
 const API_URL =
-  window.location.hostname === "localhost"
-    ? "http://localhost:3001"                    // desarrollo
+  _hostname === "localhost"
+    ? "http://localhost:3001" // desarrollo
     : "https://ingsoftadoptme.onrender.com"; // producción
 
 
@@ -22,14 +27,40 @@ function mapJsonToMascota(json) {
 
 export class MascotaRepository {
 
-  async obtenerTodas() {
-    const res = await fetch(`${API_URL}/api/mascotas`);
-    if (!res.ok) {
-      throw new Error("Error al obtener mascotas");
+  async obtenerMascotas(hayConexion = true) {
+    if(hayConexion) {
+      const res = await fetch(`${API_URL}/api/mascotas`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const mascotas = await res.json();
+        if (!Array.isArray(mascotas) || mascotas.length === 0) {
+            throw new Error("No hay mascotas disponibles.");
+        }
+        return mascotas;
+    } else {
+        throw new Error("Revise su conexión a internet.");
     }
-    const data = await res.json(); // array JSON
-    return data.map(mapJsonToMascota); // array de Mascota
   }
+
+  async obtenerDetalleMascota(hayConexion = false, idMascota = null) {
+    if (hayConexion) {
+        if (idMascota) {
+            try {
+          const res = await fetch(`${API_URL}/api/mascotas/${encodeURIComponent(idMascota)}`);
+                if (res.ok) {
+                    return await res.json();
+                } else {
+                    throw new Error(`HTTP ${res.status}`);
+                }
+            } catch (err) {
+                throw err; // <-- re-lanzar el error para que el llamador/tests lo reciban
+            }
+        } else {
+            throw new Error('id de mascota no proporcionado.');
+        }
+    } else {
+        throw new Error("Revise su conexión a internet.");
+    }
+}
 
 
   async obtenerPorId(id) {

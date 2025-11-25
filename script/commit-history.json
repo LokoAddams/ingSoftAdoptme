@@ -190,12 +190,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "faf51e7b1b2c09c9ef75dbceb709eaab4878f851",
     "author": "JoseAB32",
     "commit": {
       "date": "2025-11-24T01:27:51.000Z",
       "message": "feat: Implementacion Repositorio Mascotas",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/faf51e7b1b2c09c9ef75dbceb709eaab4878f851"
     },
     "stats": {
       "total": 82,
@@ -261,6 +261,25 @@
       "date": "2025-11-24"
     },
     "coverage": 98.39,
+    "test_count": 14,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "LokoAddams",
+    "commit": {
+      "date": "2025-11-25T00:48:16.000Z",
+      "message": "refact: usar MascotaRepository",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 136,
+      "additions": 73,
+      "deletions": 63,
+      "date": "2025-11-25"
+    },
+    "coverage": 75,
     "test_count": 14,
     "failed_tests": 0,
     "conclusion": "success"
