@@ -9,20 +9,26 @@ app.use(express.json());
 
 app.use('/uploads', express.static('backend/uploads'));
 const allowedOrigins = [
-  "http://localhost:1234",
-  "http://localhost:3001",
-  "https://ingsoftadoptme.onrender.com",
-	"https://69259c45a6b6980008278f56--adoptmebombastic.netlify.app/"
+	"http://localhost:1234",
+	"http://localhost:3001",
+	"https://ingsoftadoptme.onrender.com",
+	"https://69259c45a6b6980008278f56--adoptmebombastic.netlify.app"
 ];
 
 // Middleware CORS simple - permite llamadas desde el frontend de desarrollo
 app.use((req, res, next) => {
-	// Cambia el origen según necesites; para desarrollo se permite el origen del dev server
-	const origin = req.headers.origin;
+	// Normalizar origen removiendo una barra final si existe
+	const rawOrigin = req.headers.origin || '';
+	const origin = rawOrigin.replace(/\/$/, '');
 
-  	if (allowedOrigins.includes(origin)) {
-    	res.header("Access-Control-Allow-Origin", origin);
-  	}
+	// Normalizar lista una sola vez
+	const normalizedAllowed = allowedOrigins.map(o => o.replace(/\/$/, ''));
+
+	if (origin && normalizedAllowed.includes(origin)) {
+		res.header('Access-Control-Allow-Origin', origin);
+		res.header('Vary', 'Origin');
+	}
+
 	res.header('Access-Control-Allow-Methods', 'GET,POST,PATCH,PUT,DELETE,OPTIONS');
 	res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 	// responder preflight
