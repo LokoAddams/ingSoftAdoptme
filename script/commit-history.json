@@ -247,12 +247,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "6d878c352e120c805fbb9a5030a2ca12afd6a02e",
     "author": "LokoAddams",
     "commit": {
       "date": "2025-11-24T19:27:41.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/6d878c352e120c805fbb9a5030a2ca12afd6a02e"
     },
     "stats": {
       "total": 100,
@@ -314,6 +314,25 @@
     "stats": {
       "total": 56,
       "additions": 56,
+      "deletions": 0,
+      "date": "2025-11-25"
+    },
+    "coverage": 98.39,
+    "test_count": 14,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-25T02:13:09.000Z",
+      "message": "feat: Se agrego Endpoint getById",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 29,
+      "additions": 29,
       "deletions": 0,
       "date": "2025-11-25"
     },

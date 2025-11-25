@@ -91,5 +91,34 @@ SolicitudRouter.post("/", async (req, res) => {
 });
 
 
+// GET por ID
+SolicitudRouter.get("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    if (!ObjectId.isValid(id)) {
+      return res.status(400).json({ message: "id inválido" });
+    }
+
+    const repo = solicitudRepo();
+    const objectId = new ObjectId(id);
+
+    const solicitud = await repo.findOne({
+      where: { _id: objectId },
+    });
+
+    if (!solicitud) {
+      return res.status(404).json({ message: "Solicitud no encontrada" });
+    }
+
+    return res.json(mapSolicitudEntityToDto(solicitud));
+
+  } catch (error) {
+    console.error("Error al obtener solicitud por ID:", error);
+    return res.status(500).json({ message: "Error interno al obtener solicitud por ID" });
+  }
+});
+
+
 
 export default SolicitudRouter;
