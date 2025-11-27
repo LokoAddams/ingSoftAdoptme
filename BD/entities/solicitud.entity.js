@@ -14,7 +14,6 @@ export const SolicitudAdopcionEntity = new EntitySchema({
     // Referencia a mascota (por _id)
     mascotaId: {
       type: ObjectId,
-      objectId: true,
       nullable: false,
     },
 

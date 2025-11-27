@@ -76,12 +76,12 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "5718c3864216fc9eba414a7cfdd5283e0e47fb69",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-11-27T04:20:27.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme into actualizarEstadoSolicitud",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/5718c3864216fc9eba414a7cfdd5283e0e47fb69"
     },
     "stats": {
       "total": 185,
@@ -125,6 +125,25 @@
       "total": 0,
       "additions": 0,
       "deletions": 0,
+      "date": "2025-11-27"
+    },
+    "coverage": 63.97,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-27T14:19:44.000Z",
+      "message": "Fixed: Se corrigio entity mal estructurada",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 1,
+      "additions": 0,
+      "deletions": 1,
       "date": "2025-11-27"
     },
     "coverage": 63.97,
