@@ -114,12 +114,12 @@
     "conclusion": "success"
   },
   {
-    "sha": "HEAD",
+    "sha": "3c338629293429a83af60098f44f1735b4c61e46",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-11-27T10:57:36.000Z",
       "message": "Merge branch 'main' of https://github.com/LokoAddams/ingSoftAdoptme",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/3c338629293429a83af60098f44f1735b4c61e46"
     },
     "stats": {
       "total": 0,
@@ -162,6 +162,25 @@
     "stats": {
       "total": 2,
       "additions": 2,
+      "deletions": 0,
+      "date": "2025-11-27"
+    },
+    "coverage": 63.97,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-27T14:51:30.000Z",
+      "message": "feat: Si la mascota esta adoptada, se oculta el boton adoptar",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 4,
+      "additions": 4,
       "deletions": 0,
       "date": "2025-11-27"
     },

@@ -93,6 +93,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             const q = targetName ? ('?id=' + encodeURIComponent(targetName)) : '';
             window.location.href = './FormSolicitudAdopcion.html' + q;
         });
+        if (detallesMascota.estado === 'Adoptado') {
+            adoptBtn.style.display = 'none';
+        
+        }
         detalleDiv.appendChild(adoptBtn);
     }
 });
