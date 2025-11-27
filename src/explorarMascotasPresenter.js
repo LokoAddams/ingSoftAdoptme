@@ -1,90 +1,24 @@
-import  MascotaRepository from "./infraestructure/MascotaRepository.js";
-import Mascota from "./domain/Mascota.js";
+// src/index.js
+import { MascotaService } from "./services/MascotaService.js";
+import { renderMascotas } from "./services/MascotaUIService.js";
+import MascotaRepository from "./infraestructure/MascotaRepository.js";
+import ValidarConexion from "./infraestructure/ValidarConexion.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   const div = document.querySelector("#resultado-div");
+  if (!div) return;
+
   div.innerHTML = "";
-  let mascotaRepository = new MascotaRepository();
+  const mascotaRepository = new MascotaRepository();
+  const validarConexion = new ValidarConexion();
+  const mascotaService = new MascotaService(mascotaRepository, validarConexion);
 
-  // Intentamos obtener la lista real desde el backend
   try {
-    try{
-      const mascotas = await mascotaRepository.obtenerMascotas();
-      mascotas.forEach((m) => {
-        // Crear el enlace que envuelve la tarjeta (igual que la versión anterior)
-        const a = document.createElement('a');
-        // Pasamos el id en la query para que la vista detalle pueda pedir la mascota al backend
-        const mascotaId = encodeURIComponent(m.id || m._id || '');
-        a.href = `./UI/detalleMascota.html?id=${mascotaId}`;
-        a.style.display = 'block';
-        a.style.textDecoration = 'none';
-  
-        const inner = document.createElement('div');
-        // título
-        const titulo = document.createElement('h2');
-        titulo.textContent = m.nombre || '';
-        // raza/desc
-        const p = document.createElement('p');
-        p.textContent = m.raza || '';
-        // imagen
-        const img = document.createElement('img');
-        // Construir API_URL igual que en otros presenters/repositories
-        const _hostname =
-          typeof window !== 'undefined' && window.location && window.location.hostname
-            ? window.location.hostname
-            : 'localhost';
-        const API_URL = _hostname === 'localhost' ? 'http://localhost:3001' : 'https://ingsoftadoptme.onrender.com';
-
-        const buildImgUrl = (imgRef) => {
-          if (!imgRef) return '';
-          if (/^https?:\/\//i.test(imgRef)) return imgRef;
-          if (imgRef.startsWith('/')) return `${API_URL}${imgRef}`;
-          return `${API_URL}/${imgRef}`;
-        };
-
-        img.src = buildImgUrl(m.img_ref) || '';
-        img.alt = `Foto de ${m.nombre || 'mascota'}`;
-  
-        inner.appendChild(titulo);
-        inner.appendChild(p);
-        inner.appendChild(img);
-  
-        a.appendChild(inner);
-  
-        const solicitarBtn = document.createElement('button');
-        solicitarBtn.type = 'button';
-        solicitarBtn.className = 'adopt-btn';
-        solicitarBtn.textContent = 'Solicitar adopción';
-        solicitarBtn.addEventListener('click', (ev) => {
-          // evitar que el click en el botón active el <a> padre si está dentro
-          ev.stopPropagation();
-          ev.preventDefault();
-          // Navegamos al formulario pasando solo el id en la query
-          const idParam = encodeURIComponent(m.id || m._id || '');
-          window.location.href = `./UI/FormSolicitudAdopcion.html?id=${idParam}`;
-        });
-  
-        // Apilar: primero el enlace (tarjeta), luego el botón
-        const container = document.createElement('div');
-        container.style.display = 'flex';
-        container.style.flexDirection = 'column';
-        container.style.alignItems = 'center';
-        container.appendChild(a);
-        container.appendChild(solicitarBtn);
-  
-        div.appendChild(container);
-      });
-    }
-    catch(error){
-      div.innerHTML = `<p>${error.message}</p>`;
-      return;
-    }    
-    
-    
-
-  } catch (err) {
-    console.error('Error al obtener mascotas desde API, usando fallback:', err);
-    // Fallback: mostrar mensaje o datos locales si es necesario
-    div.innerHTML = '<p>Error al cargar mascotas. Intenta nuevamente más tarde.</p>';
+    const mascotas = await mascotaService.listarMascotas();
+    renderMascotas(div, mascotas);
+  } catch (error) {
+    console.error("Error al obtener mascotas desde API:", error);
+    div.innerHTML =
+      "<p>Error al cargar mascotas. Intenta nuevamente más tarde.</p>";
   }
 });
