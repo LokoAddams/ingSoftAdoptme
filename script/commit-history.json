@@ -95,12 +95,12 @@
     "conclusion": "failure"
   },
   {
-    "sha": "HEAD",
+    "sha": "e02a14d190d92ee0fc7e790ef5ace536e3ced130",
     "author": "Vanessa745",
     "commit": {
       "date": "2025-11-27T10:56:04.000Z",
       "message": "Merge pull request #16 from LokoAddams/actualizarEstadoSolicitud\n\nActualizar estado solicitud",
-      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/e02a14d190d92ee0fc7e790ef5ace536e3ced130"
     },
     "stats": {
       "total": 139,
@@ -144,6 +144,25 @@
       "total": 1,
       "additions": 0,
       "deletions": 1,
+      "date": "2025-11-27"
+    },
+    "coverage": 63.97,
+    "test_count": 40,
+    "failed_tests": 0,
+    "conclusion": "success"
+  },
+  {
+    "sha": "HEAD",
+    "author": "JoseAB32",
+    "commit": {
+      "date": "2025-11-27T14:46:04.000Z",
+      "message": "feat: Ahora registra tambien al facilitador de la mascota",
+      "url": "https://github.com/LokoAddams/ingSoftAdoptme/commit/HEAD"
+    },
+    "stats": {
+      "total": 2,
+      "additions": 2,
+      "deletions": 0,
       "date": "2025-11-27"
     },
     "coverage": 63.97,

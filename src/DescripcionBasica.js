@@ -26,6 +26,7 @@ registrarbton.addEventListener('click', () => {
     formData.append('edad', document.getElementById('edad').value);
     formData.append('raza', document.getElementById('Raza').value);
     formData.append('sexo', document.getElementById('Sexo').value);
+    formData.append('facilitador', document.getElementById('facilitador').value);
     
     const imagenInput = document.getElementById('documento');
     if (imagenInput.files.length > 0) {
