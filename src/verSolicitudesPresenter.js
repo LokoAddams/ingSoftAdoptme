@@ -26,6 +26,7 @@ function formatoSolicitudes(solicitudes) {
   solicitudes.forEach((solicitud, idx) => {
 
     const id = solicitud.id ?? "(sin id)";
+    console.log("Procesando solicitud ID =", solicitud.id);
     const nombreAdoptante =
       solicitud.adoptante?.nombre || solicitud.adoptanteNombre || "(sin nombre)";
     const mascotaId =
@@ -63,6 +64,40 @@ function formatoSolicitudes(solicitudes) {
     contSolicitud.appendChild(masIdP);
     contSolicitud.appendChild(fechaP);
     contSolicitud.appendChild(estadoP);
+
+    const contBotones = document.createElement("div");
+    contBotones.classList.add("cont-botones-estado");
+    const btnAceptar = document.createElement("button");
+    btnAceptar.textContent = "Aceptar";
+    btnAceptar.classList.add("btn-aceptar");
+    btnAceptar.addEventListener("click", async () => {
+      try {
+        await service.actualizarEstadoSolicitud(id, "aprobada");
+        alert("Solicitud aprobada correctamente");
+        cargarSolicitudes();
+      } catch (err) {
+        alert(`Error: ${err.message}`);
+      }
+    });
+
+    const btnRechazar = document.createElement("button");
+    btnRechazar.textContent = "Rechazar";
+    btnRechazar.classList.add("btn-rechazar");
+    btnRechazar.addEventListener("click", async () => {
+      try {
+        await service.actualizarEstadoSolicitud(id, "rechazada");
+        alert("Solicitud rechazada");
+        cargarSolicitudes(); 
+      } catch (err) {
+        alert(`Error: ${err.message}`);
+      }
+    });
+
+    contBotones.appendChild(btnAceptar);
+    contBotones.appendChild(btnRechazar);
+    if (estado === "pendiente") {
+      contSolicitud.appendChild(contBotones);
+    }
 
     contSolicitudes.appendChild(contSolicitud);
   });
